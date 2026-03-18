@@ -1,0 +1,34 @@
+ Morbidade Hospitalar do SUS - por local de internação - Brasil
+Internações por Unidade da Federação
+Lista Morb  CID-10: Outras tuberculoses respiratórias, Restante de tuberculose respiratória, Outras neopl malig órg respirat e intratorácicos, Outras doenças do trato respiratório superior, Outras doenças do aparelho respiratório, Outros transt respiratórios orig período perinatal
+Período:2003
+"Unidade da Federação";"Internações"
+"11 Rondônia";1453
+"12 Acre";434
+"13 Amazonas";1799
+"14 Roraima";188
+"15 Pará";12161
+"16 Amapá";391
+"17 Tocantins";2012
+"21 Maranhão";5548
+"22 Piauí";3221
+"23 Ceará";10742
+"24 Rio Grande do Norte";2316
+"25 Paraíba";5805
+"26 Pernambuco";14891
+"27 Alagoas";3435
+"28 Sergipe";1834
+"29 Bahia";36170
+"31 Minas Gerais";22818
+"32 Espírito Santo";3476
+"33 Rio de Janeiro";17141
+"35 São Paulo";49982
+"41 Paraná";14654
+"42 Santa Catarina";7104
+"43 Rio Grande do Sul";23379
+"50 Mato Grosso do Sul";3823
+"51 Mato Grosso";3991
+"52 Goiás";6404
+"53 Distrito Federal";3850
+"Total";259022
+ Fonte: Ministério da Saúde - Sistema de Informações Hospitalares do SUS (SIH/SUS)
