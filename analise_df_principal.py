@@ -1,32 +1,44 @@
 import pandas as pd
-from visualizacoes import grafico_linha_co2_brasil, boxplot_co2_por_regiao
+
+from linha_boxplot import grafico_linha_co2_brasil, boxplot_co2_por_regiao
 from shapiro import shapiro_series_temporais_por_regiao
-from scatter_plot import scatter_co2_vs_variavel, agregar_por_regiao_ano
+from scatter_plot import scatter_co2_vs_todas
+from utils import agregar_por_regiao_ano
 
-# carregar o dataFrame de um arquivo CSV
-df_principal = pd.read_csv("bases/tratadas/dataframe_principal_tratado.csv")  # Carregar de CSV
+CAMINHO_DF = "bases/tratadas/dataframe_principal_tratado.csv"
 
 
-print(df_principal.head())  # visualizar as primeiras linhas
+def main():
+    df_principal = pd.read_csv(CAMINHO_DF)
 
-# Realizar análises, por exemplo, verificando missing values
-# missing_values = df_principal.isnull().sum()
-# print(missing_values[missing_values > 0])
+    print(df_principal.head())
 
-grafico_linha_co2_brasil(df_principal, salvar=True)
+    # gráfico geral
+    grafico_linha_co2_brasil(df_principal, salvar=True)
 
-#distribuição completa de todos os valores observados ao longo dos anos para os estados daquela região
-#boxplot_co2_por_regiao(df_principal, salvar=True) 
+    # boxplot regional
+    # boxplot_co2_por_regiao(df_principal, salvar=True)
 
-'''resultado_shapiro_normalidade = shapiro_series_temporais_por_regiao(
-    df_principal,
-    ignorar_colunas=["IDHM"],
-    agregacao="sum"
-)'''
-df_regional = agregar_por_regiao_ano(df_principal, ignorar_colunas=["IDHM"])
+    # série regional agregada
+    df_regional = agregar_por_regiao_ano(df_principal, ignorar_colunas=["IDHM"])
+    print(df_regional.head())
 
-scatter_co2_vs_variavel(df_regional, "Frota_total")
-scatter_co2_vs_variavel(df_regional, "Populacao")
-scatter_co2_vs_variavel(df_regional, "Rebanho_total")
-scatter_co2_vs_variavel(df_regional, "Internacoes_Respiratorias")
-scatter_co2_vs_variavel(df_regional, "Area_Desmatada km2")
+    # shapiro
+    resultado_shapiro = shapiro_series_temporais_por_regiao(
+        df_principal,
+        ignorar_colunas=["IDHM"]
+    )
+    print(resultado_shapiro)
+    resultado_shapiro.to_csv("bases/tratadas/shapiro_por_regiao.csv", index=False)
+
+    # scatter plots
+    scatter_co2_vs_todas(
+        df_principal,
+        ignorar_colunas=["IDHM"],
+        salvar=True,
+        versao="limpo"
+    )
+
+
+if __name__ == "__main__":
+    main()

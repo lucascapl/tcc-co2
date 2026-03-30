@@ -2,19 +2,9 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from utils import MAPA_REGIOES, ORDEM_REGIOES
 
 sns.set_theme(style="whitegrid")
-
-MAPA_REGIOES = {
-    "AC": "Norte", "AP": "Norte", "AM": "Norte", "PA": "Norte", "RO": "Norte", "RR": "Norte", "TO": "Norte",
-    "AL": "Nordeste", "BA": "Nordeste", "CE": "Nordeste", "MA": "Nordeste", "PB": "Nordeste",
-    "PE": "Nordeste", "PI": "Nordeste", "RN": "Nordeste", "SE": "Nordeste",
-    "DF": "Centro-Oeste", "GO": "Centro-Oeste", "MT": "Centro-Oeste", "MS": "Centro-Oeste",
-    "ES": "Sudeste", "MG": "Sudeste", "RJ": "Sudeste", "SP": "Sudeste",
-    "PR": "Sul", "RS": "Sul", "SC": "Sul"
-}
-
-ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
 
 
 def preparar_pasta_graficos(caminho="graficos"):
