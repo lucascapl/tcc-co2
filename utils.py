@@ -50,6 +50,8 @@ def salvar_tratado(df, nome):
     print(f"✅ Base '{nome}' tratada salva em {caminho}")
     return df
 
+def preparar_pasta_graficos(caminho="graficos"):
+    os.makedirs(caminho, exist_ok=True)
 
 def adicionar_regiao(df, coluna_estado="Estado"):
     base = df.copy()

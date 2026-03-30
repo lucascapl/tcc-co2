@@ -4,6 +4,7 @@ from linha_boxplot import grafico_linha_co2_brasil, boxplot_co2_por_regiao
 from shapiro import shapiro_series_temporais_por_regiao
 from scatter_plot import scatter_co2_vs_todas
 from utils import agregar_por_regiao_ano
+from histogramas import histogramas_todas_variaveis_por_regiao
 
 CAMINHO_DF = "bases/tratadas/dataframe_principal_tratado.csv"
 
@@ -38,7 +39,13 @@ def main():
         salvar=True,
         versao="limpo"
     )
-
+    histogramas_todas_variaveis_por_regiao(
+        df_principal,
+        ignorar_colunas=["IDHM"],
+        bins=8,
+        kde=True,
+        salvar=True
+    )
 
 if __name__ == "__main__":
     main()

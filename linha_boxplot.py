@@ -2,13 +2,9 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from utils import MAPA_REGIOES, ORDEM_REGIOES
+from utils import MAPA_REGIOES, ORDEM_REGIOES, preparar_pasta_graficos
 
 sns.set_theme(style="whitegrid")
-
-
-def preparar_pasta_graficos(caminho="graficos"):
-    os.makedirs(caminho, exist_ok=True)
 
 
 def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/co2_linha_anos.png"):
