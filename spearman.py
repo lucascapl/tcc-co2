@@ -1,6 +1,6 @@
 import pandas as pd
 from scipy.stats import spearmanr
-from utils import agregar_por_regiao_ano, obter_variaveis_numericas
+from utils import preparar_base_analitica, obter_variaveis_numericas, obter_coluna_grupo
 
 
 def classificar_forca_correlacao(valor_abs):
@@ -17,40 +17,29 @@ def classificar_forca_correlacao(valor_abs):
     return "Muito forte"
 
 
-def correlacao_spearman_por_regiao(
-    df,
-    coluna_alvo="CO2_bruto",
-    coluna_ano="Ano",
-    ignorar_colunas=None,
-    alpha=0.05,
-):
+def correlacao_spearman(df, nivel="regiao", coluna_alvo="CO2_bruto", coluna_ano="Ano", ignorar_colunas=None, alpha=0.05):
     if ignorar_colunas is None:
         ignorar_colunas = ["IDHM"]
 
-    regional = agregar_por_regiao_ano(
+    base = preparar_base_analitica(
         df,
+        nivel=nivel,
         coluna_ano=coluna_ano,
         ignorar_colunas=ignorar_colunas,
     )
+    coluna_grupo = obter_coluna_grupo(nivel)
 
-    variaveis = obter_variaveis_numericas(
-        regional,
-        coluna_ano=coluna_ano,
-        ignorar_colunas=ignorar_colunas,
-    )
+    variaveis = obter_variaveis_numericas(base, coluna_ano=coluna_ano, ignorar_colunas=ignorar_colunas)
     variaveis = [v for v in variaveis if v != coluna_alvo]
 
     resultados = []
-
-    for regiao in sorted(regional["Regiao"].dropna().unique()):
-        base_regiao = regional.loc[regional["Regiao"] == regiao].copy()
-
+    for grupo in base[coluna_grupo].dropna().unique():
+        base_grupo = base.loc[base[coluna_grupo] == grupo].copy()
         for var in variaveis:
-            pares = base_regiao[[coluna_alvo, var]].dropna()
-
+            pares = base_grupo[[coluna_alvo, var]].dropna()
             if len(pares) < 3:
                 resultados.append({
-                    "Regiao": regiao,
+                    coluna_grupo: grupo,
                     "Variavel": var,
                     "Metodo": "Spearman",
                     "n": len(pares),
@@ -62,28 +51,25 @@ def correlacao_spearman_por_regiao(
                     "Conclusao": "Amostra insuficiente",
                 })
                 continue
-
             coef, p = spearmanr(pares[coluna_alvo], pares[var])
-            coef_abs = abs(coef)
-
-            if coef > 0:
-                direcao = "Positiva"
-            elif coef < 0:
-                direcao = "Negativa"
-            else:
-                direcao = "Nula"
-
             resultados.append({
-                "Regiao": regiao,
+                coluna_grupo: grupo,
                 "Variavel": var,
                 "Metodo": "Spearman",
                 "n": len(pares),
                 "Coeficiente": coef,
                 "p_valor": p,
                 "Significativo_5pct": "Sim" if p < alpha else "Não",
-                "Direcao": direcao,
-                "Forca": classificar_forca_correlacao(coef_abs),
+                "Direcao": "Positiva" if coef > 0 else "Negativa" if coef < 0 else "Nula",
+                "Forca": classificar_forca_correlacao(abs(coef)),
                 "Conclusao": "Correlação monotônica significativa" if p < alpha else "Sem evidência de correlação monotônica significativa",
             })
+    return pd.DataFrame(resultados).sort_values([coluna_grupo, "Variavel"]).reset_index(drop=True)
 
-    return pd.DataFrame(resultados).sort_values(["Regiao", "Variavel"]).reset_index(drop=True)
+
+def correlacao_spearman_por_regiao(df, coluna_alvo="CO2_bruto", coluna_ano="Ano", ignorar_colunas=None, alpha=0.05):
+    return correlacao_spearman(df, nivel="regiao", coluna_alvo=coluna_alvo, coluna_ano=coluna_ano, ignorar_colunas=ignorar_colunas, alpha=alpha)
+
+
+def correlacao_spearman_por_estado(df, coluna_alvo="CO2_bruto", coluna_ano="Ano", ignorar_colunas=None, alpha=0.05):
+    return correlacao_spearman(df, nivel="estado", coluna_alvo=coluna_alvo, coluna_ano=coluna_ano, ignorar_colunas=ignorar_colunas, alpha=alpha)

@@ -1,0 +1,136 @@
+Estado,Variavel,Metodo,n,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao
+AC,Area_Desmatada km2,Spearman,16,-0.2352941176470588,0.3803558011886571,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+AC,Frota_total,Spearman,16,-0.2352941176470588,0.3803558011886571,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+AC,Internacoes_Respiratorias,Spearman,16,-0.6382352941176471,0.007801138631008013,Sim,Negativa,Forte,Correlação monotônica significativa
+AC,Populacao,Spearman,16,-0.18823529411764706,0.4850866091454684,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+AC,Rebanho_total,Spearman,16,-0.22352941176470587,0.40529834728275926,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+AL,Area_Desmatada km2,Spearman,16,0.7999999999999999,0.00019857097280000065,Sim,Positiva,Forte,Correlação monotônica significativa
+AL,Frota_total,Spearman,16,0.7999999999999999,0.00019857097280000065,Sim,Positiva,Forte,Correlação monotônica significativa
+AL,Internacoes_Respiratorias,Spearman,16,0.4705882352941176,0.06581947250108111,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+AL,Populacao,Spearman,16,0.7911764705882354,0.0002619464480824596,Sim,Positiva,Forte,Correlação monotônica significativa
+AL,Rebanho_total,Spearman,16,0.7382352941176471,0.0010928508118481525,Sim,Positiva,Forte,Correlação monotônica significativa
+AM,Area_Desmatada km2,Spearman,16,0.25,0.35039147910720203,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+AM,Frota_total,Spearman,16,0.25,0.35039147910720203,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+AM,Internacoes_Respiratorias,Spearman,16,-0.6,0.01400712232959999,Sim,Negativa,Forte,Correlação monotônica significativa
+AM,Populacao,Spearman,16,0.25,0.35039147910720203,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+AM,Rebanho_total,Spearman,16,-0.09411764705882353,0.7288144270239807,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+AP,Area_Desmatada km2,Spearman,16,0.538235294117647,0.03149322820583828,Sim,Positiva,Moderada,Correlação monotônica significativa
+AP,Frota_total,Spearman,16,0.5264705882352941,0.036166514972245434,Sim,Positiva,Moderada,Correlação monotônica significativa
+AP,Internacoes_Respiratorias,Spearman,16,0.5235294117647059,0.037412648130149384,Sim,Positiva,Moderada,Correlação monotônica significativa
+AP,Populacao,Spearman,16,0.4852941176470588,0.05671771428191193,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+AP,Rebanho_total,Spearman,16,0.5117647058823529,0.042723448163331804,Sim,Positiva,Moderada,Correlação monotônica significativa
+BA,Area_Desmatada km2,Spearman,16,-0.3529411764705882,0.17995865788498175,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+BA,Frota_total,Spearman,16,-0.3529411764705882,0.17995865788498175,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+BA,Internacoes_Respiratorias,Spearman,16,0.3,0.2589364525624988,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+BA,Populacao,Spearman,16,-0.34705882352941175,0.18783442010629955,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+BA,Rebanho_total,Spearman,16,-0.5352941176470588,0.032615863294021934,Sim,Negativa,Moderada,Correlação monotônica significativa
+CE,Area_Desmatada km2,Spearman,16,0.823529411764706,8.839139363842152e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa
+CE,Frota_total,Spearman,16,0.823529411764706,8.839139363842152e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa
+CE,Internacoes_Respiratorias,Spearman,16,0.19705882352941176,0.46446421122573883,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+CE,Populacao,Spearman,16,0.7999999999999999,0.00019857097280000065,Sim,Positiva,Forte,Correlação monotônica significativa
+CE,Rebanho_total,Spearman,16,0.823529411764706,8.839139363842152e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa
+DF,Area_Desmatada km2,Spearman,16,0.8676470588235294,1.3348681299166973e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa
+DF,Frota_total,Spearman,16,0.8676470588235294,1.3348681299166973e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa
+DF,Internacoes_Respiratorias,Spearman,16,0.411764705882353,0.11303386621436715,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+DF,Populacao,Spearman,16,0.8911764705882352,3.618648907351986e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+DF,Rebanho_total,Spearman,16,-0.06764705882352941,0.8034203137966693,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+ES,Area_Desmatada km2,Spearman,16,0.8794117647058824,7.187273041770845e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+ES,Frota_total,Spearman,16,0.8794117647058824,7.187273041770845e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+ES,Internacoes_Respiratorias,Spearman,16,0.7411764705882353,0.0010184695495736751,Sim,Positiva,Forte,Correlação monotônica significativa
+ES,Populacao,Spearman,16,0.8764705882352942,8.439118583861077e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+ES,Rebanho_total,Spearman,16,0.8852941176470588,5.147147576842467e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+GO,Area_Desmatada km2,Spearman,16,-0.06176470588235294,0.8202418775044894,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+GO,Frota_total,Spearman,16,-0.06176470588235294,0.8202418775044894,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+GO,Internacoes_Respiratorias,Spearman,16,-0.4941176470588235,0.05172344224923534,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+GO,Populacao,Spearman,16,-0.06176470588235294,0.8202418775044894,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+GO,Rebanho_total,Spearman,16,-0.10294117647058824,0.7044103818167708,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+MA,Area_Desmatada km2,Spearman,16,-0.7205882352941175,0.0016381911638796128,Sim,Negativa,Forte,Correlação monotônica significativa
+MA,Frota_total,Spearman,16,-0.7205882352941175,0.0016381911638796128,Sim,Negativa,Forte,Correlação monotônica significativa
+MA,Internacoes_Respiratorias,Spearman,16,-0.7205882352941175,0.0016381911638796128,Sim,Negativa,Forte,Correlação monotônica significativa
+MA,Populacao,Spearman,16,-0.7205882352941175,0.0016381911638796128,Sim,Negativa,Forte,Correlação monotônica significativa
+MA,Rebanho_total,Spearman,16,0.2088235294117647,0.4376585109498007,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+MG,Area_Desmatada km2,Spearman,16,-0.22352941176470587,0.40529834728275926,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+MG,Frota_total,Spearman,16,-0.22352941176470587,0.40529834728275926,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+MG,Internacoes_Respiratorias,Spearman,16,-0.01764705882352941,0.9482801500547113,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+MG,Populacao,Spearman,16,-0.28529411764705886,0.284138740159563,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+MG,Rebanho_total,Spearman,16,-0.008823529411764706,0.9741279946623942,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+MS,Area_Desmatada km2,Spearman,16,-0.7411764705882353,0.0010184695495736751,Sim,Negativa,Forte,Correlação monotônica significativa
+MS,Frota_total,Spearman,16,-0.7411764705882353,0.0010184695495736751,Sim,Negativa,Forte,Correlação monotônica significativa
+MS,Internacoes_Respiratorias,Spearman,16,-0.6323529411764706,0.008577584103099363,Sim,Negativa,Forte,Correlação monotônica significativa
+MS,Populacao,Spearman,16,-0.7411764705882353,0.0010184695495736751,Sim,Negativa,Forte,Correlação monotônica significativa
+MS,Rebanho_total,Spearman,16,-0.09117647058823529,0.7370049501736591,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+MT,Area_Desmatada km2,Spearman,16,-0.6264705882352941,0.009413977306783625,Sim,Negativa,Forte,Correlação monotônica significativa
+MT,Frota_total,Spearman,16,-0.6264705882352941,0.009413977306783625,Sim,Negativa,Forte,Correlação monotônica significativa
+MT,Internacoes_Respiratorias,Spearman,16,-0.6941176470588235,0.002853705903456908,Sim,Negativa,Forte,Correlação monotônica significativa
+MT,Populacao,Spearman,16,-0.6264705882352941,0.009413977306783625,Sim,Negativa,Forte,Correlação monotônica significativa
+MT,Rebanho_total,Spearman,16,-0.7352941176470589,0.0011716155350991774,Sim,Negativa,Forte,Correlação monotônica significativa
+PA,Area_Desmatada km2,Spearman,16,-0.6323529411764706,0.008577584103099363,Sim,Negativa,Forte,Correlação monotônica significativa
+PA,Frota_total,Spearman,16,-0.6323529411764706,0.008577584103099363,Sim,Negativa,Forte,Correlação monotônica significativa
+PA,Internacoes_Respiratorias,Spearman,16,-0.7441176470588236,0.0009482827857378677,Sim,Negativa,Forte,Correlação monotônica significativa
+PA,Populacao,Spearman,16,-0.6323529411764706,0.008577584103099363,Sim,Negativa,Forte,Correlação monotônica significativa
+PA,Rebanho_total,Spearman,16,-0.18529411764705883,0.492057050205944,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+PB,Area_Desmatada km2,Spearman,16,0.9794117647058824,3.9820097897552534e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PB,Frota_total,Spearman,16,0.9794117647058824,3.9820097897552534e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PB,Internacoes_Respiratorias,Spearman,16,0.2735294117647059,0.3053231563074051,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+PB,Populacao,Spearman,16,0.9705882352941176,4.723401127287029e-10,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PB,Rebanho_total,Spearman,16,0.8294117647058824,7.088454064639912e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PE,Area_Desmatada km2,Spearman,16,0.8823529411764707,6.0956195691949335e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PE,Frota_total,Spearman,16,0.8823529411764707,6.0956195691949335e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PE,Internacoes_Respiratorias,Spearman,16,0.38235294117647056,0.14385924954389048,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+PE,Populacao,Spearman,16,0.8823529411764707,6.0956195691949335e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+PE,Rebanho_total,Spearman,16,0.7205882352941175,0.0016381911638796128,Sim,Positiva,Forte,Correlação monotônica significativa
+PI,Area_Desmatada km2,Spearman,16,0.16176470588235295,0.5494831434036931,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+PI,Frota_total,Spearman,16,0.16176470588235295,0.5494831434036931,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+PI,Internacoes_Respiratorias,Spearman,16,0.1323529411764706,0.6251064291516133,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+PI,Populacao,Spearman,16,0.1323529411764706,0.6251064291516133,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+PI,Rebanho_total,Spearman,16,-0.3529411764705882,0.17995865788498175,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+PR,Area_Desmatada km2,Spearman,16,0.4205882352941176,0.10476751392918698,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+PR,Frota_total,Spearman,16,0.4205882352941176,0.10476751392918698,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+PR,Internacoes_Respiratorias,Spearman,16,-0.0411764705882353,0.8796536149318311,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+PR,Populacao,Spearman,16,0.35000000000000003,0.18386882202619312,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+PR,Rebanho_total,Spearman,16,0.3911764705882353,0.13407128619725528,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+RJ,Area_Desmatada km2,Spearman,16,0.7735294117647058,0.000439355651711721,Sim,Positiva,Forte,Correlação monotônica significativa
+RJ,Frota_total,Spearman,16,0.7735294117647058,0.000439355651711721,Sim,Positiva,Forte,Correlação monotônica significativa
+RJ,Internacoes_Respiratorias,Spearman,16,0.5352941176470588,0.032615863294021934,Sim,Positiva,Moderada,Correlação monotônica significativa
+RJ,Populacao,Spearman,16,0.7735294117647058,0.000439355651711721,Sim,Positiva,Forte,Correlação monotônica significativa
+RJ,Rebanho_total,Spearman,16,0.2441176470588235,0.36221349614195036,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+RN,Area_Desmatada km2,Spearman,16,0.7088235294117646,0.0021116812392545344,Sim,Positiva,Forte,Correlação monotônica significativa
+RN,Frota_total,Spearman,16,0.7088235294117646,0.0021116812392545344,Sim,Positiva,Forte,Correlação monotônica significativa
+RN,Internacoes_Respiratorias,Spearman,16,0.4294117647058823,0.09693648522272375,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+RN,Populacao,Spearman,16,0.7205882352941175,0.0016381911638796128,Sim,Positiva,Forte,Correlação monotônica significativa
+RN,Rebanho_total,Spearman,16,0.047058823529411764,0.8626036946668733,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RO,Area_Desmatada km2,Spearman,16,-0.4205882352941176,0.10476751392918698,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+RO,Frota_total,Spearman,16,-0.4205882352941176,0.10476751392918698,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+RO,Internacoes_Respiratorias,Spearman,16,-0.7676470588235293,0.0005168835242959222,Sim,Negativa,Forte,Correlação monotônica significativa
+RO,Populacao,Spearman,16,-0.07647058823529412,0.778340980960703,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+RO,Rebanho_total,Spearman,16,0.4735294117647058,0.06391907182682006,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+RR,Area_Desmatada km2,Spearman,16,0.15,0.5792486306642535,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RR,Frota_total,Spearman,16,0.15,0.5792486306642535,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RR,Internacoes_Respiratorias,Spearman,16,-0.12950702549515722,0.6326299103072031,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+RR,Populacao,Spearman,16,0.15,0.5792486306642535,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RR,Rebanho_total,Spearman,16,-0.2911764705882353,0.27388704841914857,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+RS,Area_Desmatada km2,Spearman,16,0.008823529411764706,0.9741279946623942,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RS,Frota_total,Spearman,16,0.008823529411764706,0.9741279946623942,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RS,Internacoes_Respiratorias,Spearman,16,0.1764705882352941,0.5132505967364671,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+RS,Populacao,Spearman,16,-0.3852941176470588,0.14054417737367633,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+RS,Rebanho_total,Spearman,16,0.14411764705882352,0.5943782881736934,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+SC,Area_Desmatada km2,Spearman,16,0.6794117647058824,0.003793432669159745,Sim,Positiva,Forte,Correlação monotônica significativa
+SC,Frota_total,Spearman,16,0.6794117647058824,0.003793432669159745,Sim,Positiva,Forte,Correlação monotônica significativa
+SC,Internacoes_Respiratorias,Spearman,16,0.15588235294117647,0.5642819694728023,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+SC,Populacao,Spearman,16,0.6794117647058824,0.003793432669159745,Sim,Positiva,Forte,Correlação monotônica significativa
+SC,Rebanho_total,Spearman,16,-0.29411764705882354,0.26884655462289303,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+SE,Area_Desmatada km2,Spearman,16,0.7852941176470588,0.0003128539178860115,Sim,Positiva,Forte,Correlação monotônica significativa
+SE,Frota_total,Spearman,16,0.7852941176470588,0.0003128539178860115,Sim,Positiva,Forte,Correlação monotônica significativa
+SE,Internacoes_Respiratorias,Spearman,16,0.4441176470588235,0.08482274417741574,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+SE,Populacao,Spearman,16,0.7647058823529411,0.0005596762943567444,Sim,Positiva,Forte,Correlação monotônica significativa
+SE,Rebanho_total,Spearman,16,0.9294117647058824,1.9401189481036705e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa
+SP,Area_Desmatada km2,Spearman,16,0.5529411764705882,0.0263144998706665,Sim,Positiva,Moderada,Correlação monotônica significativa
+SP,Frota_total,Spearman,16,0.5529411764705882,0.0263144998706665,Sim,Positiva,Moderada,Correlação monotônica significativa
+SP,Internacoes_Respiratorias,Spearman,16,0.5735294117647058,0.0201910380465231,Sim,Positiva,Moderada,Correlação monotônica significativa
+SP,Populacao,Spearman,16,0.5058823529411764,0.04558161612394021,Sim,Positiva,Moderada,Correlação monotônica significativa
+SP,Rebanho_total,Spearman,16,0.6617647058823529,0.005233753301327501,Sim,Positiva,Forte,Correlação monotônica significativa
+TO,Area_Desmatada km2,Spearman,16,0.16176470588235295,0.5494831434036931,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+TO,Frota_total,Spearman,16,0.16176470588235295,0.5494831434036931,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+TO,Internacoes_Respiratorias,Spearman,16,-0.2411764705882353,0.3682066080426343,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+TO,Populacao,Spearman,16,0.22647058823529412,0.39898292664128926,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+TO,Rebanho_total,Spearman,16,0.21176470588235297,0.4310832472392213,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa

@@ -22,6 +22,7 @@ MAPA_REGIOES = {
 }
 
 ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
+ORDEM_ESTADOS = sorted(MAPA_REGIOES.keys())
 
 
 def normalizar_texto(txt: str) -> str:
@@ -40,6 +41,8 @@ def normalizar_estado(nome_estado: str) -> str:
         nome_norm = normalizar_texto(nome).title()
         if nome_estado_norm == nome_norm:
             return uf
+    if nome_estado_norm.upper() in MAPA_REGIOES:
+        return nome_estado_norm.upper()
     return None
 
 
@@ -50,12 +53,20 @@ def salvar_tratado(df, nome):
     print(f"✅ Base '{nome}' tratada salva em {caminho}")
     return df
 
+
 def preparar_pasta_graficos(caminho="graficos"):
     os.makedirs(caminho, exist_ok=True)
+
 
 def adicionar_regiao(df, coluna_estado="Estado"):
     base = df.copy()
     base["Regiao"] = base[coluna_estado].map(MAPA_REGIOES)
+    return base
+
+
+def garantir_uf(df, coluna_estado="Estado"):
+    base = df.copy()
+    base[coluna_estado] = base[coluna_estado].apply(normalizar_estado)
     return base
 
 
@@ -74,35 +85,67 @@ def construir_agregacoes(df, variaveis=None):
     return {var: (lambda s: s.sum(min_count=1)) for var in variaveis}
 
 
-def agregar_por_regiao_ano(
-    df,
-    coluna_estado="Estado",
-    coluna_ano="Ano",
-    ignorar_colunas=None,
-    agg_map=None
-):
-    base = adicionar_regiao(df, coluna_estado=coluna_estado)
-    base = base.dropna(subset=["Regiao", coluna_ano])
+def preparar_base_analitica(df, nivel="regiao", coluna_estado="Estado", coluna_ano="Ano", ignorar_colunas=None, agg_map=None):
+    nivel = str(nivel).lower()
+    base = garantir_uf(df, coluna_estado=coluna_estado)
+    base = adicionar_regiao(base, coluna_estado=coluna_estado)
 
+    if nivel == "estado":
+        base = base.dropna(subset=[coluna_estado, coluna_ano]).copy()
+        base[coluna_estado] = pd.Categorical(base[coluna_estado], categories=ORDEM_ESTADOS, ordered=True)
+        return base.sort_values([coluna_estado, coluna_ano]).reset_index(drop=True)
+
+    if nivel != "regiao":
+        raise ValueError("nivel deve ser 'regiao' ou 'estado'.")
+
+    base = base.dropna(subset=["Regiao", coluna_ano])
     variaveis = obter_variaveis_numericas(
         base,
         coluna_ano=coluna_ano,
-        ignorar_colunas=ignorar_colunas
+        ignorar_colunas=ignorar_colunas,
     )
 
     if agg_map is None:
         agg_map = construir_agregacoes(base, variaveis)
 
-    df_regional = (
+    df_agregado = (
         base.groupby(["Regiao", coluna_ano], as_index=False)
         .agg(agg_map)
     )
 
-    df_regional["Regiao"] = pd.Categorical(
-        df_regional["Regiao"],
+    df_agregado["Regiao"] = pd.Categorical(
+        df_agregado["Regiao"],
         categories=ORDEM_REGIOES,
-        ordered=True
+        ordered=True,
     )
 
-    df_regional = df_regional.sort_values(["Regiao", coluna_ano]).reset_index(drop=True)
-    return df_regional
+    return df_agregado.sort_values(["Regiao", coluna_ano]).reset_index(drop=True)
+
+
+def agregar_por_regiao_ano(df, coluna_estado="Estado", coluna_ano="Ano", ignorar_colunas=None, agg_map=None):
+    return preparar_base_analitica(
+        df,
+        nivel="regiao",
+        coluna_estado=coluna_estado,
+        coluna_ano=coluna_ano,
+        ignorar_colunas=ignorar_colunas,
+        agg_map=agg_map,
+    )
+
+
+def preparar_base_estado_ano(df, coluna_estado="Estado", coluna_ano="Ano"):
+    return preparar_base_analitica(
+        df,
+        nivel="estado",
+        coluna_estado=coluna_estado,
+        coluna_ano=coluna_ano,
+    )
+
+
+def obter_coluna_grupo(nivel="regiao"):
+    nivel = str(nivel).lower()
+    if nivel == "regiao":
+        return "Regiao"
+    if nivel == "estado":
+        return "Estado"
+    raise ValueError("nivel deve ser 'regiao' ou 'estado'.")

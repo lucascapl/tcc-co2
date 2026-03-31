@@ -1,0 +1,136 @@
+Estado,Variavel,Metodo,n,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao
+AC,Area_Desmatada km2,Pearson,16,-0.5374657432766546,0.03178408071088827,Sim,Negativa,Moderada,Correlação linear significativa
+AC,Frota_total,Pearson,16,-0.4186613213664189,0.10653523364343671,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
+AC,Internacoes_Respiratorias,Pearson,16,-0.6710882565740133,0.004426629147732234,Sim,Negativa,Forte,Correlação linear significativa
+AC,Populacao,Pearson,16,-0.46034694519665154,0.07275952798969666,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
+AC,Rebanho_total,Pearson,16,-0.43308088104547304,0.09380570141037635,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
+AL,Area_Desmatada km2,Pearson,16,0.821616925528711,9.480538308591427e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+AL,Frota_total,Pearson,16,0.81580831540393,0.00011671056481910139,Sim,Positiva,Muito forte,Correlação linear significativa
+AL,Internacoes_Respiratorias,Pearson,16,0.4891359001785902,0.05450129754832714,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+AL,Populacao,Pearson,16,0.8107074790948512,0.00013927460269813613,Sim,Positiva,Muito forte,Correlação linear significativa
+AL,Rebanho_total,Pearson,16,0.7123388120918132,0.0019598754605716145,Sim,Positiva,Forte,Correlação linear significativa
+AM,Area_Desmatada km2,Pearson,16,0.27750267158026504,0.29806728001348837,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+AM,Frota_total,Pearson,16,0.2704135410758593,0.3110853645316983,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+AM,Internacoes_Respiratorias,Pearson,16,-0.2712990704312501,0.30944131183179496,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+AM,Populacao,Pearson,16,0.3473957019232471,0.1873773889912816,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+AM,Rebanho_total,Pearson,16,-0.06487851872817084,0.8113277940070512,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+AP,Area_Desmatada km2,Pearson,16,0.46625575141417164,0.06869362029143558,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+AP,Frota_total,Pearson,16,0.46177195055574527,0.07176337664775503,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+AP,Internacoes_Respiratorias,Pearson,16,0.393944033355648,0.13109785646103306,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+AP,Populacao,Pearson,16,0.4234238057437135,0.10220393439996071,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+AP,Rebanho_total,Pearson,16,0.3478536882508879,0.18675722470900977,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+BA,Area_Desmatada km2,Pearson,16,-0.251851338693002,0.3467162915370854,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+BA,Frota_total,Pearson,16,-0.35344397475504363,0.17929574447352767,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+BA,Internacoes_Respiratorias,Pearson,16,0.16083485774136808,0.5518110945605885,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+BA,Populacao,Pearson,16,-0.2596835299405685,0.33141099674068086,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+BA,Rebanho_total,Pearson,16,-0.5338529660179416,0.03317691074357674,Sim,Negativa,Moderada,Correlação linear significativa
+CE,Area_Desmatada km2,Pearson,16,0.8163696829924754,0.00011442509440755651,Sim,Positiva,Muito forte,Correlação linear significativa
+CE,Frota_total,Pearson,16,0.8631936224446333,1.662195122816979e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+CE,Internacoes_Respiratorias,Pearson,16,0.40590569074034466,0.11876844569942627,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+CE,Populacao,Pearson,16,0.8363868156550056,5.39703829091688e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+CE,Rebanho_total,Pearson,16,0.8034901430936134,0.00017730288464047725,Sim,Positiva,Muito forte,Correlação linear significativa
+DF,Area_Desmatada km2,Pearson,16,0.8269455770129187,7.783387753989329e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+DF,Frota_total,Pearson,16,0.8991265813990299,2.1746252076457372e-06,Sim,Positiva,Muito forte,Correlação linear significativa
+DF,Internacoes_Respiratorias,Pearson,16,0.6328729837653058,0.008506571201378654,Sim,Positiva,Forte,Correlação linear significativa
+DF,Populacao,Pearson,16,0.8716609095464104,1.0880360706467768e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+DF,Rebanho_total,Pearson,16,-0.08616393989332044,0.7510246526218438,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+ES,Area_Desmatada km2,Pearson,16,0.8113261056106196,0.00013635877075051224,Sim,Positiva,Muito forte,Correlação linear significativa
+ES,Frota_total,Pearson,16,0.9146475161527623,7.044340547467875e-07,Sim,Positiva,Muito forte,Correlação linear significativa
+ES,Internacoes_Respiratorias,Pearson,16,0.8166937405273946,0.00011312281924598547,Sim,Positiva,Muito forte,Correlação linear significativa
+ES,Populacao,Pearson,16,0.8466126452390823,3.535078436586512e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+ES,Rebanho_total,Pearson,16,0.8340224786901067,5.927715049747574e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+GO,Area_Desmatada km2,Pearson,16,-0.3539917006229668,0.17857543258064756,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+GO,Frota_total,Pearson,16,-0.1732047951330115,0.5212002086509165,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+GO,Internacoes_Respiratorias,Pearson,16,-0.44633031819780994,0.08309892690099502,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
+GO,Populacao,Pearson,16,-0.17271266147473457,0.5224030210329182,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+GO,Rebanho_total,Pearson,16,-0.2074702676497336,0.4407009588580221,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+MA,Area_Desmatada km2,Pearson,16,-0.8105601925884095,0.00013997640804098177,Sim,Negativa,Muito forte,Correlação linear significativa
+MA,Frota_total,Pearson,16,-0.6966748234015242,0.0027114474977223578,Sim,Negativa,Forte,Correlação linear significativa
+MA,Internacoes_Respiratorias,Pearson,16,-0.8196257496870119,0.00010189069817278792,Sim,Negativa,Muito forte,Correlação linear significativa
+MA,Populacao,Pearson,16,-0.7712759506328907,0.00046783436607515324,Sim,Negativa,Forte,Correlação linear significativa
+MA,Rebanho_total,Pearson,16,0.21534370211143797,0.4231512429489939,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+MG,Area_Desmatada km2,Pearson,16,-0.2057961283273962,0.44447965858281924,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+MG,Frota_total,Pearson,16,-0.2675055011088987,0.3165202509676588,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+MG,Internacoes_Respiratorias,Pearson,16,-0.15940973806453917,0.5553873236495471,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+MG,Populacao,Pearson,16,-0.25151668029399077,0.3473790197729659,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+MG,Rebanho_total,Pearson,16,-0.0631544575284145,0.8162607446448236,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+MS,Area_Desmatada km2,Pearson,16,-0.8831011753318645,5.841391858139284e-06,Sim,Negativa,Muito forte,Correlação linear significativa
+MS,Frota_total,Pearson,16,-0.7333011547747881,0.0012275769792905098,Sim,Negativa,Forte,Correlação linear significativa
+MS,Internacoes_Respiratorias,Pearson,16,-0.7834869924097423,0.00033004160518758044,Sim,Negativa,Forte,Correlação linear significativa
+MS,Populacao,Pearson,16,-0.7072714566535498,0.0021816734732265884,Sim,Negativa,Forte,Correlação linear significativa
+MS,Rebanho_total,Pearson,16,0.1363682582599569,0.6145503847974303,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+MT,Area_Desmatada km2,Pearson,16,-0.8813251777419715,6.45997234849954e-06,Sim,Negativa,Muito forte,Correlação linear significativa
+MT,Frota_total,Pearson,16,-0.6961849543283187,0.002738245708611801,Sim,Negativa,Forte,Correlação linear significativa
+MT,Internacoes_Respiratorias,Pearson,16,-0.7558551127561536,0.0007063862175389367,Sim,Negativa,Forte,Correlação linear significativa
+MT,Populacao,Pearson,16,-0.7564159670521378,0.0006962390071919446,Sim,Negativa,Forte,Correlação linear significativa
+MT,Rebanho_total,Pearson,16,-0.7602383876471045,0.0006302225169839324,Sim,Negativa,Forte,Correlação linear significativa
+PA,Area_Desmatada km2,Pearson,16,-0.8629715083795342,1.6801415396333922e-05,Sim,Negativa,Muito forte,Correlação linear significativa
+PA,Frota_total,Pearson,16,-0.6929989227291837,0.0029178078151122604,Sim,Negativa,Forte,Correlação linear significativa
+PA,Internacoes_Respiratorias,Pearson,16,-0.8530320079698164,2.668188082126396e-05,Sim,Negativa,Muito forte,Correlação linear significativa
+PA,Populacao,Pearson,16,-0.769255781526494,0.0004946418990073866,Sim,Negativa,Forte,Correlação linear significativa
+PA,Rebanho_total,Pearson,16,-0.30069434341416135,0.2577817206612371,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+PB,Area_Desmatada km2,Pearson,16,0.8422803999390757,4.2442999472640004e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+PB,Frota_total,Pearson,16,0.9609044568662053,3.375235762483602e-09,Sim,Positiva,Muito forte,Correlação linear significativa
+PB,Internacoes_Respiratorias,Pearson,16,0.28861048009284396,0.27833105183924156,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+PB,Populacao,Pearson,16,0.9371211249787604,8.815888931375974e-08,Sim,Positiva,Muito forte,Correlação linear significativa
+PB,Rebanho_total,Pearson,16,0.7294296760603589,0.001342527170377617,Sim,Positiva,Forte,Correlação linear significativa
+PE,Area_Desmatada km2,Pearson,16,0.9355202511118863,1.0467024265473341e-07,Sim,Positiva,Muito forte,Correlação linear significativa
+PE,Frota_total,Pearson,16,0.9171473513029249,5.759983971532018e-07,Sim,Positiva,Muito forte,Correlação linear significativa
+PE,Internacoes_Respiratorias,Pearson,16,0.7465760819972902,0.0008927009716118829,Sim,Positiva,Forte,Correlação linear significativa
+PE,Populacao,Pearson,16,0.9004326694539662,1.992124693113523e-06,Sim,Positiva,Muito forte,Correlação linear significativa
+PE,Rebanho_total,Pearson,16,0.7334770946484037,0.0012225505060491793,Sim,Positiva,Forte,Correlação linear significativa
+PI,Area_Desmatada km2,Pearson,16,0.13171527420835508,0.6267891894291407,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+PI,Frota_total,Pearson,16,0.11036481986615077,0.6840843940254475,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+PI,Internacoes_Respiratorias,Pearson,16,0.17655756696665403,0.5130396424825432,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+PI,Populacao,Pearson,16,0.12298090112362892,0.6500094727489467,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+PI,Rebanho_total,Pearson,16,-0.42113127998628663,0.10427308851700845,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
+PR,Area_Desmatada km2,Pearson,16,0.21183742448427617,0.43092132595609073,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+PR,Frota_total,Pearson,16,0.4104756773788913,0.11427855954592693,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+PR,Internacoes_Respiratorias,Pearson,16,0.11786645897095327,0.6637493729229306,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+PR,Populacao,Pearson,16,0.36757122977437706,0.16132542054761234,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+PR,Rebanho_total,Pearson,16,0.34114708482308054,0.19597364075471163,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+RJ,Area_Desmatada km2,Pearson,16,0.886812959938595,4.7082329811112774e-06,Sim,Positiva,Muito forte,Correlação linear significativa
+RJ,Frota_total,Pearson,16,0.8269460523905499,7.783248521444333e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+RJ,Internacoes_Respiratorias,Pearson,16,0.7844627571857007,0.0003206667077379256,Sim,Positiva,Forte,Correlação linear significativa
+RJ,Populacao,Pearson,16,0.8233931922485846,8.883593664423393e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+RJ,Rebanho_total,Pearson,16,0.27163555417313107,0.30881794325435025,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+RN,Area_Desmatada km2,Pearson,16,0.7608579118976782,0.000620024568171001,Sim,Positiva,Forte,Correlação linear significativa
+RN,Frota_total,Pearson,16,0.7486534823996993,0.0008478410892347046,Sim,Positiva,Forte,Correlação linear significativa
+RN,Internacoes_Respiratorias,Pearson,16,0.4724020480400484,0.06464268937785253,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+RN,Populacao,Pearson,16,0.7854702417192055,0.00031121914956969246,Sim,Positiva,Forte,Correlação linear significativa
+RN,Rebanho_total,Pearson,16,0.10564009644924532,0.6969981842919111,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RO,Area_Desmatada km2,Pearson,16,-0.7336253544907332,0.0012183278912457696,Sim,Negativa,Forte,Correlação linear significativa
+RO,Frota_total,Pearson,16,-0.5731380684235996,0.020296057187030692,Sim,Negativa,Moderada,Correlação linear significativa
+RO,Internacoes_Respiratorias,Pearson,16,-0.8071357314076655,0.00015714226848950893,Sim,Negativa,Muito forte,Correlação linear significativa
+RO,Populacao,Pearson,16,-0.29655037930850653,0.2647204513116691,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+RO,Rebanho_total,Pearson,16,0.10940384060866601,0.6867044719589177,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RR,Area_Desmatada km2,Pearson,16,0.0359393575924523,0.8948753631699682,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RR,Frota_total,Pearson,16,0.15534778884241301,0.5656352166746906,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RR,Internacoes_Respiratorias,Pearson,16,-0.19679158543951622,0.4650823582366921,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+RR,Populacao,Pearson,16,0.1537336928815937,0.5697296704548789,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RR,Rebanho_total,Pearson,16,-0.19651095837510246,0.46573191217636234,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+RS,Area_Desmatada km2,Pearson,16,0.04184407792229224,0.877715932944567,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RS,Frota_total,Pearson,16,0.07467043790583243,0.7834417956612363,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+RS,Internacoes_Respiratorias,Pearson,16,0.2875144116715128,0.2802425150219868,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+RS,Populacao,Pearson,16,-0.1301670365059699,0.6308820573650749,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+RS,Rebanho_total,Pearson,16,0.14132260439546976,0.6016229392337858,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+SC,Area_Desmatada km2,Pearson,16,0.5980034822682725,0.014414018209704527,Sim,Positiva,Moderada,Correlação linear significativa
+SC,Frota_total,Pearson,16,0.7145526965998015,0.0018689063636632632,Sim,Positiva,Forte,Correlação linear significativa
+SC,Internacoes_Respiratorias,Pearson,16,0.44921971046110243,0.08088599484633949,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+SC,Populacao,Pearson,16,0.7582513216412202,0.0006638662670043543,Sim,Positiva,Forte,Correlação linear significativa
+SC,Rebanho_total,Pearson,16,-0.39679901506272935,0.12807838303158528,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+SE,Area_Desmatada km2,Pearson,16,0.9342675617918084,1.1935803279885396e-07,Sim,Positiva,Muito forte,Correlação linear significativa
+SE,Frota_total,Pearson,16,0.8111160392459339,0.00013734314958672712,Sim,Positiva,Muito forte,Correlação linear significativa
+SE,Internacoes_Respiratorias,Pearson,16,0.8629641823697136,1.6807362286894244e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+SE,Populacao,Pearson,16,0.805540887189109,0.00016571379711073623,Sim,Positiva,Muito forte,Correlação linear significativa
+SE,Rebanho_total,Pearson,16,0.911932354753709,8.706329309133956e-07,Sim,Positiva,Muito forte,Correlação linear significativa
+SP,Area_Desmatada km2,Pearson,16,0.5409231838512562,0.030493192820404975,Sim,Positiva,Moderada,Correlação linear significativa
+SP,Frota_total,Pearson,16,0.5104403895064233,0.04335486870092961,Sim,Positiva,Moderada,Correlação linear significativa
+SP,Internacoes_Respiratorias,Pearson,16,0.5895780331642192,0.016233890481851324,Sim,Positiva,Moderada,Correlação linear significativa
+SP,Populacao,Pearson,16,0.36874437528127124,0.15988967868430892,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+SP,Rebanho_total,Pearson,16,0.6086915637620893,0.0123392654202765,Sim,Positiva,Forte,Correlação linear significativa
+TO,Area_Desmatada km2,Pearson,16,0.19696711954012872,0.46467628546678985,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+TO,Frota_total,Pearson,16,0.22309222985563681,0.4062415867592373,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+TO,Internacoes_Respiratorias,Pearson,16,-0.26230873700857404,0.3263692467993635,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+TO,Populacao,Pearson,16,0.38671733871823166,0.13895890388635324,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+TO,Rebanho_total,Pearson,16,0.4331837850901017,0.09371894617187183,Não,Positiva,Moderada,Sem evidência de correlação linear significativa

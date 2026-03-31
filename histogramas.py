@@ -1,7 +1,7 @@
+import math
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-from utils import agregar_por_regiao_ano, obter_variaveis_numericas, preparar_pasta_graficos
+from utils import preparar_base_analitica, obter_variaveis_numericas, preparar_pasta_graficos, obter_coluna_grupo
 
 sns.set_theme(style="whitegrid")
 
@@ -15,128 +15,50 @@ def _finalizar_plot(salvar=False, nome_arquivo=None, mostrar=True):
         plt.close()
 
 
-def histograma_variavel_por_regiao(
-    df_regional,
-    variavel,
-    bins=10,
-    kde=True,
-    salvar=False,
-    pasta="graficos",
-    mostrar=True,
-):
-    base_plot = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
+def histograma_variavel(df, variavel, nivel="regiao", ignorar_colunas=None, bins=10, kde=True, salvar=False, pasta="graficos", mostrar=True):
+    base = preparar_base_analitica(df, nivel=nivel, ignorar_colunas=ignorar_colunas)
+    coluna_grupo = obter_coluna_grupo(nivel)
+    plot_df = base[[coluna_grupo, "Ano", variavel]].dropna().copy()
+    grupos = list(plot_df[coluna_grupo].dropna().unique())
 
-    g = sns.FacetGrid(
-        base_plot,
-        col="Regiao",
-        col_wrap=3,
-        sharex=False,
-        sharey=False,
-        height=4
-    )
+    ncols = 3 if nivel == "regiao" else 4
+    nrows = math.ceil(len(grupos) / ncols)
+    fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=(5 * ncols, 3.8 * nrows))
+    axes = axes.flatten() if hasattr(axes, "flatten") else [axes]
 
-    g.map_dataframe(
-        sns.histplot,
-        x=variavel,
-        bins=bins,
-        kde=kde
-    )
+    for ax, grupo in zip(axes, grupos):
+        dados = plot_df.loc[plot_df[coluna_grupo] == grupo, variavel].dropna()
+        sns.histplot(dados, bins=bins, kde=kde, ax=ax)
+        ax.set_title(str(grupo))
+        ax.set_xlabel(variavel)
+        ax.set_ylabel("Frequência")
 
-    g.set_axis_labels(variavel, "Frequência")
-    g.set_titles("{col_name}")
-    g.fig.suptitle(f"Histograma de {variavel} por região", y=1.02)
-    g.fig.tight_layout()
+    for ax in axes[len(grupos):]:
+        ax.set_visible(False)
+
+    fig.suptitle(f"Histograma de {variavel} por {coluna_grupo.lower()}", y=1.02)
+    fig.tight_layout()
 
     nome_arquivo = None
     if salvar:
         preparar_pasta_graficos(pasta)
-        nome_arquivo = f"{pasta}/histograma_{variavel.replace(' ', '_').replace('/', '_')}.png"
+        nome = variavel.replace(" ", "_").replace("/", "_")
+        nome_arquivo = f"{pasta}/histograma_{nome}_por_{coluna_grupo.lower()}.png"
 
     _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def histograma_variavel_geral(
-    df_regional,
-    variavel,
-    bins=10,
-    kde=True,
-    salvar=False,
-    pasta="graficos",
-    mostrar=True,
-):
-    base_plot = df_regional[[variavel]].dropna().copy()
-
-    plt.figure(figsize=(8, 5))
-    sns.histplot(base_plot[variavel], bins=bins, kde=kde)
-
-    plt.title(f"Histograma geral de {variavel} (Região + Ano)")
-    plt.xlabel(variavel)
-    plt.ylabel("Frequência")
-    plt.tight_layout()
-
-    nome_arquivo = None
-    if salvar:
-        preparar_pasta_graficos(pasta)
-        nome_arquivo = f"{pasta}/histograma_geral_{variavel.replace(' ', '_').replace('/', '_')}.png"
-
-    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
-
-
-def histogramas_todas_variaveis_por_regiao(
-    df,
-    ignorar_colunas=None,
-    bins=10,
-    kde=True,
-    salvar=False,
-    pasta="graficos",
-    mostrar=True,
-):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
-    variaveis = obter_variaveis_numericas(
-        df_regional,
-        coluna_ano="Ano",
-        ignorar_colunas=ignorar_colunas
-    )
-
+def histogramas_todas_variaveis(df, nivel="regiao", ignorar_colunas=None, bins=10, kde=True, salvar=False, pasta="graficos", mostrar=True):
+    base = preparar_base_analitica(df, nivel=nivel, ignorar_colunas=ignorar_colunas)
+    variaveis = obter_variaveis_numericas(base, coluna_ano="Ano", ignorar_colunas=ignorar_colunas)
     for var in variaveis:
-        histograma_variavel_por_regiao(
-            df_regional,
-            variavel=var,
-            bins=bins,
-            kde=kde,
-            salvar=salvar,
-            pasta=pasta,
-            mostrar=mostrar,
-        )
-
-    return df_regional
+        histograma_variavel(df, variavel=var, nivel=nivel, ignorar_colunas=ignorar_colunas, bins=bins, kde=kde, salvar=salvar, pasta=pasta, mostrar=mostrar)
+    return base
 
 
-def histogramas_co2_vs_todas(
-    df,
-    ignorar_colunas=None,
-    bins=10,
-    kde=True,
-    salvar=False,
-    pasta="graficos",
-    mostrar=True,
-):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
-    variaveis = obter_variaveis_numericas(
-        df_regional,
-        coluna_ano="Ano",
-        ignorar_colunas=ignorar_colunas
-    )
+def histogramas_todas_variaveis_por_regiao(df, ignorar_colunas=None, bins=10, kde=True, salvar=False, pasta="graficos", mostrar=True):
+    return histogramas_todas_variaveis(df, nivel="regiao", ignorar_colunas=ignorar_colunas, bins=bins, kde=kde, salvar=salvar, pasta=pasta, mostrar=mostrar)
 
-    for var in variaveis:
-        histograma_variavel_por_regiao(
-            df_regional,
-            variavel=var,
-            bins=bins,
-            kde=kde,
-            salvar=salvar,
-            pasta=pasta,
-            mostrar=mostrar,
-        )
 
-    return df_regional
+def histogramas_todas_variaveis_por_estado(df, ignorar_colunas=None, bins=10, kde=True, salvar=False, pasta="graficos", mostrar=True):
+    return histogramas_todas_variaveis(df, nivel="estado", ignorar_colunas=ignorar_colunas, bins=bins, kde=kde, salvar=salvar, pasta=pasta, mostrar=mostrar)
