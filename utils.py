@@ -68,7 +68,19 @@ def obter_variaveis_numericas(df, coluna_ano="Ano", ignorar_colunas=None):
     return variaveis
 
 
-def agregar_por_regiao_ano(df, coluna_estado="Estado", coluna_ano="Ano", ignorar_colunas=None):
+def construir_agregacoes(df, variaveis=None):
+    if variaveis is None:
+        variaveis = obter_variaveis_numericas(df)
+    return {var: (lambda s: s.sum(min_count=1)) for var in variaveis}
+
+
+def agregar_por_regiao_ano(
+    df,
+    coluna_estado="Estado",
+    coluna_ano="Ano",
+    ignorar_colunas=None,
+    agg_map=None
+):
     base = adicionar_regiao(df, coluna_estado=coluna_estado)
     base = base.dropna(subset=["Regiao", coluna_ano])
 
@@ -78,9 +90,12 @@ def agregar_por_regiao_ano(df, coluna_estado="Estado", coluna_ano="Ano", ignorar
         ignorar_colunas=ignorar_colunas
     )
 
+    if agg_map is None:
+        agg_map = construir_agregacoes(base, variaveis)
+
     df_regional = (
-        base.groupby(["Regiao", coluna_ano], as_index=False)[variaveis]
-        .sum()
+        base.groupby(["Regiao", coluna_ano], as_index=False)
+        .agg(agg_map)
     )
 
     df_regional["Regiao"] = pd.Categorical(
