@@ -5,7 +5,16 @@ from utils import ORDEM_REGIOES, agregar_por_regiao_ano, obter_variaveis_numeric
 sns.set_theme(style="whitegrid")
 
 
-def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/co2_linha_anos.png"):
+def _finalizar_plot(salvar=False, nome_arquivo=None, mostrar=True):
+    if salvar and nome_arquivo:
+        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
+    if mostrar:
+        plt.show()
+    else:
+        plt.close()
+
+
+def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/co2_linha_anos.png", mostrar=True):
     base = df.copy()
     base["Ano"] = base["Ano"].astype("Int64")
     base["CO2_bruto"] = base["CO2_bruto"].astype(float)
@@ -26,12 +35,11 @@ def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/co2_linha_anos.
 
     if salvar:
         preparar_pasta_graficos()
-        plt.savefig(caminho, dpi=300, bbox_inches="tight")
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=caminho, mostrar=mostrar)
 
 
-def grafico_linha_variavel_por_regiao(df, variavel="CO2_bruto", ignorar_colunas=None, salvar=False, pasta="graficos"):
+def grafico_linha_variavel_por_regiao(df, variavel="CO2_bruto", ignorar_colunas=None, salvar=False, pasta="graficos", mostrar=True):
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
     base = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
 
@@ -44,15 +52,16 @@ def grafico_linha_variavel_por_regiao(df, variavel="CO2_bruto", ignorar_colunas=
     plt.legend(title="Região")
     plt.tight_layout()
 
+    nome_arquivo = None
     if salvar:
         preparar_pasta_graficos(pasta)
         nome = variavel.replace(" ", "_").replace("/", "_")
-        plt.savefig(f"{pasta}/linha_{nome}_por_regiao.png", dpi=300, bbox_inches="tight")
+        nome_arquivo = f"{pasta}/linha_{nome}_por_regiao.png"
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def boxplot_variavel_por_regiao_ano(df, variavel="CO2_bruto", ignorar_colunas=None, salvar=False, pasta="graficos", showfliers=False):
+def boxplot_variavel_por_regiao_ano(df, variavel="CO2_bruto", ignorar_colunas=None, salvar=False, pasta="graficos", showfliers=False, mostrar=True):
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
     base = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
 
@@ -65,15 +74,16 @@ def boxplot_variavel_por_regiao_ano(df, variavel="CO2_bruto", ignorar_colunas=No
     plt.ylabel(variavel)
     plt.tight_layout()
 
+    nome_arquivo = None
     if salvar:
         preparar_pasta_graficos(pasta)
         nome = variavel.replace(" ", "_").replace("/", "_")
-        plt.savefig(f"{pasta}/boxplot_{nome}_por_regiao.png", dpi=300, bbox_inches="tight")
+        nome_arquivo = f"{pasta}/boxplot_{nome}_por_regiao.png"
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def boxplots_todas_variaveis_por_regiao_ano(df, ignorar_colunas=None, salvar=False, pasta="graficos", showfliers=False):
+def boxplots_todas_variaveis_por_regiao_ano(df, ignorar_colunas=None, salvar=False, pasta="graficos", showfliers=False, mostrar=True):
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(df_regional, coluna_ano="Ano", ignorar_colunas=ignorar_colunas)
 
@@ -85,12 +95,13 @@ def boxplots_todas_variaveis_por_regiao_ano(df, ignorar_colunas=None, salvar=Fal
             salvar=salvar,
             pasta=pasta,
             showfliers=showfliers,
+            mostrar=mostrar,
         )
 
     return df_regional
 
 
-def boxplot_co2_por_regiao(df, salvar=False, caminho="graficos/co2_boxplot_regioes.png"):
+def boxplot_co2_por_regiao(df, salvar=False, caminho="graficos/co2_boxplot_regioes.png", mostrar=True):
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=["IDHM"])
     base = df_regional[["Regiao", "Ano", "CO2_bruto"]].dropna().copy()
 
@@ -104,6 +115,5 @@ def boxplot_co2_por_regiao(df, salvar=False, caminho="graficos/co2_boxplot_regio
 
     if salvar:
         preparar_pasta_graficos()
-        plt.savefig(caminho, dpi=300, bbox_inches="tight")
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=caminho, mostrar=mostrar)

@@ -1,4 +1,3 @@
-import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -7,15 +6,24 @@ from utils import agregar_por_regiao_ano, obter_variaveis_numericas, preparar_pa
 sns.set_theme(style="whitegrid")
 
 
+def _finalizar_plot(salvar=False, nome_arquivo=None, mostrar=True):
+    if salvar and nome_arquivo:
+        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
+    if mostrar:
+        plt.show()
+    else:
+        plt.close()
+
+
 def histograma_variavel_por_regiao(
     df_regional,
     variavel,
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos"
+    pasta="graficos",
+    mostrar=True,
 ):
-
     base_plot = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
 
     g = sns.FacetGrid(
@@ -39,12 +47,12 @@ def histograma_variavel_por_regiao(
     g.fig.suptitle(f"Histograma de {variavel} por região", y=1.02)
     g.fig.tight_layout()
 
+    nome_arquivo = None
     if salvar:
         preparar_pasta_graficos(pasta)
         nome_arquivo = f"{pasta}/histograma_{variavel.replace(' ', '_').replace('/', '_')}.png"
-        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
 def histograma_variavel_geral(
@@ -53,11 +61,9 @@ def histograma_variavel_geral(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos"
+    pasta="graficos",
+    mostrar=True,
 ):
-    
-    ##Gera um histograma geral da variável já agregada por Regiao + Ano.
-
     base_plot = df_regional[[variavel]].dropna().copy()
 
     plt.figure(figsize=(8, 5))
@@ -68,12 +74,12 @@ def histograma_variavel_geral(
     plt.ylabel("Frequência")
     plt.tight_layout()
 
+    nome_arquivo = None
     if salvar:
         preparar_pasta_graficos(pasta)
         nome_arquivo = f"{pasta}/histograma_geral_{variavel.replace(' ', '_').replace('/', '_')}.png"
-        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
 def histogramas_todas_variaveis_por_regiao(
@@ -82,12 +88,9 @@ def histogramas_todas_variaveis_por_regiao(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos"
+    pasta="graficos",
+    mostrar=True,
 ):
-    """
-    Agrega por Regiao + Ano e gera histogramas por região
-    para todas as variáveis numéricas, exceto CO2 se você quiser filtrar depois.
-    """
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(
         df_regional,
@@ -102,7 +105,8 @@ def histogramas_todas_variaveis_por_regiao(
             bins=bins,
             kde=kde,
             salvar=salvar,
-            pasta=pasta
+            pasta=pasta,
+            mostrar=mostrar,
         )
 
     return df_regional
@@ -114,12 +118,9 @@ def histogramas_co2_vs_todas(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos"
+    pasta="graficos",
+    mostrar=True,
 ):
-    """
-    Gera histogramas de todas as variáveis exceto Ano e IDHM,
-    já com agregação Regiao + Ano.
-    """
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(
         df_regional,
@@ -134,7 +135,8 @@ def histogramas_co2_vs_todas(
             bins=bins,
             kde=kde,
             salvar=salvar,
-            pasta=pasta
+            pasta=pasta,
+            mostrar=mostrar,
         )
 
     return df_regional

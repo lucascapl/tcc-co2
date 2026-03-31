@@ -1,9 +1,18 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
-from utils import agregar_por_regiao_ano, obter_variaveis_numericas
+from utils import agregar_por_regiao_ano, obter_variaveis_numericas, preparar_pasta_graficos
 
 
-def scatter_co2_vs_variavel(df_regional, variavel, coluna_co2="CO2_bruto", coluna_ano="Ano", salvar=False):
+def _finalizar_plot(salvar=False, nome_arquivo=None, mostrar=True):
+    if salvar and nome_arquivo:
+        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
+    if mostrar:
+        plt.show()
+    else:
+        plt.close()
+
+
+def scatter_co2_vs_variavel(df_regional, variavel, coluna_co2="CO2_bruto", coluna_ano="Ano", salvar=False, mostrar=True, pasta="graficos"):
     base_plot = df_regional[[coluna_co2, variavel, "Regiao", coluna_ano]].dropna().copy()
 
     g = sns.FacetGrid(
@@ -32,14 +41,15 @@ def scatter_co2_vs_variavel(df_regional, variavel, coluna_co2="CO2_bruto", colun
     g.fig.suptitle(f"Scatter plot: CO2_bruto vs {variavel}", y=1.02)
     g.fig.tight_layout()
 
+    nome_arquivo = None
     if salvar:
-        nome_arquivo = f"graficos/scatter_co2_vs_{variavel.replace(' ', '_').replace('/', '_')}.png"
-        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
+        preparar_pasta_graficos(pasta)
+        nome_arquivo = f"{pasta}/scatter_co2_vs_{variavel.replace(' ', '_').replace('/', '_')}.png"
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def scatter_co2_vs_variavel_limpo(df_regional, variavel, coluna_co2="CO2_bruto", salvar=False):
+def scatter_co2_vs_variavel_limpo(df_regional, variavel, coluna_co2="CO2_bruto", salvar=False, mostrar=True, pasta="graficos"):
     base_plot = df_regional[[coluna_co2, variavel, "Regiao"]].dropna().copy()
 
     g = sns.FacetGrid(
@@ -59,14 +69,15 @@ def scatter_co2_vs_variavel_limpo(df_regional, variavel, coluna_co2="CO2_bruto",
     g.fig.suptitle(f"CO2_bruto vs {variavel}", y=1.02)
     g.fig.tight_layout()
 
+    nome_arquivo = None
     if salvar:
-        nome_arquivo = f"graficos/scatter_co2_vs_{variavel.replace(' ', '_').replace('/', '_')}.png"
-        plt.savefig(nome_arquivo, dpi=300, bbox_inches="tight")
+        preparar_pasta_graficos(pasta)
+        nome_arquivo = f"{pasta}/scatter_co2_vs_{variavel.replace(' ', '_').replace('/', '_')}.png"
 
-    plt.show()
+    _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def scatter_co2_vs_todas(df, ignorar_colunas=None, salvar=False, versao="limpo"):
+def scatter_co2_vs_todas(df, ignorar_colunas=None, salvar=False, versao="limpo", mostrar=True, pasta="graficos"):
     df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(df_regional, ignorar_colunas=ignorar_colunas)
 
@@ -74,8 +85,8 @@ def scatter_co2_vs_todas(df, ignorar_colunas=None, salvar=False, versao="limpo")
 
     for var in variaveis:
         if versao == "limpo":
-            scatter_co2_vs_variavel_limpo(df_regional, var, salvar=salvar)
+            scatter_co2_vs_variavel_limpo(df_regional, var, salvar=salvar, mostrar=mostrar, pasta=pasta)
         else:
-            scatter_co2_vs_variavel(df_regional, var, salvar=salvar)
+            scatter_co2_vs_variavel(df_regional, var, salvar=salvar, mostrar=mostrar, pasta=pasta)
 
     return df_regional
