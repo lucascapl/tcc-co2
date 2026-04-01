@@ -16,7 +16,7 @@ def relatorio_missing_values(df):
 def interpolar_coluna_por_grupo_tempo(
     df,
     coluna,
-    grupo="Estado",
+    grupo="Regiao",
     tempo="Ano",
     metodo="linear",
     limitar_direcao="both",
@@ -34,7 +34,7 @@ def interpolar_coluna_por_grupo_tempo(
 
 def preencher_populacao_por_interpolacao(
     df,
-    coluna_estado="Estado",
+    coluna_grupo="Regiao",
     coluna_ano="Ano",
     coluna_populacao="Populacao",
     arredondar=True,
@@ -42,7 +42,7 @@ def preencher_populacao_por_interpolacao(
     return interpolar_coluna_por_grupo_tempo(
         df=df,
         coluna=coluna_populacao,
-        grupo=coluna_estado,
+        grupo=coluna_grupo,
         tempo=coluna_ano,
         metodo="linear",
         limitar_direcao="both",
@@ -52,9 +52,13 @@ def preencher_populacao_por_interpolacao(
 
 def preparar_df_para_analise(df, preencher_populacao=True, arredondar_populacao=True):
     base = df.copy()
+
+    coluna_grupo = "Regiao" if "Regiao" in base.columns else "Estado"
+
     if preencher_populacao and "Populacao" in base.columns:
         base = preencher_populacao_por_interpolacao(
             base,
+            coluna_grupo=coluna_grupo,
             coluna_populacao="Populacao",
             arredondar=arredondar_populacao,
         )

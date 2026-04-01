@@ -1,11 +1,11 @@
-# pipelines/idhm_pipeline.py
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado
+from utils import normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
 ANOS_MIN = 2003
 ANOS_MAX = 2018
 
-def processar_idhm():
+
+def processar_idhm(agrupar_por_regiao: bool = False):
     df = pd.read_excel("bases/IDHM_1991_2021.xlsx", sheet_name="Worksheet", header=0)
 
     # Renomear a primeira coluna
@@ -31,5 +31,9 @@ def processar_idhm():
 
     # Organizar colunas
     df_long = df_long[["Estado", "Ano", "IDHM"]].sort_values(["Estado", "Ano"]).reset_index(drop=True)
+
+    if agrupar_por_regiao:
+        df_long = agregar_por_regiao_ano(df_long, agg_map={"IDHM": "mean"})
+        return salvar_tratado(df_long, "idhm_regiao")
 
     return salvar_tratado(df_long, "idhm")

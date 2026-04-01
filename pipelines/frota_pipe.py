@@ -1,8 +1,8 @@
-# pipelines/frota_pipeline.py
 import pandas as pd
-from utils import salvar_tratado
+from utils import salvar_tratado, agregar_por_regiao_ano
 
-def processar_frota():
+
+def processar_frota(agrupar_por_regiao: bool = False):
     # Ler base (separador ; já confirmado)
     df = pd.read_csv("bases/Frota Veiculos 2003-2023.csv", sep=";")
 
@@ -22,6 +22,10 @@ def processar_frota():
         "ano": "Ano",
         "quantidade": "Frota_total"
     })
+
+    if agrupar_por_regiao:
+        df_agg = agregar_por_regiao_ano(df_agg)
+        return salvar_tratado(df_agg, "frota_regiao")
 
     # Salvar tratado
     return salvar_tratado(df_agg, "frota")

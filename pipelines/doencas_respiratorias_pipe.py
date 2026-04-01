@@ -1,12 +1,12 @@
-# pipelines/doencas_respiratorias_pipeline.py
 import os
 import re
 import glob
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado, normalizar_texto
+from utils import normalizar_estado, salvar_tratado, normalizar_texto, agregar_por_regiao_ano
 
 ANOS_MIN = 2003
 ANOS_MAX = 2018
+
 
 def _detectar_ano(caminho_arquivo: str) -> int:
     """
@@ -16,6 +16,7 @@ def _detectar_ano(caminho_arquivo: str) -> int:
     if m:
         return int(m.group(1))
     raise ValueError(f"Não foi possível identificar o ano para {caminho_arquivo}")
+
 
 def _limpar_uf(valor: str) -> str:
     """
@@ -29,7 +30,11 @@ def _limpar_uf(valor: str) -> str:
     s = re.sub(r"^\d{1,3}\s+", "", s)
     return s
 
-def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") -> pd.DataFrame:
+
+def processar_doencas_respiratorias(
+    pasta: str = "bases/doencas_respiratorias",
+    agrupar_por_regiao: bool = False,
+) -> pd.DataFrame:
     """
     Lê todos os CSVs da pasta especificada, trata e retorna DataFrame unificado:
     colunas: Estado (UF), Ano, Internações_Respiratorias.
@@ -48,7 +53,7 @@ def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") 
         df = pd.read_csv(
             arq,
             sep=";",
-            header=4,  # Começar a leitura a partir da quinta linha
+            header=4,
             encoding="latin1",
             quotechar='"'
         )
@@ -103,6 +108,10 @@ def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") 
 
     # Organizar DataFrame final
     final = final.sort_values(["Estado", "Ano"]).reset_index(drop=True)
+
+    if agrupar_por_regiao:
+        final = agregar_por_regiao_ano(final)
+        return salvar_tratado(final, "doencas_respiratorias_regiao")
 
     # Salvar o DataFrame tratado
     return salvar_tratado(final, "doencas_respiratorias")

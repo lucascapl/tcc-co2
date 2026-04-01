@@ -1,8 +1,8 @@
-# pipelines/populacao_pipeline.py
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado
+from utils import normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
-def processar_populacao():
+
+def processar_populacao(agrupar_por_regiao: bool = False):
     # Ler sem cabeçalho para reconstruir colunas manualmente
     raw = pd.read_excel("bases/populacao.xlsx", sheet_name="Tabela", header=None)
 
@@ -37,5 +37,9 @@ def processar_populacao():
 
     # Ordenar/organizar
     df_long = df_long[["Estado", "Ano", "Populacao"]].sort_values(["Estado", "Ano"]).reset_index(drop=True)
+
+    if agrupar_por_regiao:
+        df_long = agregar_por_regiao_ano(df_long)
+        return salvar_tratado(df_long, "populacao_regiao")
 
     return salvar_tratado(df_long, "populacao")

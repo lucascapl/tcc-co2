@@ -1,6 +1,6 @@
 import pandas as pd
 from scipy.stats import shapiro
-from utils import agregar_por_regiao_ano, obter_variaveis_numericas
+from utils import base_regional_ano, obter_variaveis_numericas
 
 
 def shapiro_series_temporais_por_regiao(
@@ -9,10 +9,14 @@ def shapiro_series_temporais_por_regiao(
     ignorar_colunas=None,
     alpha=0.05
 ):
+    """
+    Avalia a normalidade univariada de cada série temporal regional.
+    Útil como diagnóstico exploratório, mas não valida sozinho o uso de Pearson.
+    """
     if ignorar_colunas is None:
         ignorar_colunas = ["IDHM"]
 
-    regional = agregar_por_regiao_ano(
+    regional = base_regional_ano(
         df,
         coluna_ano=coluna_ano,
         ignorar_colunas=ignorar_colunas
@@ -27,8 +31,8 @@ def shapiro_series_temporais_por_regiao(
     resultados = []
 
     for var in variaveis:
-        for regiao in sorted(regional["Regiao"].dropna().unique()):
-            serie = regional.loc[regional["Regiao"] == regiao, var].dropna()
+        for regiao in regional["Regiao"].dropna().astype(str).unique():
+            serie = regional.loc[regional["Regiao"].astype(str) == regiao, var].dropna()
 
             if len(serie) < 3:
                 resultados.append({

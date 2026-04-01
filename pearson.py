@@ -1,6 +1,6 @@
 import pandas as pd
 from scipy.stats import pearsonr
-from utils import agregar_por_regiao_ano, obter_variaveis_numericas
+from utils import base_regional_ano, obter_variaveis_numericas, construir_base_defasada
 
 
 def classificar_forca_correlacao(valor_abs):
@@ -23,36 +23,48 @@ def correlacao_pearson_por_regiao(
     coluna_ano="Ano",
     ignorar_colunas=None,
     alpha=0.05,
+    defasagem_alvo=0,
 ):
     if ignorar_colunas is None:
         ignorar_colunas = ["IDHM"]
 
-    regional = agregar_por_regiao_ano(
+    regional = base_regional_ano(
         df,
         coluna_ano=coluna_ano,
         ignorar_colunas=ignorar_colunas,
     )
+
+    coluna_alvo_analise = coluna_alvo
+    if defasagem_alvo != 0:
+        regional = construir_base_defasada(
+            regional,
+            coluna_alvo=coluna_alvo,
+            coluna_ano=coluna_ano,
+            defasagem_alvo=defasagem_alvo,
+        )
+        coluna_alvo_analise = f"{coluna_alvo}_t+{defasagem_alvo}"
 
     variaveis = obter_variaveis_numericas(
         regional,
         coluna_ano=coluna_ano,
         ignorar_colunas=ignorar_colunas,
     )
-    variaveis = [v for v in variaveis if v != coluna_alvo]
+    variaveis = [v for v in variaveis if v not in {coluna_alvo, coluna_alvo_analise}]
 
     resultados = []
 
-    for regiao in sorted(regional["Regiao"].dropna().unique()):
-        base_regiao = regional.loc[regional["Regiao"] == regiao].copy()
+    for regiao in regional["Regiao"].dropna().astype(str).unique():
+        base_regiao = regional.loc[regional["Regiao"].astype(str) == regiao].copy()
 
         for var in variaveis:
-            pares = base_regiao[[coluna_alvo, var]].dropna()
+            pares = base_regiao[[coluna_alvo_analise, var, coluna_ano]].dropna()
 
             if len(pares) < 3:
                 resultados.append({
                     "Regiao": regiao,
                     "Variavel": var,
                     "Metodo": "Pearson",
+                    "Defasagem_CO2": defasagem_alvo,
                     "n": len(pares),
                     "Coeficiente": None,
                     "p_valor": None,
@@ -63,7 +75,23 @@ def correlacao_pearson_por_regiao(
                 })
                 continue
 
-            coef, p = pearsonr(pares[coluna_alvo], pares[var])
+            if pares[coluna_alvo_analise].nunique() < 2 or pares[var].nunique() < 2:
+                resultados.append({
+                    "Regiao": regiao,
+                    "Variavel": var,
+                    "Metodo": "Pearson",
+                    "Defasagem_CO2": defasagem_alvo,
+                    "n": len(pares),
+                    "Coeficiente": None,
+                    "p_valor": None,
+                    "Significativo_5pct": None,
+                    "Direcao": None,
+                    "Forca": None,
+                    "Conclusao": "Variável constante na região",
+                })
+                continue
+
+            coef, p = pearsonr(pares[coluna_alvo_analise], pares[var])
             coef_abs = abs(coef)
 
             if coef > 0:
@@ -77,7 +105,10 @@ def correlacao_pearson_por_regiao(
                 "Regiao": regiao,
                 "Variavel": var,
                 "Metodo": "Pearson",
+                "Defasagem_CO2": defasagem_alvo,
                 "n": len(pares),
+                "Ano_inicial_min": int(pares[coluna_ano].min()),
+                "Ano_inicial_max": int(pares[coluna_ano].max()),
                 "Coeficiente": coef,
                 "p_valor": p,
                 "Significativo_5pct": "Sim" if p < alpha else "Não",

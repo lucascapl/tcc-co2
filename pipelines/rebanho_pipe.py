@@ -1,11 +1,11 @@
-# pipelines/rebanho_pipeline.py
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado
+from utils import normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
 ANOS_MIN = 2003
 ANOS_MAX = 2018
 
-def processar_rebanho(agregar_total: bool = True):
+
+def processar_rebanho(agregar_total: bool = True, agrupar_por_regiao: bool = False):
     # lê sem cabeçalho para reconstruir
     raw = pd.read_excel("bases/rebanho.xlsx", sheet_name="Tabela", header=None)
 
@@ -14,7 +14,7 @@ def processar_rebanho(agregar_total: bool = True):
     types_row = raw.iloc[1, 1:].copy().astype(str)
 
     # propagar anos para a direita (cada bloco de categorias pertence ao mesmo ano)
-    years_ffill = years_row.fillna(method="ffill")
+    years_ffill = years_row.ffill()
 
     # montar colunas: primeira é Estado; restantes são pares (Ano, Animal)
     n_cols = 1 + len(years_ffill)
@@ -31,7 +31,7 @@ def processar_rebanho(agregar_total: bool = True):
     # Empilhar (wide MultiIndex -> long)
     df_long = (
         df.set_index("Estado")
-          .stack(level=[0, 1])  # Ano, Animal
+          .stack(level=[0, 1])
           .reset_index()
     )
     df_long.columns = ["Estado", "Ano", "Animal", "Quantidade"]
@@ -39,6 +39,9 @@ def processar_rebanho(agregar_total: bool = True):
     # Tipos e recorte de anos
     df_long["Ano"] = pd.to_numeric(df_long["Ano"], errors="coerce").astype("Int64")
     df_long = df_long[(df_long["Ano"] >= ANOS_MIN) & (df_long["Ano"] <= ANOS_MAX)]
+
+    df_long["Animal"] = df_long["Animal"].astype(str).str.strip()
+    df_long = df_long[df_long["Animal"].str.upper() == "BOVINO"]
 
     # Quantidades numéricas (trata "-", vazios etc.)
     df_long["Quantidade"] = pd.to_numeric(df_long["Quantidade"], errors="coerce").fillna(0)
@@ -48,7 +51,7 @@ def processar_rebanho(agregar_total: bool = True):
     df_long = df_long.dropna(subset=["Estado"])
 
     # Salva versão detalhada (útil para análises por tipo)
-    salvar_tratado(df_long[["Estado", "Ano", "Animal", "Quantidade"]], "rebanho_detalhado")
+    #salvar_tratado(df_long[["Estado", "Ano", "Animal", "Quantidade"]], "rebanho_detalhado")
 
     if agregar_total:
         # Agrega tudo em Rebanho_total
@@ -57,6 +60,9 @@ def processar_rebanho(agregar_total: bool = True):
                    .sum()
                    .rename(columns={"Quantidade": "Rebanho_total"})
         )
+        if agrupar_por_regiao:
+            df_total = agregar_por_regiao_ano(df_total)
+            return salvar_tratado(df_total, "rebanho_regiao")
         return salvar_tratado(df_total, "rebanho")
 
     # OU: gerar colunas por animal (pivot)
@@ -70,5 +76,10 @@ def processar_rebanho(agregar_total: bool = True):
         )
         .reset_index()
     )
+
+    if agrupar_por_regiao:
+        wide = agregar_por_regiao_ano(wide)
+        return salvar_tratado(wide, "rebanho_por_animal_regiao")
+
     # Observação: os nomes das colunas ficam como os animais (com acentos).
     return salvar_tratado(wide, "rebanho_por_animal")

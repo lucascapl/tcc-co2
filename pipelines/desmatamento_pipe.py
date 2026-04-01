@@ -1,28 +1,32 @@
-# pipelines/desmatamento_pipeline.py
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado
+from utils import normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
 ANOS_MIN = 2003
 ANOS_MAX = 2018
 
-def processar_desmatamento(municipio_file: str, desmatamento_file: str) -> pd.DataFrame:
+
+def processar_desmatamento(
+    municipio_file: str,
+    desmatamento_file: str,
+    agrupar_por_regiao: bool = False,
+) -> pd.DataFrame:
     """
     Processa os dados de desmatamento por município, mapeia os municípios para estados,
-    e retorna um DataFrame de desmatamento por Estado.
+    e retorna um DataFrame de desmatamento por Estado ou Região.
     """
     # carregar a ferramenta do INPE (municípios -> estado)
     df_municipios = pd.read_csv(municipio_file, sep=";", encoding="utf-8-sig")
-    
+
     # verificar as primeiras linhas e corrigir os nomes das colunas pois estavam cheias de simbolos
     df_municipios.columns = df_municipios.columns.str.replace("ï»¿", "", regex=False)
     df_municipios.columns = df_municipios.columns.str.strip()
-    
+
     # mapeamento: Código Município Completo -> Estado (UF)
     df_municipios = df_municipios[["Código Município Completo", "Nome_UF"]].drop_duplicates()
-    
+
     # carregar os dados de desmatamento do INPE
     df_desmatamento = pd.read_csv(desmatamento_file, sep=",", encoding="latin1")
-    
+
     # mapear o município para o Estado
     df_desmatamento = df_desmatamento.merge(
         df_municipios,
@@ -30,7 +34,7 @@ def processar_desmatamento(municipio_file: str, desmatamento_file: str) -> pd.Da
         right_on="Código Município Completo",
         how="left"
     )
-    
+
     # normalizar o nome do Estado para a sigla
     df_desmatamento["Estado"] = df_desmatamento["Nome_UF"].apply(normalizar_estado)
 
@@ -42,6 +46,10 @@ def processar_desmatamento(municipio_file: str, desmatamento_file: str) -> pd.Da
 
     # renomear colunas para o padrao do df_principal
     df_aggregated = df_aggregated.rename(columns={"ano": "Ano", "desmatado": "Area_Desmatada km2"})
+
+    if agrupar_por_regiao:
+        df_aggregated = agregar_por_regiao_ano(df_aggregated)
+        return salvar_tratado(df_aggregated, "desmatamento_por_regiao")
 
     # salvar o DataFrame tratado
     return salvar_tratado(df_aggregated, "desmatamento_por_estado")
