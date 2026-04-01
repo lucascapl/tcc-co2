@@ -1,8 +1,8 @@
 import pandas as pd
 from utils import normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
-ANOS_MIN = 2003
-ANOS_MAX = 2018
+ANOS_MIN = 2006
+ANOS_MAX = 2019
 
 
 def processar_idhm(agrupar_por_regiao: bool = False):

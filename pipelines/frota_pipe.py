@@ -11,7 +11,7 @@ def processar_frota(agrupar_por_regiao: bool = False):
     df["quantidade"] = pd.to_numeric(df["quantidade"], errors="coerce").fillna(0)
 
     # Filtrar período de interesse
-    df = df[(df["ano"] >= 2003) & (df["ano"] <= 2018)]
+    df = df[(df["ano"] >= 2006) & (df["ano"] <= 2022)]
 
     # Agregar: Frota total por estado e ano
     df_agg = df.groupby(["sigla_uf", "ano"], as_index=False)["quantidade"].sum()

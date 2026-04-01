@@ -7,6 +7,7 @@ from pipelines.rebanho_pipe import processar_rebanho
 from pipelines.idhm_pipe import processar_idhm
 from pipelines.doencas_respiratorias_pipe import processar_doencas_respiratorias
 from pipelines.desmatamento_pipe import processar_desmatamento
+from pipelines.combustiveis_pipe import processar_combustiveis
 
 from utils import salvar_tratado
 
@@ -20,21 +21,15 @@ df_doencas = processar_doencas_respiratorias("bases/doencas_respiratorias", agru
 
 municipio_file = "bases/ferramenta_municipio.csv"
 desmatamento_file = "bases/desmatamento_inpe.csv"
-df_desmatamento = processar_desmatamento(
-    municipio_file,
-    desmatamento_file,
-    agrupar_por_regiao=True,
-)
+df_desmatamento = processar_desmatamento(municipio_file,desmatamento_file,agrupar_por_regiao=True,)
+df_combustiveis = processar_combustiveis(agrupar_por_regiao=True)
 
 # criar dataframe principal a partir do CO2
 df_principal = df_co2.copy()
 
 # adicionar os demais dts
-for df_secundario in [df_pop, df_frota, df_rebanho, df_idhm, df_doencas, df_desmatamento]:
+for df_secundario in [df_pop, df_frota, df_rebanho, df_idhm, df_doencas, df_desmatamento, df_combustiveis]:
     df_principal = df_principal.merge(df_secundario, on=["Regiao", "Ano"], how="left")
 
 # salvar dataframe principal tratado
-salvar_tratado(df_principal, "dataframe_principal_regiao")
-
-print(df_principal.head(10))  # printa o topo
-print(df_principal.tail(10))  # printa o final
+salvar_tratado(df_principal, "dataframe_principal")

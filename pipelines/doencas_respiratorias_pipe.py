@@ -4,8 +4,8 @@ import glob
 import pandas as pd
 from utils import normalizar_estado, salvar_tratado, normalizar_texto, agregar_por_regiao_ano
 
-ANOS_MIN = 2003
-ANOS_MAX = 2018
+ANOS_MIN = 2006
+ANOS_MAX = 2019
 
 
 def _detectar_ano(caminho_arquivo: str) -> int:

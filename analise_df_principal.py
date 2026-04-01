@@ -13,7 +13,7 @@ from utils import base_regional_ano
 from pearson import correlacao_pearson_por_regiao
 from spearman import correlacao_spearman_por_regiao
 
-CAMINHO_DF = "bases/tratadas/dataframe_principal_regiao_tratado.csv"
+CAMINHO_DF = "bases/tratadas/dataframe_principal_tratado.csv"
 DEFASAGEM_CO2 = 1
 
 
