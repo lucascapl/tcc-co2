@@ -23,6 +23,10 @@ MAPA_REGIOES = {
 
 ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
 
+# Periodo unico usado por todos os pipelines de tratamento.
+ANO_INICIAL = 2000
+ANO_FINAL = 2019
+
 
 def normalizar_texto(txt: str) -> str:
     if pd.isna(txt):
@@ -45,7 +49,7 @@ def normalizar_estado(nome_estado: str) -> str:
 
 def salvar_tratado(df, nome):
     os.makedirs("bases/tratadas", exist_ok=True)
-    caminho = f"bases/tratadas/{nome}_tratado.csv"
+    caminho = f"bases/tratadas/{nome}-tratada.csv"
     df.to_csv(caminho, index=False)
     print(f"✅ Base '{nome}' tratada salva em {caminho}")
     return df
@@ -143,7 +147,7 @@ def agregar_por_regiao_ano(
 
 def construir_base_defasada(
     df,
-    coluna_alvo="CO2_bruto",
+    coluna_alvo="co2",
     coluna_regiao="Regiao",
     coluna_ano="Ano",
     defasagem_alvo=1,

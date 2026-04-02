@@ -20,11 +20,11 @@ def _finalizar_plot(salvar=False, nome_arquivo=None, mostrar=True):
 def scatter_co2_vs_variavel(
     df_regional,
     variavel,
-    coluna_co2="CO2_bruto",
+    coluna_co2="co2",
     coluna_ano="Ano",
     salvar=False,
     mostrar=True,
-    pasta="graficos",
+    pasta="graficos/scatterplots",
     defasagem_co2=0,
 ):
     coluna_co2_plot = coluna_co2
@@ -79,11 +79,11 @@ def scatter_co2_vs_variavel(
 def scatter_co2_vs_variavel_limpo(
     df_regional,
     variavel,
-    coluna_co2="CO2_bruto",
+    coluna_co2="co2",
     coluna_ano="Ano",
     salvar=False,
     mostrar=True,
-    pasta="graficos",
+    pasta="graficos/scatterplots",
     defasagem_co2=0,
 ):
     coluna_co2_plot = coluna_co2
@@ -132,13 +132,13 @@ def scatter_co2_vs_todas(
     salvar=False,
     versao="limpo",
     mostrar=True,
-    pasta="graficos",
+    pasta="graficos/scatterplots",
     defasagem_co2=0,
 ):
     df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(df_regional, ignorar_colunas=ignorar_colunas)
 
-    variaveis = [v for v in variaveis if v != "CO2_bruto"]
+    variaveis = [v for v in variaveis if v != "co2"]
 
     for var in variaveis:
         if versao == "limpo":

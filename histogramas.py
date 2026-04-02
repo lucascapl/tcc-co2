@@ -21,7 +21,7 @@ def histograma_variavel_por_regiao(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
     base_plot = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
@@ -61,7 +61,7 @@ def histograma_variavel_geral(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
     base_plot = df_regional[[variavel]].dropna().copy()
@@ -88,7 +88,7 @@ def histogramas_todas_variaveis_por_regiao(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
     df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
@@ -118,7 +118,7 @@ def histogramas_co2_vs_todas(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
     df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
@@ -128,7 +128,7 @@ def histogramas_co2_vs_todas(
         ignorar_colunas=ignorar_colunas
     )
 
-    variaveis = [v for v in variaveis if v != "CO2_bruto"]
+    variaveis = [v for v in variaveis if v != "co2"]
 
     for var in variaveis:
         histograma_variavel_por_regiao(

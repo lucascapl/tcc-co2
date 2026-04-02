@@ -1,10 +1,10 @@
 import pandas as pd
 
-from utils import normalizar_estado, agregar_por_regiao_ano, salvar_tratado
+from utils import ANO_FINAL, ANO_INICIAL, normalizar_estado, agregar_por_regiao_ano, salvar_tratado
 
 
 def processar_desmatamento_mapbiomas(
-    caminho_arquivo="bases/MAPBIOMAS_BRAZIL-COL.10-DEFORESTATION_BIOME_STATE.xlsx",
+    caminho_arquivo="bases/desmatamento-bioma-estado-1987-2024-mapbiomas.xlsx",
     agrupar_por_regiao=True,
 ):
     """
@@ -12,10 +12,10 @@ def processar_desmatamento_mapbiomas(
     e devolve uma base no padrão do projeto.
 
     Saída regional:
-        Regiao | Ano | Area_Desmatada_MapBiomas
+        Regiao | Ano | desmat_area
 
     Saída estadual:
-        Estado | Ano | Area_Desmatada_MapBiomas
+        Estado | Ano | desmat_area
     """
 
     df = pd.read_excel(caminho_arquivo, sheet_name="DEFORESTATION")
@@ -37,12 +37,12 @@ def processar_desmatamento_mapbiomas(
         ],
         value_vars=colunas_anos,
         var_name="Ano",
-        value_name="Area_Desmatada_MapBiomas",
+        value_name="desmat_area",
     )
 
     base["Ano"] = pd.to_numeric(base["Ano"], errors="coerce")
-    base["Area_Desmatada_MapBiomas"] = pd.to_numeric(
-        base["Area_Desmatada_MapBiomas"], errors="coerce"
+    base["desmat_area"] = pd.to_numeric(
+        base["desmat_area"], errors="coerce"
     )
 
     base["state"] = base["state"].astype(str).str.strip()
@@ -50,13 +50,14 @@ def processar_desmatamento_mapbiomas(
 
     base = base.dropna(subset=["Estado", "Ano"])
     base["Ano"] = base["Ano"].astype(int)
+    base = base[(base["Ano"] >= ANO_INICIAL) & (base["Ano"] <= ANO_FINAL)]
 
     # soma tudo por estado/ano:
     # - diferentes biomas dentro do mesmo estado
     # - supressão primária e secundária
     # - subclasses de cobertura
     df_estado = (
-        base.groupby(["Estado", "Ano"], as_index=False)["Area_Desmatada_MapBiomas"]
+        base.groupby(["Estado", "Ano"], as_index=False)["desmat_area"]
         .sum(min_count=1)
     )
 
@@ -72,5 +73,5 @@ def processar_desmatamento_mapbiomas(
         ignorar_colunas=[],
     )
 
-    salvar_tratado(df_regional, "desmatamento_mapbiomas")
+    salvar_tratado(df_regional, "desmatamento-mapbiomas")
     return df_regional

@@ -1,12 +1,9 @@
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado, agregar_por_regiao_ano
-
-ANOS_MIN = 2006
-ANOS_MAX = 2019
+from utils import ANO_FINAL, ANO_INICIAL, normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
 
 def processar_combustiveis(
-    arquivo: str = "bases/vendas-combustiveis-m3-1990-2025.csv",
+    arquivo: str = "bases/venda-combustiveis-m3-1990-2025-dados_gov.csv",
     produtos=None,
     agrupar_por_regiao: bool = False,
 ):
@@ -27,7 +24,7 @@ def processar_combustiveis(
 
     # tipos
     df["ANO"] = pd.to_numeric(df["ANO"], errors="coerce").astype("Int64")
-    df = df[(df["ANO"] >= ANOS_MIN) & (df["ANO"] <= ANOS_MAX)]
+    df = df[(df["ANO"] >= ANO_INICIAL) & (df["ANO"] <= ANO_FINAL)]
 
     # filtro opcional por produto
     if produtos is not None:
@@ -54,11 +51,11 @@ def processar_combustiveis(
     df_total = (
         df.groupby(["Estado", "ANO"], as_index=False)["VENDAS"]
           .sum(min_count=1)
-          .rename(columns={"ANO": "Ano", "VENDAS": "Vendas_Combustiveis"})
+                    .rename(columns={"ANO": "Ano", "VENDAS": "venda_comb"})
     )
 
     if agrupar_por_regiao:
         df_total = agregar_por_regiao_ano(df_total)
-        return salvar_tratado(df_total, "combustiveis")
+        return salvar_tratado(df_total, "venda-combustiveis")
 
-    return salvar_tratado(df_total, "combustiveis_estado")
+    return salvar_tratado(df_total, "venda-combustiveis-estado")

@@ -19,7 +19,7 @@ def classificar_forca_correlacao(valor_abs):
 
 def correlacao_spearman_por_regiao(
     df,
-    coluna_alvo="CO2_bruto",
+    coluna_alvo="co2",
     coluna_ano="Ano",
     ignorar_colunas=None,
     alpha=0.05,
