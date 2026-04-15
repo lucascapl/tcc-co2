@@ -24,7 +24,7 @@ MAPA_REGIOES = {
 ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
 
 # Periodo unico usado por todos os pipelines de tratamento.
-ANO_INICIAL = 2000
+ANO_INICIAL = 2003
 ANO_FINAL = 2019
 
 

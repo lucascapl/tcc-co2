@@ -8,6 +8,14 @@ ARQUIVOS_PADRAO = [
     "bases/PIB-Municipios-2010-2023-ibge.xlsx",
 ]
 
+MAPA_NOME_REGIAO = {
+    "norte": "Norte",
+    "nordeste": "Nordeste",
+    "centrooeste": "Centro-Oeste",
+    "sudeste": "Sudeste",
+    "sul": "Sul",
+}
+
 
 def _normalizar_coluna(coluna: str) -> str:
     return (
@@ -23,6 +31,20 @@ def _normalizar_coluna(coluna: str) -> str:
         .replace("-", "")
         .replace("_", "")
     )
+
+
+def _normalizar_nome_regiao(valor: str) -> str | None:
+    if pd.isna(valor):
+        return None
+
+    chave = (
+        normalizar_texto(str(valor))
+        .strip()
+        .lower()
+        .replace("-", "")
+        .replace(" ", "")
+    )
+    return MAPA_NOME_REGIAO.get(chave)
 
 
 def _encontrar_coluna(
@@ -59,6 +81,7 @@ def _carregar_planilha_pib(caminho_arquivo: str) -> pd.DataFrame:
 
     base = df[[col_ano, col_regiao, col_pib_total, col_pib_pc]].copy()
     base.columns = ["Ano", "Regiao", "pib_total_mil", "pib_pc"]
+    base["Regiao"] = base["Regiao"].apply(_normalizar_nome_regiao)
 
     base["Ano"] = pd.to_numeric(base["Ano"], errors="coerce").astype("Int64")
     base["pib_total_mil"] = pd.to_numeric(base["pib_total_mil"], errors="coerce")
