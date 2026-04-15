@@ -9,6 +9,8 @@ from pipelines.combustiveis_pipe import processar_combustiveis
 from pipelines.desmatamento_mapbiomas_pipe import processar_desmatamento_mapbiomas
 from pipelines.inmet_pipe import processar_inmet_temperatura, processar_inmet_chuva
 from pipelines.pib_pipe import processar_pib_per_capita
+from pipelines.area_destinada_colheita_pipe import processar_area_destinada_colheita
+from pipelines.area_colhida_pipe import processar_area_colhida
 
 from utils import salvar_tratado
 
@@ -56,6 +58,16 @@ df_pib_percapita = carregar_ou_processar(
     processar_pib_per_capita,
     agrupar_por_regiao=True,
 )
+df_area_destinada_colheita = carregar_ou_processar(
+    "area-destinada-colheita-regiao",
+    processar_area_destinada_colheita,
+    agrupar_por_regiao=True,
+)
+df_area_colhida = carregar_ou_processar(
+    "area-colhida-regiao",
+    processar_area_colhida,
+    agrupar_por_regiao=True,
+)
 
 # criar dataframe principal a partir do CO2
 df_principal = df_co2.copy()
@@ -70,6 +82,8 @@ for df_secundario in [
     df_inmet_temperatura,
     df_inmet_chuva,
     df_pib_percapita,
+    df_area_destinada_colheita,
+    df_area_colhida,
 ]:
     df_principal = df_principal.merge(df_secundario, on=["Regiao", "Ano"], how="left")
 
