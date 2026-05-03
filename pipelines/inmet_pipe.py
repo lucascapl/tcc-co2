@@ -167,7 +167,7 @@ def processar_inmet_temperatura(
     ano_min: int = ANO_INICIAL,
     ano_max: int = ANO_FINAL,
     agrupar_por_regiao: bool = True,
-    somente_capitais: bool = True,
+    somente_capitais: bool = False,
 ) -> pd.DataFrame:
     """
     Processa todos os CSVs do INMET em subpastas por ano e calcula

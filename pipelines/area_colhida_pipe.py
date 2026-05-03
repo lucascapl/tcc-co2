@@ -4,7 +4,7 @@ from utils import ANO_FINAL, ANO_INICIAL, ORDEM_REGIOES, ordenar_regioes, salvar
 
 
 def processar_area_colhida(
-    caminho_arquivo: str = "bases/area-colhida-regiao-1974-2024-ibge.csv.csv",
+    caminho_arquivo: str = "bases/area-colhida-regiao-1974-2024-ibge.csv",
     agrupar_por_regiao: bool = True,
 ):
     """

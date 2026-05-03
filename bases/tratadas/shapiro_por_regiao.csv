@@ -1,46 +1,61 @@
 Regiao,Variavel,n,W,p_valor,Normal_5pct,Conclusao
-Centro-Oeste,chuva_media,14,0.956758421538327,0.6695443710549498,Sim,Não rejeita normalidade
-Centro-Oeste,co2,20,0.8001743201776826,0.0008691383225435179,Não,Rejeita normalidade
-Centro-Oeste,desmat_area,20,0.8024553748485281,0.0009401628828824721,Não,Rejeita normalidade
+Centro-Oeste,area_colhida,17,0.9039881745584625,0.079228522904508,Sim,Não rejeita normalidade
+Centro-Oeste,area_destinada_colheita,17,0.9044898526308639,0.08078168785663706,Sim,Não rejeita normalidade
+Centro-Oeste,chuva_media,17,0.9686766826502923,0.794853528447648,Sim,Não rejeita normalidade
+Centro-Oeste,co2,17,0.6846877284833882,7.794273885898381e-05,Não,Rejeita normalidade
+Centro-Oeste,consumo_energia_industrial,16,0.8563935381058181,0.01694318596958514,Não,Rejeita normalidade
+Centro-Oeste,desmat_area,17,0.6869137060671504,8.24870751406186e-05,Não,Rejeita normalidade
 Centro-Oeste,frota,17,0.9422045261298337,0.34526709059627986,Sim,Não rejeita normalidade
 Centro-Oeste,internacoes,17,0.8080864921768001,0.002624261580891247,Não,Rejeita normalidade
-Centro-Oeste,pib_pc,0,,,,Amostra insuficiente
-Centro-Oeste,rebanho,20,0.8402545228952163,0.003675715304562321,Não,Rejeita normalidade
-Centro-Oeste,temp_media,14,0.9433275442434104,0.4626122285418521,Sim,Não rejeita normalidade
-Centro-Oeste,venda_comb,20,0.8405903647848861,0.0037225619836742684,Não,Rejeita normalidade
-Nordeste,chuva_media,14,0.9683834682199884,0.8543113385485694,Sim,Não rejeita normalidade
-Nordeste,co2,20,0.938451943377707,0.22412180157938139,Sim,Não rejeita normalidade
-Nordeste,desmat_area,20,0.9782901986990218,0.9101586786985446,Sim,Não rejeita normalidade
+Centro-Oeste,pib_pc,17,0.926267547345704,0.18841037233497188,Sim,Não rejeita normalidade
+Centro-Oeste,rebanho,17,0.9803160374099851,0.9599214293195586,Sim,Não rejeita normalidade
+Centro-Oeste,temp_media,17,0.9712974324286288,0.8407679226256008,Sim,Não rejeita normalidade
+Centro-Oeste,venda_comb,17,0.8652049698316414,0.018450346048797382,Não,Rejeita normalidade
+Nordeste,area_colhida,17,0.901569943118283,0.07216098489835127,Sim,Não rejeita normalidade
+Nordeste,area_destinada_colheita,17,0.9345218020902972,0.2588117832522462,Sim,Não rejeita normalidade
+Nordeste,chuva_media,17,0.9448148190645062,0.3798141808195488,Sim,Não rejeita normalidade
+Nordeste,co2,17,0.9421391139612113,0.3444361483379361,Sim,Não rejeita normalidade
+Nordeste,consumo_energia_industrial,16,0.8723858043631766,0.029585662394125252,Não,Rejeita normalidade
+Nordeste,desmat_area,17,0.9682564426948816,0.787217058315216,Sim,Não rejeita normalidade
 Nordeste,frota,17,0.9304440046362077,0.2213954321527637,Sim,Não rejeita normalidade
 Nordeste,internacoes,17,0.814310841257719,0.003209013677961366,Não,Rejeita normalidade
-Nordeste,pib_pc,18,0.9306750911957441,0.1995686559331767,Sim,Não rejeita normalidade
-Nordeste,rebanho,20,0.8204433329738184,0.0017721811037229053,Não,Rejeita normalidade
-Nordeste,temp_media,14,0.9627688611878517,0.768308554186318,Sim,Não rejeita normalidade
-Nordeste,venda_comb,20,0.8719731391824634,0.012727887302248959,Não,Rejeita normalidade
-Norte,chuva_media,14,0.9174411663834541,0.20199076093848822,Sim,Não rejeita normalidade
-Norte,co2,20,0.9422185491280284,0.2639948690147649,Sim,Não rejeita normalidade
-Norte,desmat_area,20,0.9492756787741556,0.35622909091772625,Sim,Não rejeita normalidade
+Nordeste,pib_pc,17,0.9341835707542928,0.25549810209146806,Sim,Não rejeita normalidade
+Nordeste,rebanho,17,0.8663778573887,0.019252708733780658,Não,Rejeita normalidade
+Nordeste,temp_media,17,0.9352383572738432,0.26596258914628257,Sim,Não rejeita normalidade
+Nordeste,venda_comb,17,0.9045209845861805,0.08087909368468406,Sim,Não rejeita normalidade
+Norte,area_colhida,17,0.8267329131755927,0.0048330763376168515,Não,Rejeita normalidade
+Norte,area_destinada_colheita,17,0.8369626084784938,0.006827835443172286,Não,Rejeita normalidade
+Norte,chuva_media,17,0.9466515364905681,0.405758869783865,Sim,Não rejeita normalidade
+Norte,co2,17,0.9052169314483571,0.08308829375682296,Sim,Não rejeita normalidade
+Norte,consumo_energia_industrial,16,0.944253485473393,0.40441392417468996,Sim,Não rejeita normalidade
+Norte,desmat_area,17,0.9118486635252547,0.10749740664341445,Sim,Não rejeita normalidade
 Norte,frota,17,0.9361415729025166,0.2752329027625413,Sim,Não rejeita normalidade
 Norte,internacoes,17,0.7924869585105554,0.0016032641548678764,Não,Rejeita normalidade
-Norte,pib_pc,18,0.9367457467804392,0.25471289266163444,Sim,Não rejeita normalidade
-Norte,rebanho,20,0.9117897774288289,0.06894805023364298,Sim,Não rejeita normalidade
-Norte,temp_media,14,0.9712669991310299,0.8931362617960114,Sim,Não rejeita normalidade
-Norte,venda_comb,20,0.858480565223945,0.0074182712511013955,Não,Rejeita normalidade
-Sudeste,chuva_media,14,0.9553367791637369,0.6461591928689351,Sim,Não rejeita normalidade
-Sudeste,co2,20,0.9303851786737267,0.15707495694435564,Sim,Não rejeita normalidade
-Sudeste,desmat_area,20,0.9545545211088169,0.4415312121794642,Sim,Não rejeita normalidade
+Norte,pib_pc,17,0.9388192173411756,0.3044507039448804,Sim,Não rejeita normalidade
+Norte,rebanho,17,0.9659544296260094,0.7444712406964585,Sim,Não rejeita normalidade
+Norte,temp_media,17,0.9318585622173771,0.23376123604110616,Sim,Não rejeita normalidade
+Norte,venda_comb,17,0.8735020831880066,0.02498772050206734,Não,Rejeita normalidade
+Sudeste,area_colhida,17,0.9314417867805558,0.23005195926905547,Sim,Não rejeita normalidade
+Sudeste,area_destinada_colheita,17,0.9296066990571272,0.2143696431615531,Sim,Não rejeita normalidade
+Sudeste,chuva_media,17,0.9575215075599973,0.5854639816861644,Sim,Não rejeita normalidade
+Sudeste,co2,17,0.9332915463340679,0.24694563878097037,Sim,Não rejeita normalidade
+Sudeste,consumo_energia_industrial,16,0.8750086554825476,0.03247005482745542,Não,Rejeita normalidade
+Sudeste,desmat_area,17,0.9563912394918859,0.5649475709392924,Sim,Não rejeita normalidade
 Sudeste,frota,17,0.9466720156172131,0.40605578371635737,Sim,Não rejeita normalidade
 Sudeste,internacoes,17,0.6939493012782565,9.880580956547911e-05,Não,Rejeita normalidade
-Sudeste,pib_pc,18,0.9287157629247929,0.18433975726383584,Sim,Não rejeita normalidade
-Sudeste,rebanho,20,0.906221606143991,0.05402358210910479,Sim,Não rejeita normalidade
-Sudeste,temp_media,14,0.973944585352806,0.9244934752191971,Sim,Não rejeita normalidade
-Sudeste,venda_comb,20,0.8848313543498751,0.02163430144397695,Não,Rejeita normalidade
-Sul,chuva_media,14,0.9477477284435067,0.5263169630281495,Sim,Não rejeita normalidade
-Sul,co2,20,0.9854853521551151,0.984345143127725,Sim,Não rejeita normalidade
-Sul,desmat_area,20,0.953276405392287,0.41957333213088455,Sim,Não rejeita normalidade
+Sudeste,pib_pc,17,0.930856715528946,0.22493810048909613,Sim,Não rejeita normalidade
+Sudeste,rebanho,17,0.8964151232399884,0.05918224948581175,Sim,Não rejeita normalidade
+Sudeste,temp_media,17,0.9623244277489663,0.675503354433176,Sim,Não rejeita normalidade
+Sudeste,venda_comb,17,0.8788269501114898,0.030436716188297804,Não,Rejeita normalidade
+Sul,area_colhida,17,0.8824341919834837,0.03482749169698268,Não,Rejeita normalidade
+Sul,area_destinada_colheita,17,0.8586387048098041,0.014565474797684861,Não,Rejeita normalidade
+Sul,chuva_media,17,0.9066005117344138,0.08766570274505427,Sim,Não rejeita normalidade
+Sul,co2,17,0.9829348106831051,0.9790476903844845,Sim,Não rejeita normalidade
+Sul,consumo_energia_industrial,16,0.9101877765132274,0.11718472979669181,Sim,Não rejeita normalidade
+Sul,desmat_area,17,0.9348577223186967,0.262141852705187,Sim,Não rejeita normalidade
 Sul,frota,17,0.9484017010059139,0.4317380687545701,Sim,Não rejeita normalidade
 Sul,internacoes,17,0.7244452468568016,0.00022175885277750309,Não,Rejeita normalidade
-Sul,pib_pc,18,0.9309835589043284,0.202073791647553,Sim,Não rejeita normalidade
-Sul,rebanho,20,0.891661480427653,0.028854804610627362,Não,Rejeita normalidade
-Sul,temp_media,14,0.9675196899214132,0.8418379345616973,Sim,Não rejeita normalidade
-Sul,venda_comb,20,0.8298653167373771,0.0024965889259723983,Não,Rejeita normalidade
+Sul,pib_pc,17,0.9289985262307766,0.20939981047198292,Sim,Não rejeita normalidade
+Sul,rebanho,17,0.8470881777526379,0.009684941965041965,Não,Rejeita normalidade
+Sul,temp_media,17,0.8881044263038331,0.04312012769522856,Não,Rejeita normalidade
+Sul,venda_comb,17,0.8548901596327209,0.012744806458502182,Não,Rejeita normalidade
