@@ -25,7 +25,7 @@ ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
 
 # Periodo unico usado por todos os pipelines de tratamento.
 ANO_INICIAL = 2003
-ANO_FINAL = 2019
+ANO_FINAL = 2023
 
 
 def normalizar_texto(txt: str) -> str:
