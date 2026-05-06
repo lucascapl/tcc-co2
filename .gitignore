@@ -1,2 +1,14 @@
 *.pyc
 *.png
+/.env
+/.venv
+__pycache__/
+*.pyo
+*.pyd
+*.tmp
+*.temp
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*/inmet

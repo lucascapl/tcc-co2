@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
-from utils import ORDEM_REGIOES, agregar_por_regiao_ano, obter_variaveis_numericas, preparar_pasta_graficos
+import os
+from utils import ORDEM_REGIOES, base_regional_ano, obter_variaveis_numericas, preparar_pasta_graficos
 
 sns.set_theme(style="whitegrid")
 
@@ -14,19 +15,19 @@ def _finalizar_plot(salvar=False, nome_arquivo=None, mostrar=True):
         plt.close()
 
 
-def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/co2_linha_anos.png", mostrar=True):
-    base = df.copy()
+def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/linhas/co2_linha_anos.png", mostrar=True):
+    base = base_regional_ano(df, ignorar_colunas=["IDHM"]).copy()
     base["Ano"] = base["Ano"].astype("Int64")
-    base["CO2_bruto"] = base["CO2_bruto"].astype(float)
+    base["co2"] = base["co2"].astype(float)
 
     co2_ano = (
-        base.groupby("Ano", as_index=False)["CO2_bruto"]
+        base.groupby("Ano", as_index=False)["co2"]
         .sum(min_count=1)
         .sort_values("Ano")
     )
 
     plt.figure(figsize=(10, 6))
-    sns.lineplot(data=co2_ano, x="Ano", y="CO2_bruto", marker="o")
+    sns.lineplot(data=co2_ano, x="Ano", y="co2", marker="o")
     plt.title("Emissões totais de CO2 no Brasil ao longo dos anos")
     plt.xlabel("Ano")
     plt.ylabel("CO2 bruto")
@@ -34,13 +35,13 @@ def grafico_linha_co2_brasil(df, salvar=False, caminho="graficos/co2_linha_anos.
     plt.tight_layout()
 
     if salvar:
-        preparar_pasta_graficos()
+        preparar_pasta_graficos(os.path.dirname(caminho) or "graficos/linhas")
 
     _finalizar_plot(salvar=salvar, nome_arquivo=caminho, mostrar=mostrar)
 
 
-def grafico_linha_variavel_por_regiao(df, variavel="CO2_bruto", ignorar_colunas=None, salvar=False, pasta="graficos", mostrar=True):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
+def grafico_linha_variavel_por_regiao(df, variavel="co2", ignorar_colunas=None, salvar=False, pasta="graficos/linhas", mostrar=True):
+    df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
     base = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
 
     plt.figure(figsize=(11, 6))
@@ -61,8 +62,8 @@ def grafico_linha_variavel_por_regiao(df, variavel="CO2_bruto", ignorar_colunas=
     _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def boxplot_variavel_por_regiao_ano(df, variavel="CO2_bruto", ignorar_colunas=None, salvar=False, pasta="graficos", showfliers=False, mostrar=True):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
+def boxplot_variavel_por_regiao_ano(df, variavel="co2", ignorar_colunas=None, salvar=False, pasta="graficos/boxplots", showfliers=False, mostrar=True):
+    df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
     base = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
 
     plt.figure(figsize=(10, 6))
@@ -83,13 +84,13 @@ def boxplot_variavel_por_regiao_ano(df, variavel="CO2_bruto", ignorar_colunas=No
     _finalizar_plot(salvar=salvar, nome_arquivo=nome_arquivo, mostrar=mostrar)
 
 
-def boxplots_todas_variaveis_por_regiao_ano(df, ignorar_colunas=None, salvar=False, pasta="graficos", showfliers=False, mostrar=True):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
+def boxplots_todas_variaveis_por_regiao_ano(df, ignorar_colunas=None, salvar=False, pasta="graficos/boxplots", showfliers=False, mostrar=True):
+    df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(df_regional, coluna_ano="Ano", ignorar_colunas=ignorar_colunas)
 
     for var in variaveis:
         boxplot_variavel_por_regiao_ano(
-            df,
+            df_regional,
             variavel=var,
             ignorar_colunas=ignorar_colunas,
             salvar=salvar,
@@ -101,19 +102,19 @@ def boxplots_todas_variaveis_por_regiao_ano(df, ignorar_colunas=None, salvar=Fal
     return df_regional
 
 
-def boxplot_co2_por_regiao(df, salvar=False, caminho="graficos/co2_boxplot_regioes.png", mostrar=True):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=["IDHM"])
-    base = df_regional[["Regiao", "Ano", "CO2_bruto"]].dropna().copy()
+def boxplot_co2_por_regiao(df, salvar=False, caminho="graficos/boxplots/co2_boxplot_regioes.png", mostrar=True):
+    df_regional = base_regional_ano(df, ignorar_colunas=["IDHM"])
+    base = df_regional[["Regiao", "Ano", "co2"]].dropna().copy()
 
     plt.figure(figsize=(10, 6))
-    sns.boxplot(data=base, x="Regiao", y="CO2_bruto", order=ORDEM_REGIOES, showfliers=False)
-    sns.stripplot(data=base, x="Regiao", y="CO2_bruto", order=ORDEM_REGIOES, color="black", size=4, alpha=0.55)
+    sns.boxplot(data=base, x="Regiao", y="co2", order=ORDEM_REGIOES, showfliers=False)
+    sns.stripplot(data=base, x="Regiao", y="co2", order=ORDEM_REGIOES, color="black", size=4, alpha=0.55)
     plt.title("Distribuição temporal das emissões de CO2 por região (base Região-Ano)")
     plt.xlabel("Região")
     plt.ylabel("CO2 bruto")
     plt.tight_layout()
 
     if salvar:
-        preparar_pasta_graficos()
+        preparar_pasta_graficos(os.path.dirname(caminho) or "graficos/boxplots")
 
     _finalizar_plot(salvar=salvar, nome_arquivo=caminho, mostrar=mostrar)

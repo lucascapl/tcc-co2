@@ -1,43 +1,98 @@
 # frame.py
+import os
 import pandas as pd
 from pipelines.co2_pipe import processar_co2
-from pipelines.populacao_pipe import processar_populacao
 from pipelines.frota_pipe import processar_frota
 from pipelines.rebanho_pipe import processar_rebanho
-from pipelines.idhm_pipe import processar_idhm
 from pipelines.doencas_respiratorias_pipe import processar_doencas_respiratorias
-from pipelines.desmatamento_pipe import processar_desmatamento
+from pipelines.combustiveis_pipe import processar_combustiveis
+from pipelines.desmatamento_mapbiomas_pipe import processar_desmatamento_mapbiomas
+from pipelines.inmet_pipe import processar_inmet_temperatura, processar_inmet_chuva
+from pipelines.pib_pipe import processar_pib_per_capita
+from pipelines.area_destinada_colheita_pipe import processar_area_destinada_colheita
+from pipelines.area_colhida_pipe import processar_area_colhida
+from pipelines.energia_industrial_pipe import processar_consumo_energia_industrial
 
 from utils import salvar_tratado
 
-# Processar bases individualmente
-df_co2 = processar_co2()
-df_pop = processar_populacao()
-df_frota = processar_frota()
-df_rebanho = processar_rebanho()
-df_idhm = processar_idhm()
-df_doencas = processar_doencas_respiratorias("bases/doencas_respiratorias")
+REPROCESSAR_TUDO = False
 
-municipio_file = "bases/ferramenta_municipio.csv"
-desmatamento_file = "bases/desmatamento_inpe.csv"
-df_desmatamento = processar_desmatamento(municipio_file, desmatamento_file)
+
+def carregar_ou_processar(nome_base_tratada: str, funcao_processamento, *args, **kwargs) -> pd.DataFrame:
+    caminho = f"bases/tratadas/{nome_base_tratada}-tratada.csv"
+
+    if (not REPROCESSAR_TUDO) and os.path.exists(caminho):
+        print(f"[cache] Carregando base tratada existente: {caminho}")
+        return pd.read_csv(caminho)
+
+    print(f"[processando] Gerando base: {nome_base_tratada}")
+    return funcao_processamento(*args, **kwargs)
+
+# Processar bases individualmente já agregadas por região
+df_co2 = carregar_ou_processar("co2-regiao", processar_co2, agrupar_por_regiao=True)
+df_frota = carregar_ou_processar("frota-regiao", processar_frota, agrupar_por_regiao=True)
+df_rebanho = carregar_ou_processar("rebanho-regiao", processar_rebanho, agrupar_por_regiao=True)
+df_doencas = carregar_ou_processar(
+    "doencas-resp-regiao",
+    processar_doencas_respiratorias,
+    "bases/doencas_respiratorias",
+    agrupar_por_regiao=True,
+)
+df_combustiveis = carregar_ou_processar("venda-combustiveis", processar_combustiveis, agrupar_por_regiao=True)
+df_desmatamento_mapbiomas = carregar_ou_processar(
+    "desmatamento-mapbiomas",
+    processar_desmatamento_mapbiomas,
+    agrupar_por_regiao=True,
+)
+df_inmet_temperatura = carregar_ou_processar(
+    "inmet-temp-regiao",
+    processar_inmet_temperatura,
+    agrupar_por_regiao=True,
+)
+df_inmet_chuva = carregar_ou_processar(
+    "inmet-chuva-regiao",
+    processar_inmet_chuva,
+    agrupar_por_regiao=True,
+)
+df_pib_percapita = carregar_ou_processar(
+    "pib-percapita-regiao",
+    processar_pib_per_capita,
+    agrupar_por_regiao=True,
+)
+df_area_destinada_colheita = carregar_ou_processar(
+    "area-destinada-colheita-regiao",
+    processar_area_destinada_colheita,
+    agrupar_por_regiao=True,
+)
+df_area_colhida = carregar_ou_processar(
+    "area-colhida-regiao",
+    processar_area_colhida,
+    agrupar_por_regiao=True,
+)
+df_energia_industrial = carregar_ou_processar(
+    "energia-industrial-regiao",
+    processar_consumo_energia_industrial,
+    agrupar_por_regiao=True,
+)
 
 # criar dataframe principal a partir do CO2
 df_principal = df_co2.copy()
 
 # adicionar os demais dts
-df_principal = df_principal.merge(df_pop, on=["Estado", "Ano"], how="left")
-df_principal = df_principal.merge(df_frota, on=["Estado", "Ano"], how="left")
-df_principal = df_principal.merge(df_rebanho, on=["Estado","Ano"], how="left")
-df_principal = df_principal.merge(df_idhm, on=["Estado", "Ano"], how="left")
-df_principal = df_principal.merge(df_doencas, on=["Estado", "Ano"], how="left")
-df_principal = df_principal.merge(df_desmatamento, on=["Estado", "Ano"], how="left")
+for df_secundario in [
+    df_frota, 
+    df_rebanho, 
+    df_doencas,
+    df_combustiveis,
+    df_desmatamento_mapbiomas,
+    df_inmet_temperatura,
+    df_inmet_chuva,
+    df_pib_percapita,
+    df_area_destinada_colheita,
+    df_area_colhida,
+    df_energia_industrial,
+]:
+    df_principal = df_principal.merge(df_secundario, on=["Regiao", "Ano"], how="left")
 
 # salvar dataframe principal tratado
-salvar_tratado(df_principal, "dataframe_principal")
-
-print(df_principal.head(10)) #printa o topo
-
-print(df_principal.tail(10)) #printa o final
-
-
+salvar_tratado(df_principal, "dataframe-principal")

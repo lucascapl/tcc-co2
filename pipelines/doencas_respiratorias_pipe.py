@@ -1,12 +1,9 @@
-# pipelines/doencas_respiratorias_pipeline.py
 import os
 import re
 import glob
 import pandas as pd
-from utils import normalizar_estado, salvar_tratado, normalizar_texto
+from utils import ANO_FINAL, ANO_INICIAL, normalizar_estado, salvar_tratado, normalizar_texto, agregar_por_regiao_ano
 
-ANOS_MIN = 2003
-ANOS_MAX = 2018
 
 def _detectar_ano(caminho_arquivo: str) -> int:
     """
@@ -16,6 +13,7 @@ def _detectar_ano(caminho_arquivo: str) -> int:
     if m:
         return int(m.group(1))
     raise ValueError(f"Não foi possível identificar o ano para {caminho_arquivo}")
+
 
 def _limpar_uf(valor: str) -> str:
     """
@@ -29,10 +27,14 @@ def _limpar_uf(valor: str) -> str:
     s = re.sub(r"^\d{1,3}\s+", "", s)
     return s
 
-def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") -> pd.DataFrame:
+
+def processar_doencas_respiratorias(
+    pasta: str = "bases/doencas_respiratorias",
+    agrupar_por_regiao: bool = False,
+) -> pd.DataFrame:
     """
     Lê todos os CSVs da pasta especificada, trata e retorna DataFrame unificado:
-    colunas: Estado (UF), Ano, Internações_Respiratorias.
+    colunas: Estado (UF), Ano, internacoes.
     """
     arquivos = sorted(glob.glob(os.path.join(pasta, "*.csv")))
     if not arquivos:
@@ -48,7 +50,7 @@ def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") 
         df = pd.read_csv(
             arq,
             sep=";",
-            header=4,  # Começar a leitura a partir da quinta linha
+            header=4,
             encoding="latin1",
             quotechar='"'
         )
@@ -79,16 +81,16 @@ def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") 
         df = df.dropna(subset=["Estado"])
 
         # Converter Internações para valores numéricos
-        df["Internacoes_Respiratorias"] = pd.to_numeric(df[col_int], errors="coerce").fillna(0).astype("Int64")
+        df["internacoes"] = pd.to_numeric(df[col_int], errors="coerce").fillna(0).astype("Int64")
 
         # Adicionar o ano extraído do nome do arquivo
         df["Ano"] = ano
 
         # Filtrar para o período do TCC (2003-2018)
-        if not (ANOS_MIN <= ano <= ANOS_MAX):
+        if not (ANO_INICIAL <= ano <= ANO_FINAL):
             continue
 
-        registros.append(df[["Estado", "Ano", "Internacoes_Respiratorias"]])
+        registros.append(df[["Estado", "Ano", "internacoes"]])
 
     if not registros:
         raise ValueError("Nenhum arquivo no período 2003–2018 foi processado.")
@@ -99,10 +101,14 @@ def processar_doencas_respiratorias(pasta: str = "bases/doencas_respiratorias") 
     # Checagem de duplicatas (Estado + Ano deve ser único)
     if final.duplicated(subset=["Estado", "Ano"]).any():
         # Se existir duplicata, agregamos somando as internações
-        final = final.groupby(["Estado", "Ano"], as_index=False)["Internacoes_Respiratorias"].sum()
+        final = final.groupby(["Estado", "Ano"], as_index=False)["internacoes"].sum()
 
     # Organizar DataFrame final
     final = final.sort_values(["Estado", "Ano"]).reset_index(drop=True)
 
+    if agrupar_por_regiao:
+        final = agregar_por_regiao_ano(final)
+        return salvar_tratado(final, "doencas-resp-regiao")
+
     # Salvar o DataFrame tratado
-    return salvar_tratado(final, "doencas_respiratorias")
+    return salvar_tratado(final, "doencas-resp-estado")

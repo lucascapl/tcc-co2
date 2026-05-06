@@ -1,31 +1,61 @@
 Regiao,Variavel,n,W,p_valor,Normal_5pct,Conclusao
-Centro-Oeste,Area_Desmatada km2,16,0.9374460440798469,0.31889898624484947,Sim,Não rejeita normalidade
-Centro-Oeste,CO2_bruto,16,0.6903998158644419,0.0001325338591047381,Não,Rejeita normalidade
-Centro-Oeste,Frota_total,16,0.9427438443152751,0.38399283005492535,Sim,Não rejeita normalidade
-Centro-Oeste,Internacoes_Respiratorias,16,0.8090982510713288,0.0036063332172318126,Não,Rejeita normalidade
-Centro-Oeste,Populacao,16,0.9628511353436436,0.7137016330961434,Sim,Não rejeita normalidade
-Centro-Oeste,Rebanho_total,16,0.9555255624699215,0.5818970283374811,Sim,Não rejeita normalidade
-Nordeste,Area_Desmatada km2,16,0.9429035606096645,0.3861137546428249,Sim,Não rejeita normalidade
-Nordeste,CO2_bruto,16,0.9458384103176962,0.42675172918071214,Sim,Não rejeita normalidade
-Nordeste,Frota_total,16,0.9317774390992112,0.2600873862134063,Sim,Não rejeita normalidade
-Nordeste,Internacoes_Respiratorias,16,0.8163213120147687,0.0045237761515324,Não,Rejeita normalidade
-Nordeste,Populacao,16,0.9365804629863848,0.3092154440162295,Sim,Não rejeita normalidade
-Nordeste,Rebanho_total,16,0.9371788131443524,0.3158814989156654,Sim,Não rejeita normalidade
-Norte,Area_Desmatada km2,16,0.968497639268855,0.8137232824637748,Sim,Não rejeita normalidade
-Norte,CO2_bruto,16,0.8811158797800573,0.04039070313929652,Não,Rejeita normalidade
-Norte,Frota_total,16,0.9373326428315982,0.3176154414484246,Sim,Não rejeita normalidade
-Norte,Internacoes_Respiratorias,16,0.79085747567964,0.0020646019424302186,Não,Rejeita normalidade
-Norte,Populacao,16,0.9490198304194839,0.47432033641141863,Sim,Não rejeita normalidade
-Norte,Rebanho_total,16,0.7376901513592878,0.0004532929108839644,Não,Rejeita normalidade
-Sudeste,Area_Desmatada km2,16,0.9293934212019663,0.23844958546257156,Sim,Não rejeita normalidade
-Sudeste,CO2_bruto,16,0.9350216737931061,0.2924283616781437,Sim,Não rejeita normalidade
-Sudeste,Frota_total,16,0.9472737763593515,0.44776812571410235,Sim,Não rejeita normalidade
-Sudeste,Internacoes_Respiratorias,16,0.7007168995288131,0.00017184447461643693,Não,Rejeita normalidade
-Sudeste,Populacao,16,0.9480737145936241,0.45980012932006603,Sim,Não rejeita normalidade
-Sudeste,Rebanho_total,16,0.8444829270005986,0.011313311768701964,Não,Rejeita normalidade
-Sul,Area_Desmatada km2,16,0.953284396545394,0.5434380890404622,Sim,Não rejeita normalidade
-Sul,CO2_bruto,16,0.9797236677100184,0.9613728853670275,Sim,Não rejeita normalidade
-Sul,Frota_total,16,0.9498235146463438,0.4868961375319022,Sim,Não rejeita normalidade
-Sul,Internacoes_Respiratorias,16,0.7245539514995217,0.0003188217396087707,Não,Rejeita normalidade
-Sul,Populacao,16,0.927963977210586,0.22629370137185723,Sim,Não rejeita normalidade
-Sul,Rebanho_total,16,0.9219302926638938,0.18118153753953753,Sim,Não rejeita normalidade
+Centro-Oeste,area_colhida,17,0.9039881745584625,0.079228522904508,Sim,Não rejeita normalidade
+Centro-Oeste,area_destinada_colheita,17,0.9044898526308639,0.08078168785663706,Sim,Não rejeita normalidade
+Centro-Oeste,chuva_media,17,0.9686766826502923,0.794853528447648,Sim,Não rejeita normalidade
+Centro-Oeste,co2,17,0.6846877284833882,7.794273885898381e-05,Não,Rejeita normalidade
+Centro-Oeste,consumo_energia_industrial,16,0.8563935381058181,0.01694318596958514,Não,Rejeita normalidade
+Centro-Oeste,desmat_area,17,0.6869137060671504,8.24870751406186e-05,Não,Rejeita normalidade
+Centro-Oeste,frota,17,0.9422045261298337,0.34526709059627986,Sim,Não rejeita normalidade
+Centro-Oeste,internacoes,17,0.8080864921768001,0.002624261580891247,Não,Rejeita normalidade
+Centro-Oeste,pib_pc,17,0.926267547345704,0.18841037233497188,Sim,Não rejeita normalidade
+Centro-Oeste,rebanho,17,0.9803160374099851,0.9599214293195586,Sim,Não rejeita normalidade
+Centro-Oeste,temp_media,17,0.9712974324286288,0.8407679226256008,Sim,Não rejeita normalidade
+Centro-Oeste,venda_comb,17,0.8652049698316414,0.018450346048797382,Não,Rejeita normalidade
+Nordeste,area_colhida,17,0.901569943118283,0.07216098489835127,Sim,Não rejeita normalidade
+Nordeste,area_destinada_colheita,17,0.9345218020902972,0.2588117832522462,Sim,Não rejeita normalidade
+Nordeste,chuva_media,17,0.9448148190645062,0.3798141808195488,Sim,Não rejeita normalidade
+Nordeste,co2,17,0.9421391139612113,0.3444361483379361,Sim,Não rejeita normalidade
+Nordeste,consumo_energia_industrial,16,0.8723858043631766,0.029585662394125252,Não,Rejeita normalidade
+Nordeste,desmat_area,17,0.9682564426948816,0.787217058315216,Sim,Não rejeita normalidade
+Nordeste,frota,17,0.9304440046362077,0.2213954321527637,Sim,Não rejeita normalidade
+Nordeste,internacoes,17,0.814310841257719,0.003209013677961366,Não,Rejeita normalidade
+Nordeste,pib_pc,17,0.9341835707542928,0.25549810209146806,Sim,Não rejeita normalidade
+Nordeste,rebanho,17,0.8663778573887,0.019252708733780658,Não,Rejeita normalidade
+Nordeste,temp_media,17,0.9352383572738432,0.26596258914628257,Sim,Não rejeita normalidade
+Nordeste,venda_comb,17,0.9045209845861805,0.08087909368468406,Sim,Não rejeita normalidade
+Norte,area_colhida,17,0.8267329131755927,0.0048330763376168515,Não,Rejeita normalidade
+Norte,area_destinada_colheita,17,0.8369626084784938,0.006827835443172286,Não,Rejeita normalidade
+Norte,chuva_media,17,0.9466515364905681,0.405758869783865,Sim,Não rejeita normalidade
+Norte,co2,17,0.9052169314483571,0.08308829375682296,Sim,Não rejeita normalidade
+Norte,consumo_energia_industrial,16,0.944253485473393,0.40441392417468996,Sim,Não rejeita normalidade
+Norte,desmat_area,17,0.9118486635252547,0.10749740664341445,Sim,Não rejeita normalidade
+Norte,frota,17,0.9361415729025166,0.2752329027625413,Sim,Não rejeita normalidade
+Norte,internacoes,17,0.7924869585105554,0.0016032641548678764,Não,Rejeita normalidade
+Norte,pib_pc,17,0.9388192173411756,0.3044507039448804,Sim,Não rejeita normalidade
+Norte,rebanho,17,0.9659544296260094,0.7444712406964585,Sim,Não rejeita normalidade
+Norte,temp_media,17,0.9318585622173771,0.23376123604110616,Sim,Não rejeita normalidade
+Norte,venda_comb,17,0.8735020831880066,0.02498772050206734,Não,Rejeita normalidade
+Sudeste,area_colhida,17,0.9314417867805558,0.23005195926905547,Sim,Não rejeita normalidade
+Sudeste,area_destinada_colheita,17,0.9296066990571272,0.2143696431615531,Sim,Não rejeita normalidade
+Sudeste,chuva_media,17,0.9575215075599973,0.5854639816861644,Sim,Não rejeita normalidade
+Sudeste,co2,17,0.9332915463340679,0.24694563878097037,Sim,Não rejeita normalidade
+Sudeste,consumo_energia_industrial,16,0.8750086554825476,0.03247005482745542,Não,Rejeita normalidade
+Sudeste,desmat_area,17,0.9563912394918859,0.5649475709392924,Sim,Não rejeita normalidade
+Sudeste,frota,17,0.9466720156172131,0.40605578371635737,Sim,Não rejeita normalidade
+Sudeste,internacoes,17,0.6939493012782565,9.880580956547911e-05,Não,Rejeita normalidade
+Sudeste,pib_pc,17,0.930856715528946,0.22493810048909613,Sim,Não rejeita normalidade
+Sudeste,rebanho,17,0.8964151232399884,0.05918224948581175,Sim,Não rejeita normalidade
+Sudeste,temp_media,17,0.9623244277489663,0.675503354433176,Sim,Não rejeita normalidade
+Sudeste,venda_comb,17,0.8788269501114898,0.030436716188297804,Não,Rejeita normalidade
+Sul,area_colhida,17,0.8824341919834837,0.03482749169698268,Não,Rejeita normalidade
+Sul,area_destinada_colheita,17,0.8586387048098041,0.014565474797684861,Não,Rejeita normalidade
+Sul,chuva_media,17,0.9066005117344138,0.08766570274505427,Sim,Não rejeita normalidade
+Sul,co2,17,0.9829348106831051,0.9790476903844845,Sim,Não rejeita normalidade
+Sul,consumo_energia_industrial,16,0.9101877765132274,0.11718472979669181,Sim,Não rejeita normalidade
+Sul,desmat_area,17,0.9348577223186967,0.262141852705187,Sim,Não rejeita normalidade
+Sul,frota,17,0.9484017010059139,0.4317380687545701,Sim,Não rejeita normalidade
+Sul,internacoes,17,0.7244452468568016,0.00022175885277750309,Não,Rejeita normalidade
+Sul,pib_pc,17,0.9289985262307766,0.20939981047198292,Sim,Não rejeita normalidade
+Sul,rebanho,17,0.8470881777526379,0.009684941965041965,Não,Rejeita normalidade
+Sul,temp_media,17,0.8881044263038331,0.04312012769522856,Não,Rejeita normalidade
+Sul,venda_comb,17,0.8548901596327209,0.012744806458502182,Não,Rejeita normalidade

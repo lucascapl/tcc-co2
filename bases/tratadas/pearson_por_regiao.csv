@@ -1,26 +1,56 @@
-Regiao,Variavel,Metodo,n,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao
-Centro-Oeste,Area_Desmatada km2,Pearson,16,-0.8676382289886564,1.335458955305088e-05,Sim,Negativa,Muito forte,Correlação linear significativa
-Centro-Oeste,Frota_total,Pearson,16,-0.7081790620830128,0.002140519533726531,Sim,Negativa,Forte,Correlação linear significativa
-Centro-Oeste,Internacoes_Respiratorias,Pearson,16,-0.755230928362408,0.0007178216926588223,Sim,Negativa,Forte,Correlação linear significativa
-Centro-Oeste,Populacao,Pearson,16,-0.71088690077649,0.002021462973167975,Sim,Negativa,Forte,Correlação linear significativa
-Centro-Oeste,Rebanho_total,Pearson,16,-0.7019448763616735,0.0024363274967267217,Sim,Negativa,Forte,Correlação linear significativa
-Nordeste,Area_Desmatada km2,Pearson,16,-0.34343635701066105,0.19279505047767562,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
-Nordeste,Frota_total,Pearson,16,-0.2774138172662222,0.2982284157522238,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
-Nordeste,Internacoes_Respiratorias,Pearson,16,-0.373163028588154,0.15455902304151087,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
-Nordeste,Populacao,Pearson,16,-0.29323227350099645,0.2703578890012862,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
-Nordeste,Rebanho_total,Pearson,16,-0.4631273216344159,0.07082513450407177,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
-Norte,Area_Desmatada km2,Pearson,16,-0.7363603993425111,0.0011425418426954028,Sim,Negativa,Forte,Correlação linear significativa
-Norte,Frota_total,Pearson,16,-0.6052511188683456,0.012979713245458612,Sim,Negativa,Forte,Correlação linear significativa
-Norte,Internacoes_Respiratorias,Pearson,16,-0.8851412564855767,5.1931702903391386e-06,Sim,Negativa,Muito forte,Correlação linear significativa
-Norte,Populacao,Pearson,16,-0.5950908908551212,0.015024109637577956,Sim,Negativa,Moderada,Correlação linear significativa
-Norte,Rebanho_total,Pearson,16,-0.21995516483020444,0.4130439774228122,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
-Sudeste,Area_Desmatada km2,Pearson,16,0.691919046804109,0.0029807816887664896,Sim,Positiva,Forte,Correlação linear significativa
-Sudeste,Frota_total,Pearson,16,0.6551189758027681,0.005877774512363315,Sim,Positiva,Forte,Correlação linear significativa
-Sudeste,Internacoes_Respiratorias,Pearson,16,0.6853414078753217,0.003388476064711382,Sim,Positiva,Forte,Correlação linear significativa
-Sudeste,Populacao,Pearson,16,0.5661646287547188,0.02223919563645054,Sim,Positiva,Moderada,Correlação linear significativa
-Sudeste,Rebanho_total,Pearson,16,0.7628872851940263,0.0005875646127549031,Sim,Positiva,Forte,Correlação linear significativa
-Sul,Area_Desmatada km2,Pearson,16,0.2672078659428055,0.3170796069958358,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
-Sul,Frota_total,Pearson,16,0.34240700987369144,0.19422008129132579,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
-Sul,Internacoes_Respiratorias,Pearson,16,0.30359036255771055,0.25299973077939314,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
-Sul,Populacao,Pearson,16,0.2949569997204537,0.26741854363985496,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
-Sul,Rebanho_total,Pearson,16,0.17330798195624086,0.520948172830987,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+Regiao,Variavel,Metodo,Defasagem_CO2,n,Ano_inicial_min,Ano_inicial_max,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao
+Centro-Oeste,area_colhida,Pearson,0,17,2003,2019,-0.5138655082312172,0.034854477808859606,Sim,Negativa,Moderada,Correlação linear significativa
+Centro-Oeste,area_destinada_colheita,Pearson,0,17,2003,2019,-0.5140528981866624,0.03477692206789839,Sim,Negativa,Moderada,Correlação linear significativa
+Centro-Oeste,chuva_media,Pearson,0,17,2003,2019,-0.21058494880992618,0.4172009059762491,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+Centro-Oeste,consumo_energia_industrial,Pearson,0,16,2004,2019,-0.5612402035253986,0.023695528479909314,Sim,Negativa,Moderada,Correlação linear significativa
+Centro-Oeste,desmat_area,Pearson,0,17,2003,2019,0.9964846915467878,1.4280097352045965e-17,Sim,Positiva,Muito forte,Correlação linear significativa
+Centro-Oeste,frota,Pearson,0,17,2003,2019,-0.6808907926095153,0.002622040166014736,Sim,Negativa,Forte,Correlação linear significativa
+Centro-Oeste,internacoes,Pearson,0,17,2003,2019,-0.7562402039750763,0.00044366379837972074,Sim,Negativa,Forte,Correlação linear significativa
+Centro-Oeste,pib_pc,Pearson,0,17,2003,2019,-0.6334487937529519,0.006334158476670821,Sim,Negativa,Forte,Correlação linear significativa
+Centro-Oeste,rebanho,Pearson,0,17,2003,2019,-0.30776169760642913,0.22947176379836107,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+Centro-Oeste,temp_media,Pearson,0,17,2003,2019,0.02483556070169101,0.9246216616797805,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+Centro-Oeste,venda_comb,Pearson,0,17,2003,2019,-0.6254051811137451,0.007255174363841317,Sim,Negativa,Forte,Correlação linear significativa
+Nordeste,area_colhida,Pearson,0,17,2003,2019,-0.2576238398861736,0.3181405310036614,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+Nordeste,area_destinada_colheita,Pearson,0,17,2003,2019,-0.16567016095418238,0.5251277381322501,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Nordeste,chuva_media,Pearson,0,17,2003,2019,-0.09075018752697274,0.7290512543294069,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Nordeste,consumo_energia_industrial,Pearson,0,16,2004,2019,0.1467847599052452,0.587498480648061,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+Nordeste,desmat_area,Pearson,0,17,2003,2019,0.8512313185952372,1.4693750762342685e-05,Sim,Positiva,Muito forte,Correlação linear significativa
+Nordeste,frota,Pearson,0,17,2003,2019,-0.18685960070999907,0.4726827085384472,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Nordeste,internacoes,Pearson,0,17,2003,2019,-0.3512108672494512,0.16688277095458487,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+Nordeste,pib_pc,Pearson,0,17,2003,2019,-0.18840105826126485,0.4689715339884527,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Nordeste,rebanho,Pearson,0,17,2003,2019,-0.2505442252585196,0.33208387332985545,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+Nordeste,temp_media,Pearson,0,17,2003,2019,-0.04953088930891549,0.8502648962548359,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Nordeste,venda_comb,Pearson,0,17,2003,2019,-0.07902817277636043,0.7630379569606854,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Norte,area_colhida,Pearson,0,17,2003,2019,-0.033787269182571855,0.8975687726686666,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Norte,area_destinada_colheita,Pearson,0,17,2003,2019,-0.0490223357349175,0.8517862371598148,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Norte,chuva_media,Pearson,0,17,2003,2019,-0.15884434677342715,0.5425692229819673,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Norte,consumo_energia_industrial,Pearson,0,16,2004,2019,-0.6548102115037765,0.005909164916796155,Sim,Negativa,Forte,Correlação linear significativa
+Norte,desmat_area,Pearson,0,17,2003,2019,0.9863280950807272,3.681540958381641e-13,Sim,Positiva,Muito forte,Correlação linear significativa
+Norte,frota,Pearson,0,17,2003,2019,-0.46815029597759295,0.05806398664859445,Não,Negativa,Moderada,Sem evidência de correlação linear significativa
+Norte,internacoes,Pearson,0,17,2003,2019,-0.8476357433870023,1.7384089118671764e-05,Sim,Negativa,Muito forte,Correlação linear significativa
+Norte,pib_pc,Pearson,0,17,2003,2019,-0.5042959662418806,0.038993743558725334,Sim,Negativa,Moderada,Correlação linear significativa
+Norte,rebanho,Pearson,0,17,2003,2019,-0.39118938560479277,0.12049582360856968,Não,Negativa,Fraca,Sem evidência de correlação linear significativa
+Norte,temp_media,Pearson,0,17,2003,2019,0.4614186600377662,0.06226996283263682,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+Norte,venda_comb,Pearson,0,17,2003,2019,-0.7788843993374126,0.00022939601509366634,Sim,Negativa,Forte,Correlação linear significativa
+Sudeste,area_colhida,Pearson,0,17,2003,2019,0.592112989470257,0.012272087538770958,Sim,Positiva,Moderada,Correlação linear significativa
+Sudeste,area_destinada_colheita,Pearson,0,17,2003,2019,0.5970671210948633,0.011388402431528841,Sim,Positiva,Moderada,Correlação linear significativa
+Sudeste,chuva_media,Pearson,0,17,2003,2019,0.3605358886883965,0.15512962722040433,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+Sudeste,consumo_energia_industrial,Pearson,0,16,2004,2019,0.5037706522996015,0.04664173316163643,Sim,Positiva,Moderada,Correlação linear significativa
+Sudeste,desmat_area,Pearson,0,17,2003,2019,-0.19582609093349657,0.4512995625889325,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Sudeste,frota,Pearson,0,17,2003,2019,0.5616497786912857,0.018966169152586126,Sim,Positiva,Moderada,Correlação linear significativa
+Sudeste,internacoes,Pearson,0,17,2003,2019,0.6607666486281919,0.00388141200048923,Sim,Positiva,Forte,Correlação linear significativa
+Sudeste,pib_pc,Pearson,0,17,2003,2019,0.5918648230425115,0.012317741028332569,Sim,Positiva,Moderada,Correlação linear significativa
+Sudeste,rebanho,Pearson,0,17,2003,2019,0.20047099484403608,0.4404188729521817,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+Sudeste,temp_media,Pearson,0,17,2003,2019,-0.16409273328813231,0.5291354446648564,Não,Negativa,Muito fraca,Sem evidência de correlação linear significativa
+Sudeste,venda_comb,Pearson,0,17,2003,2019,0.7644299979502337,0.0003523891050269094,Sim,Positiva,Forte,Correlação linear significativa
+Sul,area_colhida,Pearson,0,17,2003,2019,0.5989543107221743,0.011065376737150625,Sim,Positiva,Moderada,Correlação linear significativa
+Sul,area_destinada_colheita,Pearson,0,17,2003,2019,0.5631546624365077,0.018579890559248555,Sim,Positiva,Moderada,Correlação linear significativa
+Sul,chuva_media,Pearson,0,17,2003,2019,0.26875270897738807,0.2969296780892194,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+Sul,consumo_energia_industrial,Pearson,0,16,2004,2019,0.7036254158279767,0.0023535148078643285,Sim,Positiva,Forte,Correlação linear significativa
+Sul,desmat_area,Pearson,0,17,2003,2019,0.4541185186014138,0.0670815752547172,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+Sul,frota,Pearson,0,17,2003,2019,0.37873091311150525,0.13384548374724536,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+Sul,internacoes,Pearson,0,17,2003,2019,0.31440227135459825,0.21905714247023825,Não,Positiva,Fraca,Sem evidência de correlação linear significativa
+Sul,pib_pc,Pearson,0,17,2003,2019,0.4532096097418126,0.06769927641362274,Não,Positiva,Moderada,Sem evidência de correlação linear significativa
+Sul,rebanho,Pearson,0,17,2003,2019,0.06626866613376754,0.80050178922123,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+Sul,temp_media,Pearson,0,17,2003,2019,0.08389756207298285,0.7488661175509035,Não,Positiva,Muito fraca,Sem evidência de correlação linear significativa
+Sul,venda_comb,Pearson,0,17,2003,2019,0.5407499428561165,0.02500761588767934,Sim,Positiva,Moderada,Correlação linear significativa

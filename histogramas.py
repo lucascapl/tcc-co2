@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from utils import agregar_por_regiao_ano, obter_variaveis_numericas, preparar_pasta_graficos
+from utils import base_regional_ano, obter_variaveis_numericas, preparar_pasta_graficos
 
 sns.set_theme(style="whitegrid")
 
@@ -21,7 +21,7 @@ def histograma_variavel_por_regiao(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
     base_plot = df_regional[["Regiao", "Ano", variavel]].dropna().copy()
@@ -61,7 +61,7 @@ def histograma_variavel_geral(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
     base_plot = df_regional[[variavel]].dropna().copy()
@@ -88,10 +88,10 @@ def histogramas_todas_variaveis_por_regiao(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
+    df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(
         df_regional,
         coluna_ano="Ano",
@@ -118,15 +118,17 @@ def histogramas_co2_vs_todas(
     bins=10,
     kde=True,
     salvar=False,
-    pasta="graficos",
+    pasta="graficos/histogramas",
     mostrar=True,
 ):
-    df_regional = agregar_por_regiao_ano(df, ignorar_colunas=ignorar_colunas)
+    df_regional = base_regional_ano(df, ignorar_colunas=ignorar_colunas)
     variaveis = obter_variaveis_numericas(
         df_regional,
         coluna_ano="Ano",
         ignorar_colunas=ignorar_colunas
     )
+
+    variaveis = [v for v in variaveis if v != "co2"]
 
     for var in variaveis:
         histograma_variavel_por_regiao(

@@ -1,26 +1,56 @@
-Regiao,Variavel,Metodo,n,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao
-Centro-Oeste,Area_Desmatada km2,Spearman,16,-0.6176470588235293,0.010787984601948844,Sim,Negativa,Forte,Correlação monotônica significativa
-Centro-Oeste,Frota_total,Spearman,16,-0.6176470588235293,0.010787984601948844,Sim,Negativa,Forte,Correlação monotônica significativa
-Centro-Oeste,Internacoes_Respiratorias,Spearman,16,-0.6705882352941177,0.0044672086977381245,Sim,Negativa,Forte,Correlação monotônica significativa
-Centro-Oeste,Populacao,Spearman,16,-0.6176470588235293,0.010787984601948844,Sim,Negativa,Forte,Correlação monotônica significativa
-Centro-Oeste,Rebanho_total,Spearman,16,-0.6470588235294118,0.006742077007179861,Sim,Negativa,Forte,Correlação monotônica significativa
-Nordeste,Area_Desmatada km2,Spearman,16,-0.30882352941176466,0.24449869579851782,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
-Nordeste,Frota_total,Spearman,16,-0.30882352941176466,0.24449869579851782,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
-Nordeste,Internacoes_Respiratorias,Spearman,16,-0.2735294117647059,0.3053231563074051,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
-Nordeste,Populacao,Spearman,16,-0.3205882352941176,0.22604542220798232,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
-Nordeste,Rebanho_total,Spearman,16,-0.4617647058823529,0.07176841584053802,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
-Norte,Area_Desmatada km2,Spearman,16,-0.5088235294117647,0.04413521823498383,Sim,Negativa,Moderada,Correlação monotônica significativa
-Norte,Frota_total,Spearman,16,-0.5088235294117647,0.04413521823498383,Sim,Negativa,Moderada,Correlação monotônica significativa
-Norte,Internacoes_Respiratorias,Spearman,16,-0.9058823529411765,1.3635133553269884e-06,Sim,Negativa,Muito forte,Correlação monotônica significativa
-Norte,Populacao,Spearman,16,-0.5088235294117647,0.04413521823498383,Sim,Negativa,Moderada,Correlação monotônica significativa
-Norte,Rebanho_total,Spearman,16,-0.31764705882352945,0.2305734636218452,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
-Sudeste,Area_Desmatada km2,Spearman,16,0.6441176470588235,0.007081524086582876,Sim,Positiva,Forte,Correlação monotônica significativa
-Sudeste,Frota_total,Spearman,16,0.6441176470588235,0.007081524086582876,Sim,Positiva,Forte,Correlação monotônica significativa
-Sudeste,Internacoes_Respiratorias,Spearman,16,0.611764705882353,0.011788405053115205,Sim,Positiva,Forte,Correlação monotônica significativa
-Sudeste,Populacao,Spearman,16,0.6441176470588235,0.007081524086582876,Sim,Positiva,Forte,Correlação monotônica significativa
-Sudeste,Rebanho_total,Spearman,16,0.7411764705882353,0.0010184695495736751,Sim,Positiva,Forte,Correlação monotônica significativa
-Sul,Area_Desmatada km2,Spearman,16,0.38823529411764707,0.13728162367278135,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
-Sul,Frota_total,Spearman,16,0.38823529411764707,0.13728162367278135,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
-Sul,Internacoes_Respiratorias,Spearman,16,0.09117647058823529,0.7370049501736591,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
-Sul,Populacao,Spearman,16,0.34411764705882353,0.19185563142554293,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
-Sul,Rebanho_total,Spearman,16,0.29705882352941176,0.26386301461352263,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+Regiao,Variavel,Metodo,Defasagem_CO2,n,Ano_inicial_min,Ano_inicial_max,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao
+Centro-Oeste,area_colhida,Spearman,0,17,2003,2019,-0.41666666666666674,0.09615710991420606,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+Centro-Oeste,area_destinada_colheita,Spearman,0,17,2003,2019,-0.44117647058823534,0.07627668292313645,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+Centro-Oeste,chuva_media,Spearman,0,17,2003,2019,-0.32352941176470595,0.2052466628278676,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Centro-Oeste,consumo_energia_industrial,Spearman,0,16,2004,2019,-0.36176470588235293,0.16855882250388424,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Centro-Oeste,desmat_area,Spearman,0,17,2003,2019,0.948529411764706,6.859595261700981e-09,Sim,Positiva,Muito forte,Correlação monotônica significativa
+Centro-Oeste,frota,Spearman,0,17,2003,2019,-0.5171568627450981,0.03351135213888932,Sim,Negativa,Moderada,Correlação monotônica significativa
+Centro-Oeste,internacoes,Spearman,0,17,2003,2019,-0.6421568627450981,0.005445541252413797,Sim,Negativa,Forte,Correlação monotônica significativa
+Centro-Oeste,pib_pc,Spearman,0,17,2003,2019,-0.5171568627450981,0.03351135213888932,Sim,Negativa,Moderada,Correlação monotônica significativa
+Centro-Oeste,rebanho,Spearman,0,17,2003,2019,-0.4558823529411765,0.06589472039088745,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+Centro-Oeste,temp_media,Spearman,0,17,2003,2019,0.26960784313725494,0.2953357994714052,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+Centro-Oeste,venda_comb,Spearman,0,17,2003,2019,-0.4534313725490197,0.06754818013371679,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+Nordeste,area_colhida,Spearman,0,17,2003,2019,-0.3186274509803922,0.2125915923704277,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Nordeste,area_destinada_colheita,Spearman,0,17,2003,2019,-0.17156862745098042,0.5102663098717944,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+Nordeste,chuva_media,Spearman,0,17,2003,2019,-0.02450980392156863,0.9256077760199252,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+Nordeste,consumo_energia_industrial,Spearman,0,16,2004,2019,0.11176470588235293,0.6802736949858407,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Nordeste,desmat_area,Spearman,0,17,2003,2019,0.877450980392157,3.716784905159025e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa
+Nordeste,frota,Spearman,0,17,2003,2019,-0.22549019607843138,0.3841966507618189,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Nordeste,internacoes,Spearman,0,17,2003,2019,-0.22058823529411767,0.3948890883363402,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Nordeste,pib_pc,Spearman,0,17,2003,2019,-0.22549019607843138,0.3841966507618189,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Nordeste,rebanho,Spearman,0,17,2003,2019,-0.14215686274509806,0.586262862651232,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+Nordeste,temp_media,Spearman,0,17,2003,2019,-0.058823529411764705,0.8225588681711513,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+Nordeste,venda_comb,Spearman,0,17,2003,2019,-0.13480392156862747,0.6059663630124607,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa
+Norte,area_colhida,Spearman,0,17,2003,2019,0.03431372549019608,0.8959808104551742,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Norte,area_destinada_colheita,Spearman,0,17,2003,2019,0.002450980392156863,0.9925511887884692,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Norte,chuva_media,Spearman,0,17,2003,2019,-0.27941176470588236,0.27743032579122134,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Norte,consumo_energia_industrial,Spearman,0,16,2004,2019,-0.4794117647058824,0.0602393025043159,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa
+Norte,desmat_area,Spearman,0,17,2003,2019,0.9730392156862747,5.769230678402259e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa
+Norte,frota,Spearman,0,17,2003,2019,-0.36764705882352944,0.14655429178401475,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Norte,internacoes,Spearman,0,17,2003,2019,-0.8602941176470589,9.427383759906566e-06,Sim,Negativa,Muito forte,Correlação monotônica significativa
+Norte,pib_pc,Spearman,0,17,2003,2019,-0.36764705882352944,0.14655429178401475,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Norte,rebanho,Spearman,0,17,2003,2019,-0.2524509803921569,0.32829422956501814,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Norte,temp_media,Spearman,0,17,2003,2019,0.556372549019608,0.020370586624518953,Sim,Positiva,Moderada,Correlação monotônica significativa
+Norte,venda_comb,Spearman,0,17,2003,2019,-0.5514705882352942,0.021746579686423604,Sim,Negativa,Moderada,Correlação monotônica significativa
+Sudeste,area_colhida,Spearman,0,17,2003,2019,0.5514705882352942,0.021746579686423604,Sim,Positiva,Moderada,Correlação monotônica significativa
+Sudeste,area_destinada_colheita,Spearman,0,17,2003,2019,0.5588235294117647,0.01970856591580171,Sim,Positiva,Moderada,Correlação monotônica significativa
+Sudeste,chuva_media,Spearman,0,17,2003,2019,0.37500000000000006,0.13803484396804877,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+Sudeste,consumo_energia_industrial,Spearman,0,16,2004,2019,0.4735294117647058,0.06391907182682006,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+Sudeste,desmat_area,Spearman,0,17,2003,2019,-0.2058823529411765,0.42791485314270766,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Sudeste,frota,Spearman,0,17,2003,2019,0.5392156862745099,0.025503680315881874,Sim,Positiva,Moderada,Correlação monotônica significativa
+Sudeste,internacoes,Spearman,0,17,2003,2019,0.6299019607843138,0.00672792962173471,Sim,Positiva,Forte,Correlação monotônica significativa
+Sudeste,pib_pc,Spearman,0,17,2003,2019,0.5392156862745099,0.025503680315881874,Sim,Positiva,Moderada,Correlação monotônica significativa
+Sudeste,rebanho,Spearman,0,17,2003,2019,0.07598039215686275,0.7719448512425435,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Sudeste,temp_media,Spearman,0,17,2003,2019,-0.232843137254902,0.368459654854376,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa
+Sudeste,venda_comb,Spearman,0,17,2003,2019,0.732843137254902,0.0008187010454083451,Sim,Positiva,Forte,Correlação monotônica significativa
+Sul,area_colhida,Spearman,0,17,2003,2019,0.6127450980392157,0.008919495078273157,Sim,Positiva,Forte,Correlação monotônica significativa
+Sul,area_destinada_colheita,Spearman,0,17,2003,2019,0.5857843137254902,0.013478995289806908,Sim,Positiva,Moderada,Correlação monotônica significativa
+Sul,chuva_media,Spearman,0,17,2003,2019,0.29901960784313725,0.24365533759455596,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa
+Sul,consumo_energia_industrial,Spearman,0,16,2004,2019,0.6882352941176471,0.003203908614395742,Sim,Positiva,Forte,Correlação monotônica significativa
+Sul,desmat_area,Spearman,0,17,2003,2019,0.4093137254901961,0.10278434681514409,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+Sul,frota,Spearman,0,17,2003,2019,0.41421568627450983,0.09833118794961318,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+Sul,internacoes,Spearman,0,17,2003,2019,0.07107843137254903,0.7863266619781205,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Sul,pib_pc,Spearman,0,17,2003,2019,0.41421568627450983,0.09833118794961318,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
+Sul,rebanho,Spearman,0,17,2003,2019,0.05392156862745098,0.8371514461082936,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Sul,temp_media,Spearman,0,17,2003,2019,0.14460784313725492,0.5797547992794123,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa
+Sul,venda_comb,Spearman,0,17,2003,2019,0.47794117647058826,0.05232854189081123,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa
