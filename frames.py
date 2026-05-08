@@ -8,7 +8,7 @@ from pipelines.rebanho_pipe import processar_rebanho
 from pipelines.doencas_respiratorias_pipe import processar_doencas_respiratorias
 from pipelines.combustiveis_pipe import processar_combustiveis
 from pipelines.desmatamento_mapbiomas_pipe import processar_desmatamento_mapbiomas
-from pipelines.inmet_pipe import processar_inmet_temperatura, processar_inmet_chuva
+from pipelines.inmet_pipe import processar_inmet_clima
 from pipelines.pib_pipe import processar_pib_per_capita
 from pipelines.area_destinada_colheita_pipe import processar_area_destinada_colheita
 from pipelines.area_colhida_pipe import processar_area_colhida
@@ -18,12 +18,17 @@ from utils import salvar_tratado
 
 REPROCESSAR_TUDO = True
 
-# Escolha aqui a granularidade do dataframe principal:
 # False => Estado/Ano
 # True  => Regiao/Ano
 AGRUPAR_POR_REGIAO = False
 CHAVES_MERGE = ["Regiao", "Ano"] if AGRUPAR_POR_REGIAO else ["Estado", "Ano"]
 SUFIXO_GRANULARIDADE = "regiao" if AGRUPAR_POR_REGIAO else "estado"
+
+PASTA_INMET = "bases/inmet"
+INMET_SOMENTE_CAPITAIS = False
+INMET_PARALELO = True
+# None escolhe automaticamente. Em HD mecânico, teste 4 ou 8. Em SSD/NVMe, 16 ou 32 costuma ir bem.
+INMET_MAX_WORKERS = None
 
 
 def carregar_ou_processar(nome_base_tratada: str, funcao_processamento, *args, **kwargs) -> pd.DataFrame:
@@ -44,6 +49,13 @@ def validar_chaves(df: pd.DataFrame, nome_base: str) -> None:
             f"A base '{nome_base}' nao esta na granularidade esperada "
             f"({', '.join(CHAVES_MERGE)}). Colunas ausentes: {chaves_faltantes}. "
             f"Confira se o pipeline recebeu agrupar_por_regiao={AGRUPAR_POR_REGIAO}."
+        )
+
+    duplicadas = df.duplicated(CHAVES_MERGE).sum()
+    if duplicadas > 0:
+        raise ValueError(
+            f"A base '{nome_base}' possui {duplicadas} linhas duplicadas para as chaves "
+            f"{CHAVES_MERGE}. Agregue a base antes do merge."
         )
 
 
@@ -75,17 +87,18 @@ df_desmatamento_mapbiomas = preparar_base(
     agrupar_por_regiao=AGRUPAR_POR_REGIAO,
 )
 
+# INMET rápido: temperatura e chuva no mesmo processamento, para não ler 10 mil arquivos duas vezes.
+df_inmet_clima = preparar_base(
+    "inmet-clima",
+    processar_inmet_clima,
+    pasta_inmet=PASTA_INMET,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+    somente_capitais=INMET_SOMENTE_CAPITAIS,
+    paralelo=INMET_PARALELO,
+    max_workers=INMET_MAX_WORKERS,
+)
+
 """
-df_inmet_temperatura = preparar_base(
-    "inmet-temp",
-    processar_inmet_temperatura,
-    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
-)
-df_inmet_chuva = preparar_base(
-    "inmet-chuva",
-    processar_inmet_chuva,
-    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
-)
 df_pib_percapita = preparar_base(
     "pib-percapita",
     processar_pib_per_capita,
@@ -119,8 +132,7 @@ for nome_base, df_secundario in [
     ("doencas-resp", df_doencas),
     ("venda-combustiveis", df_combustiveis),
     ("desmatamento-mapbiomas", df_desmatamento_mapbiomas),
-    # ("inmet-temp", df_inmet_temperatura),
-    # ("inmet-chuva", df_inmet_chuva),
+    ("inmet-clima", df_inmet_clima),
     # ("pib-percapita", df_pib_percapita),
     ("area-destinada-colheita", df_area_destinada_colheita),
     ("area-colhida", df_area_colhida),
