@@ -1,23 +1,24 @@
-import csv
-
 import pandas as pd
 
-from utils import ANO_FINAL, ANO_INICIAL, ORDEM_REGIOES, ordenar_regioes, salvar_tratado
+from utils import ANO_FINAL, ANO_INICIAL, normalizar_estado, salvar_tratado, agregar_por_regiao_ano
 
 
-def _ler_linhas_csv(caminho_arquivo: str) -> list[list[str]]:
-    for encoding in ["utf-8-sig", "latin1"]:
-        try:
-            with open(caminho_arquivo, "r", encoding=encoding, newline="") as f:
-                return list(csv.reader(f))
-        except UnicodeDecodeError:
-            continue
-    raise UnicodeDecodeError("csv", b"", 0, 1, f"Nao foi possivel decodificar: {caminho_arquivo}")
-
-
-def _parse_numero_brasileiro(valor):
+def _extrair_ano(valor) -> int | None:
     if pd.isna(valor):
         return None
+    texto = str(valor).strip().replace("*", "")
+    if not texto:
+        return None
+    if texto.isdigit():
+        return int(texto)
+    return None
+
+
+def _parse_numero(valor):
+    if pd.isna(valor):
+        return None
+    if isinstance(valor, (int, float)):
+        return float(valor)
     texto = str(valor).strip()
     if not texto or texto == "...":
         return None
@@ -26,83 +27,63 @@ def _parse_numero_brasileiro(valor):
 
 
 def processar_consumo_energia_industrial(
-    caminho_arquivo: str = "bases/consumo-energia-eletrica-industrial-2004-2025-epe.csv",
-    agrupar_por_regiao: bool = True,
+    caminho_arquivo: str = "bases/consumo-energia-eletrica-industrial-estado-2004-2025-epe.xlsx",
+    agrupar_por_regiao: bool = False,
 ):
     """
-    Processa a base da EPE e extrai o consumo anual industrial (coluna ANO)
-    por regiao geografica.
+    Processa a base estadual da EPE (planilha com anos e meses em linhas separadas)
+    e devolve consumo anual por UF.
 
-    Saida:
+    Saida estadual:
+        Estado | Ano | consumo_energia_industrial
+
+    Saida regional (opcional):
         Regiao | Ano | consumo_energia_industrial
     """
-    if not agrupar_por_regiao:
-        raise ValueError("Esta base ja e regional. Use agrupar_por_regiao=True.")
+    df = pd.read_excel(caminho_arquivo, sheet_name=0, header=None)
 
-    linhas = _ler_linhas_csv(caminho_arquivo)
-    registros = []
+    anos_linha = df.iloc[4, 1:]
+    anos = [_extrair_ano(a) for a in anos_linha.tolist()]
+    if all(a is None for a in anos):
+        raise ValueError("Nao foi possivel localizar a linha de anos na planilha.")
 
-    i = 0
-    while i < len(linhas):
-        linha = linhas[i]
-        primeira_col = linha[0].strip() if len(linha) > 0 else ""
-        segunda_col = linha[1].strip() if len(linha) > 1 else ""
+    dados = df.iloc[6:, 1:].copy()
+    dados = dados.applymap(_parse_numero)
+    dados.columns = anos
 
-        if primeira_col == "" and segunda_col:
-            ano_txt = segunda_col.replace("*", "").strip()
-            if ano_txt.isdigit():
-                ano = int(ano_txt)
+    # soma os meses por ano
+    dados_ano = dados.groupby(level=0, axis=1).sum(min_count=1)
 
-                j = i + 1
-                while j < len(linhas):
-                    linha_j = linhas[j]
-                    c0 = linha_j[0].strip() if len(linha_j) > 0 else ""
-                    c1 = linha_j[1].strip() if len(linha_j) > 1 else ""
+    estados = df.iloc[6:, 0].astype(str).str.strip()
+    estados = estados[~estados.str.upper().str.contains("TOTAL", na=False)]
+    estados = estados[~estados.str.upper().str.contains("NOTA", na=False)]
+    estados_uf = estados.apply(normalizar_estado)
 
-                    if c0 == "" and c1 and c1.replace("*", "").strip().isdigit():
-                        break
+    dados_ano = dados_ano.loc[estados.index]
+    dados_ano.insert(0, "Estado", estados_uf.values)
+    dados_ano = dados_ano.dropna(subset=["Estado"])
 
-                    if "REGIAO GEOGRAFICA" in c0.upper() or "REGIÃO GEOGRÁFICA" in c0.upper():
-                        k = j + 1
-                        while k < len(linhas):
-                            linha_k = linhas[k]
-                            nome_regiao = linha_k[0].strip() if len(linha_k) > 0 else ""
+    df_long = dados_ano.melt(
+        id_vars=["Estado"],
+        var_name="Ano",
+        value_name="consumo_energia_industrial",
+    )
+    df_long["Ano"] = pd.to_numeric(df_long["Ano"], errors="coerce").astype("Int64")
+    df_long = df_long.dropna(subset=["Ano"])
+    df_long = df_long[(df_long["Ano"] >= ANO_INICIAL) & (df_long["Ano"] <= ANO_FINAL)]
 
-                            if "SUBSISTEMA" in nome_regiao.upper():
-                                break
+    df_long["consumo_energia_industrial"] = pd.to_numeric(
+        df_long["consumo_energia_industrial"], errors="coerce"
+    )
 
-                            if nome_regiao in ORDEM_REGIOES:
-                                valor_ano = linha_k[13] if len(linha_k) > 13 else None
-                                registros.append(
-                                    {
-                                        "Regiao": nome_regiao,
-                                        "Ano": ano,
-                                        "consumo_energia_industrial": _parse_numero_brasileiro(valor_ano),
-                                    }
-                                )
-                            k += 1
-                        break
-                    j += 1
-
-                i = j
-                continue
-
-        i += 1
-
-    if not registros:
-        raise ValueError("Nenhum registro regional anual de energia foi encontrado na base.")
-
-    df = pd.DataFrame(registros)
-    df["Ano"] = pd.to_numeric(df["Ano"], errors="coerce").astype("Int64")
-    df = df[(df["Ano"] >= ANO_INICIAL) & (df["Ano"] <= ANO_FINAL)].copy()
-
-    df["consumo_energia_industrial"] = pd.to_numeric(df["consumo_energia_industrial"], errors="coerce")
-
-    # Mantem chave unica por regiao/ano, somando se houver repeticao na origem.
-    df = (
-        df.groupby(["Regiao", "Ano"], as_index=False)["consumo_energia_industrial"]
+    # Mantem chave unica por estado/ano
+    df_long = (
+        df_long.groupby(["Estado", "Ano"], as_index=False)["consumo_energia_industrial"]
         .sum(min_count=1)
     )
 
-    df = ordenar_regioes(df, coluna_regiao="Regiao", coluna_ano="Ano")
-    return salvar_tratado(df, "energia-industrial-regiao")
+    if agrupar_por_regiao:
+        df_long = agregar_por_regiao_ano(df_long)
+        return salvar_tratado(df_long, "energia-industrial-regiao")
+
+    return salvar_tratado(df_long, "energia-industrial-estado")
