@@ -1,6 +1,7 @@
-# frame.py
+# frames.py
 import os
 import pandas as pd
+
 from pipelines.co2_pipe import processar_co2
 from pipelines.frota_pipe import processar_frota
 from pipelines.rebanho_pipe import processar_rebanho
@@ -15,7 +16,14 @@ from pipelines.energia_industrial_pipe import processar_consumo_energia_industri
 
 from utils import salvar_tratado
 
-REPROCESSAR_TUDO = False
+REPROCESSAR_TUDO = True
+
+# Escolha aqui a granularidade do dataframe principal:
+# False => Estado/Ano
+# True  => Regiao/Ano
+AGRUPAR_POR_REGIAO = False
+CHAVES_MERGE = ["Regiao", "Ano"] if AGRUPAR_POR_REGIAO else ["Estado", "Ano"]
+SUFIXO_GRANULARIDADE = "regiao" if AGRUPAR_POR_REGIAO else "estado"
 
 
 def carregar_ou_processar(nome_base_tratada: str, funcao_processamento, *args, **kwargs) -> pd.DataFrame:
@@ -28,71 +36,101 @@ def carregar_ou_processar(nome_base_tratada: str, funcao_processamento, *args, *
     print(f"[processando] Gerando base: {nome_base_tratada}")
     return funcao_processamento(*args, **kwargs)
 
-# Processar bases individualmente já agregadas por região
-df_co2 = carregar_ou_processar("co2-regiao", processar_co2, agrupar_por_regiao=True)
-df_frota = carregar_ou_processar("frota-regiao", processar_frota, agrupar_por_regiao=True)
-df_rebanho = carregar_ou_processar("rebanho-regiao", processar_rebanho, agrupar_por_regiao=True)
-df_doencas = carregar_ou_processar(
-    "doencas-resp-regiao",
+
+def validar_chaves(df: pd.DataFrame, nome_base: str) -> None:
+    chaves_faltantes = [col for col in CHAVES_MERGE if col not in df.columns]
+    if chaves_faltantes:
+        raise ValueError(
+            f"A base '{nome_base}' nao esta na granularidade esperada "
+            f"({', '.join(CHAVES_MERGE)}). Colunas ausentes: {chaves_faltantes}. "
+            f"Confira se o pipeline recebeu agrupar_por_regiao={AGRUPAR_POR_REGIAO}."
+        )
+
+
+def preparar_base(nome_base_tratada: str, funcao_processamento, *args, **kwargs) -> pd.DataFrame:
+    nome_cache = f"{nome_base_tratada}-{SUFIXO_GRANULARIDADE}"
+    df = carregar_ou_processar(nome_cache, funcao_processamento, *args, **kwargs)
+    validar_chaves(df, nome_base_tratada)
+    return df
+
+
+# Processar bases individualmente na mesma granularidade do dataframe principal.
+df_co2 = preparar_base("co2", processar_co2, agrupar_por_regiao=AGRUPAR_POR_REGIAO)
+df_frota = preparar_base("frota", processar_frota, agrupar_por_regiao=AGRUPAR_POR_REGIAO)
+df_rebanho = preparar_base("rebanho", processar_rebanho, agrupar_por_regiao=AGRUPAR_POR_REGIAO)
+df_doencas = preparar_base(
+    "doencas-resp",
     processar_doencas_respiratorias,
     "bases/doencas_respiratorias",
-    agrupar_por_regiao=True,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
 )
-df_combustiveis = carregar_ou_processar("venda-combustiveis", processar_combustiveis, agrupar_por_regiao=True)
-df_desmatamento_mapbiomas = carregar_ou_processar(
+df_combustiveis = preparar_base(
+    "venda-combustiveis",
+    processar_combustiveis,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+df_desmatamento_mapbiomas = preparar_base(
     "desmatamento-mapbiomas",
     processar_desmatamento_mapbiomas,
-    agrupar_por_regiao=True,
-)
-df_inmet_temperatura = carregar_ou_processar(
-    "inmet-temp-regiao",
-    processar_inmet_temperatura,
-    agrupar_por_regiao=True,
-)
-df_inmet_chuva = carregar_ou_processar(
-    "inmet-chuva-regiao",
-    processar_inmet_chuva,
-    agrupar_por_regiao=True,
-)
-df_pib_percapita = carregar_ou_processar(
-    "pib-percapita-regiao",
-    processar_pib_per_capita,
-    agrupar_por_regiao=True,
-)
-df_area_destinada_colheita = carregar_ou_processar(
-    "area-destinada-colheita-regiao",
-    processar_area_destinada_colheita,
-    agrupar_por_regiao=True,
-)
-df_area_colhida = carregar_ou_processar(
-    "area-colhida-regiao",
-    processar_area_colhida,
-    agrupar_por_regiao=True,
-)
-df_energia_industrial = carregar_ou_processar(
-    "energia-industrial-regiao",
-    processar_consumo_energia_industrial,
-    agrupar_por_regiao=True,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
 )
 
-# criar dataframe principal a partir do CO2
+"""
+df_inmet_temperatura = preparar_base(
+    "inmet-temp",
+    processar_inmet_temperatura,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+df_inmet_chuva = preparar_base(
+    "inmet-chuva",
+    processar_inmet_chuva,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+df_pib_percapita = preparar_base(
+    "pib-percapita",
+    processar_pib_per_capita,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+"""
+
+df_area_destinada_colheita = preparar_base(
+    "area-destinada-colheita",
+    processar_area_destinada_colheita,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+df_area_colhida = preparar_base(
+    "area-colhida",
+    processar_area_colhida,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+df_energia_industrial = preparar_base(
+    "energia-industrial",
+    processar_consumo_energia_industrial,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+)
+
+# Criar dataframe principal a partir do CO2.
 df_principal = df_co2.copy()
 
-# adicionar os demais dts
-for df_secundario in [
-    df_frota, 
-    df_rebanho, 
-    df_doencas,
-    df_combustiveis,
-    df_desmatamento_mapbiomas,
-    df_inmet_temperatura,
-    df_inmet_chuva,
-    df_pib_percapita,
-    df_area_destinada_colheita,
-    df_area_colhida,
-    df_energia_industrial,
+# Adicionar os demais dataframes usando a granularidade escolhida.
+for nome_base, df_secundario in [
+    ("frota", df_frota),
+    ("rebanho", df_rebanho),
+    ("doencas-resp", df_doencas),
+    ("venda-combustiveis", df_combustiveis),
+    ("desmatamento-mapbiomas", df_desmatamento_mapbiomas),
+    # ("inmet-temp", df_inmet_temperatura),
+    # ("inmet-chuva", df_inmet_chuva),
+    # ("pib-percapita", df_pib_percapita),
+    ("area-destinada-colheita", df_area_destinada_colheita),
+    ("area-colhida", df_area_colhida),
+    ("energia-industrial", df_energia_industrial),
 ]:
-    df_principal = df_principal.merge(df_secundario, on=["Regiao", "Ano"], how="left")
+    validar_chaves(df_secundario, nome_base)
+    df_principal = df_principal.merge(df_secundario, on=CHAVES_MERGE, how="left")
 
-# salvar dataframe principal tratado
-salvar_tratado(df_principal, "dataframe-principal")
+# Garantir ordenacao coerente do dataframe principal.
+df_principal = df_principal.sort_values(CHAVES_MERGE).reset_index(drop=True)
+
+# Salvar dataframe principal tratado.
+salvar_tratado(df_principal, f"dataframe-principal-{SUFIXO_GRANULARIDADE}")

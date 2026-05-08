@@ -16,13 +16,21 @@ def relatorio_missing_values(df):
 def interpolar_coluna_por_grupo_tempo(
     df,
     coluna,
-    grupo="Regiao",
+    grupo="Estado",
     tempo="Ano",
     metodo="linear",
     limitar_direcao="both",
     arredondar=False,
 ):
+    if grupo not in df.columns:
+        raise ValueError(f"Coluna de grupo '{grupo}' nao encontrada no dataframe.")
+    if tempo not in df.columns:
+        raise ValueError(f"Coluna de tempo '{tempo}' nao encontrada no dataframe.")
+    if coluna not in df.columns:
+        return df.copy()
+
     base = df.copy().sort_values([grupo, tempo]).reset_index(drop=True)
+    base[coluna] = pd.to_numeric(base[coluna], errors="coerce")
     base[coluna] = (
         base.groupby(grupo, group_keys=False)[coluna]
         .apply(lambda s: s.interpolate(method=metodo, limit_direction=limitar_direcao))
@@ -34,7 +42,7 @@ def interpolar_coluna_por_grupo_tempo(
 
 def preencher_populacao_por_interpolacao(
     df,
-    coluna_grupo="Regiao",
+    coluna_grupo="Estado",
     coluna_ano="Ano",
     coluna_populacao="Populacao",
     arredondar=True,
@@ -50,15 +58,22 @@ def preencher_populacao_por_interpolacao(
     )
 
 
-def preparar_df_para_analise(df, preencher_populacao=True, arredondar_populacao=True):
+def preparar_df_para_analise(
+    df,
+    preencher_populacao=True,
+    arredondar_populacao=True,
+    coluna_grupo=None,
+    coluna_ano="Ano",
+):
     base = df.copy()
-
-    coluna_grupo = "Regiao" if "Regiao" in base.columns else "Estado"
+    if coluna_grupo is None:
+        coluna_grupo = "Estado" if "Estado" in base.columns else "Regiao"
 
     if preencher_populacao and "Populacao" in base.columns:
         base = preencher_populacao_por_interpolacao(
             base,
             coluna_grupo=coluna_grupo,
+            coluna_ano=coluna_ano,
             coluna_populacao="Populacao",
             arredondar=arredondar_populacao,
         )
