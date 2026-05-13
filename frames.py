@@ -13,6 +13,7 @@ from pipelines.pib_pipe import processar_pib_per_capita
 from pipelines.area_destinada_colheita_pipe import processar_area_destinada_colheita
 from pipelines.area_colhida_pipe import processar_area_colhida
 from pipelines.energia_industrial_pipe import processar_consumo_energia_industrial
+from pipelines.queimadas_pipe import processar_queimadas
 
 from utils import salvar_tratado
 
@@ -29,6 +30,10 @@ INMET_SOMENTE_CAPITAIS = False
 INMET_PARALELO = True
 # None escolhe automaticamente. Em HD mecânico, teste 4 ou 8. Em SSD/NVMe, 16 ou 32 costuma ir bem.
 INMET_MAX_WORKERS = None
+
+PASTA_QUEIMADAS = "bases/queimadas"
+QUEIMADAS_PARALELO = True
+QUEIMADAS_MAX_WORKERS = None  # use um inteiro, ex.: 8, se quiser controlar
 
 
 def carregar_ou_processar(nome_base_tratada: str, funcao_processamento, *args, **kwargs) -> pd.DataFrame:
@@ -122,6 +127,16 @@ df_energia_industrial = preparar_base(
     agrupar_por_regiao=AGRUPAR_POR_REGIAO,
 )
 
+
+df_queimadas = preparar_base(
+    "queimadas",
+    processar_queimadas,
+    caminho_queimadas=PASTA_QUEIMADAS,
+    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
+    paralelo=QUEIMADAS_PARALELO,
+    max_workers=QUEIMADAS_MAX_WORKERS,
+)
+
 # Criar dataframe principal a partir do CO2.
 df_principal = df_co2.copy()
 
@@ -137,6 +152,7 @@ for nome_base, df_secundario in [
     ("area-destinada-colheita", df_area_destinada_colheita),
     ("area-colhida", df_area_colhida),
     ("energia-industrial", df_energia_industrial),
+    ("queimadas", df_queimadas),
 ]:
     validar_chaves(df_secundario, nome_base)
     df_principal = df_principal.merge(df_secundario, on=CHAVES_MERGE, how="left")
