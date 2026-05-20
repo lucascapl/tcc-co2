@@ -5,7 +5,6 @@ import pandas as pd
 from pipelines.co2_pipe import processar_co2
 from pipelines.frota_pipe import processar_frota
 from pipelines.rebanho_pipe import processar_rebanho
-from pipelines.doencas_respiratorias_pipe import processar_doencas_respiratorias
 from pipelines.combustiveis_pipe import processar_combustiveis
 from pipelines.desmatamento_mapbiomas_pipe import processar_desmatamento_mapbiomas
 from pipelines.inmet_pipe import processar_inmet_clima
@@ -75,12 +74,6 @@ def preparar_base(nome_base_tratada: str, funcao_processamento, *args, **kwargs)
 df_co2 = preparar_base("co2", processar_co2, agrupar_por_regiao=AGRUPAR_POR_REGIAO)
 df_frota = preparar_base("frota", processar_frota, agrupar_por_regiao=AGRUPAR_POR_REGIAO)
 df_rebanho = preparar_base("rebanho", processar_rebanho, agrupar_por_regiao=AGRUPAR_POR_REGIAO)
-df_doencas = preparar_base(
-    "doencas-resp",
-    processar_doencas_respiratorias,
-    "bases/doencas_respiratorias",
-    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
-)
 df_combustiveis = preparar_base(
     "venda-combustiveis",
     processar_combustiveis,
@@ -144,7 +137,6 @@ df_principal = df_co2.copy()
 for nome_base, df_secundario in [
     ("frota", df_frota),
     ("rebanho", df_rebanho),
-    ("doencas-resp", df_doencas),
     ("venda-combustiveis", df_combustiveis),
     ("desmatamento-mapbiomas", df_desmatamento_mapbiomas),
     ("inmet-clima", df_inmet_clima),

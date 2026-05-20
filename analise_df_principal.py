@@ -13,15 +13,17 @@ from missing_values import preparar_df_para_analise, relatorio_missing_values
 from utils import base_grupo_ano
 from pearson import correlacao_pearson_por_grupo
 from spearman import correlacao_spearman_por_grupo
+from heatmap_correlacao_estado import salvar_correlacao_e_heatmaps_estado
 
 CAMINHO_DF = "bases/tratadas/dataframe-principal-estado-tratada.csv"
 GERAR_VISUALIZACOES = False
+GERAR_HEATMAPS = True
 
 # Cenário atual: análise estadual.
 COLUNA_GRUPO = "Estado"
 AGREGAR_PARA_REGIAO = False
 SUFIXO_ANALISE = "estado"
-IGNORAR_COLUNAS = ["IDHM"]
+IGNORAR_COLUNAS = ["IDHM", "internacoes"]
 
 
 def salvar_resultado(df, nome_arquivo):
@@ -119,6 +121,17 @@ def main():
     )
     print(resultado_spearman)
     salvar_resultado(resultado_spearman, f"spearman_por_{SUFIXO_ANALISE}")
+
+    if GERAR_HEATMAPS:
+        salvar_correlacao_e_heatmaps_estado(
+            caminho_df=CAMINHO_DF,
+            coluna_estado=COLUNA_GRUPO,
+            coluna_ano="Ano",
+            coluna_alvo="co2",
+            ignorar_colunas=IGNORAR_COLUNAS,
+            mostrar=False,
+            gerar_heatmaps_por_bloco=True,
+        )
 
     if GERAR_VISUALIZACOES:
         scatter_co2_vs_todas(

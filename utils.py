@@ -25,7 +25,7 @@ ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
 ORDEM_ESTADOS = list(MAPA_REGIOES.keys())
 
 # Periodo unico usado por todos os pipelines de tratamento.
-ANO_INICIAL = 2003
+ANO_INICIAL = 2004
 ANO_FINAL = 2023
 
 
