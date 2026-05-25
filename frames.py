@@ -8,7 +8,6 @@ from pipelines.rebanho_pipe import processar_rebanho
 from pipelines.combustiveis_pipe import processar_combustiveis
 from pipelines.desmatamento_mapbiomas_pipe import processar_desmatamento_mapbiomas
 from pipelines.inmet_pipe import processar_inmet_clima
-from pipelines.pib_pipe import processar_pib_per_capita
 from pipelines.area_destinada_colheita_pipe import processar_area_destinada_colheita
 from pipelines.area_colhida_pipe import processar_area_colhida
 from pipelines.energia_industrial_pipe import processar_consumo_energia_industrial
@@ -96,13 +95,6 @@ df_inmet_clima = preparar_base(
     max_workers=INMET_MAX_WORKERS,
 )
 
-"""
-df_pib_percapita = preparar_base(
-    "pib-percapita",
-    processar_pib_per_capita,
-    agrupar_por_regiao=AGRUPAR_POR_REGIAO,
-)
-"""
 
 df_area_destinada_colheita = preparar_base(
     "area-destinada-colheita",
