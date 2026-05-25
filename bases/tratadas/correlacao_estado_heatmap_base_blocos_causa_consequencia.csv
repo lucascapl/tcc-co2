@@ -1,0 +1,271 @@
+Bloco,Estado,Tipo_variavel,Variavel,Coeficiente
+Mudanca de Uso da Terra,AC,Causas,area_colhida,-0.5503759398496241
+Mudanca de Uso da Terra,AC,Causas,area_destinada_colheita,-0.5082706766917292
+Mudanca de Uso da Terra,AC,Causas,consumo_energia_industrial,0.15789473684210525
+Mudanca de Uso da Terra,AC,Causas,desmat_area,0.9578947368421054
+Mudanca de Uso da Terra,AC,Causas,frota,0.42255639097744363
+Mudanca de Uso da Terra,AC,Causas,frp_anual_queimadas,0.6962406015037594
+Mudanca de Uso da Terra,AC,Causas,rebanho,0.45563909774436084
+Mudanca de Uso da Terra,AC,Causas,venda_comb,0.17593984962406017
+Mudanca de Uso da Terra,AM,Causas,area_colhida,-0.7398496240601502
+Mudanca de Uso da Terra,AM,Causas,area_destinada_colheita,-0.7969924812030074
+Mudanca de Uso da Terra,AM,Causas,consumo_energia_industrial,0.14736842105263157
+Mudanca de Uso da Terra,AM,Causas,desmat_area,0.9924812030075187
+Mudanca de Uso da Terra,AM,Causas,frota,0.7112781954887217
+Mudanca de Uso da Terra,AM,Causas,frp_anual_queimadas,0.8736842105263156
+Mudanca de Uso da Terra,AM,Causas,rebanho,0.29624060150375936
+Mudanca de Uso da Terra,AM,Causas,venda_comb,-0.6541353383458646
+Mudanca de Uso da Terra,AP,Causas,area_colhida,0.18796992481203004
+Mudanca de Uso da Terra,AP,Causas,area_destinada_colheita,0.19849624060150375
+Mudanca de Uso da Terra,AP,Causas,consumo_energia_industrial,-0.15037593984962402
+Mudanca de Uso da Terra,AP,Causas,desmat_area,0.7127819548872181
+Mudanca de Uso da Terra,AP,Causas,frota,0.22556390977443608
+Mudanca de Uso da Terra,AP,Causas,frp_anual_queimadas,0.42556390977443603
+Mudanca de Uso da Terra,AP,Causas,rebanho,0.14887218045112782
+Mudanca de Uso da Terra,AP,Causas,venda_comb,0.42105263157894735
+Mudanca de Uso da Terra,MA,Causas,area_colhida,0.13844130068163002
+Mudanca de Uso da Terra,MA,Causas,area_destinada_colheita,0.12355411758311782
+Mudanca de Uso da Terra,MA,Causas,consumo_energia_industrial,0.16691729323308271
+Mudanca de Uso da Terra,MA,Causas,desmat_area,0.910826807951439
+Mudanca de Uso da Terra,MA,Causas,frota,0.07601581791128394
+Mudanca de Uso da Terra,MA,Causas,frp_anual_queimadas,0.1133986213352467
+Mudanca de Uso da Terra,MA,Causas,rebanho,0.3619735677757199
+Mudanca de Uso da Terra,MA,Causas,venda_comb,-0.06766917293233082
+Mudanca de Uso da Terra,MT,Causas,area_colhida,-0.06616541353383458
+Mudanca de Uso da Terra,MT,Causas,area_destinada_colheita,-0.06616541353383458
+Mudanca de Uso da Terra,MT,Causas,consumo_energia_industrial,-0.10375939849624059
+Mudanca de Uso da Terra,MT,Causas,desmat_area,0.9759398496240601
+Mudanca de Uso da Terra,MT,Causas,frota,-0.13082706766917293
+Mudanca de Uso da Terra,MT,Causas,frp_anual_queimadas,0.437593984962406
+Mudanca de Uso da Terra,MT,Causas,rebanho,-0.14736842105263157
+Mudanca de Uso da Terra,MT,Causas,venda_comb,-0.09172932330827067
+Mudanca de Uso da Terra,PA,Causas,area_colhida,0.4481203007518797
+Mudanca de Uso da Terra,PA,Causas,area_destinada_colheita,0.4481203007518797
+Mudanca de Uso da Terra,PA,Causas,consumo_energia_industrial,-0.4203960465829859
+Mudanca de Uso da Terra,PA,Causas,desmat_area,0.9535169539064454
+Mudanca de Uso da Terra,PA,Causas,frota,-0.21780957013303737
+Mudanca de Uso da Terra,PA,Causas,frp_anual_queimadas,0.4781954887218045
+Mudanca de Uso da Terra,PA,Causas,rebanho,-0.011778328423719939
+Mudanca de Uso da Terra,PA,Causas,venda_comb,-0.36147723140751886
+Mudanca de Uso da Terra,RO,Causas,area_colhida,0.013533834586466165
+Mudanca de Uso da Terra,RO,Causas,area_destinada_colheita,0.009022556390977442
+Mudanca de Uso da Terra,RO,Causas,consumo_energia_industrial,-0.3924812030075188
+Mudanca de Uso da Terra,RO,Causas,desmat_area,0.9714285714285714
+Mudanca de Uso da Terra,RO,Causas,frota,0.007518796992481202
+Mudanca de Uso da Terra,RO,Causas,frp_anual_queimadas,0.7218045112781954
+Mudanca de Uso da Terra,RO,Causas,rebanho,0.05563909774436089
+Mudanca de Uso da Terra,RO,Causas,venda_comb,-0.12180451127819547
+Mudanca de Uso da Terra,RR,Causas,area_colhida,0.8210526315789473
+Mudanca de Uso da Terra,RR,Causas,area_destinada_colheita,0.7909774436090224
+Mudanca de Uso da Terra,RR,Causas,consumo_energia_industrial,0.5176320393002515
+Mudanca de Uso da Terra,RR,Causas,desmat_area,0.9304873673675322
+Mudanca de Uso da Terra,RR,Causas,frota,0.5461409313345051
+Mudanca de Uso da Terra,RR,Causas,frp_anual_queimadas,0.28721804511278193
+Mudanca de Uso da Terra,RR,Causas,rebanho,0.5376546601881969
+Mudanca de Uso da Terra,RR,Causas,venda_comb,0.6390977443609022
+Mudanca de Uso da Terra,TO,Causas,area_colhida,0.5203007518796992
+Mudanca de Uso da Terra,TO,Causas,area_destinada_colheita,0.5112781954887218
+Mudanca de Uso da Terra,TO,Causas,consumo_energia_industrial,0.4842105263157894
+Mudanca de Uso da Terra,TO,Causas,desmat_area,0.793984962406015
+Mudanca de Uso da Terra,TO,Causas,frota,0.4270676691729323
+Mudanca de Uso da Terra,TO,Causas,frp_anual_queimadas,-0.09924812030075188
+Mudanca de Uso da Terra,TO,Causas,rebanho,0.5669172932330826
+Mudanca de Uso da Terra,TO,Causas,venda_comb,0.43909774436090226
+Agropecuária,BA,Causas,area_colhida,-0.045112781954887216
+Agropecuária,BA,Causas,area_destinada_colheita,-0.14285714285714285
+Agropecuária,BA,Causas,consumo_energia_industrial,0.3383458646616541
+Agropecuária,BA,Causas,desmat_area,0.9714285714285714
+Agropecuária,BA,Causas,frota,0.20150375939849624
+Agropecuária,BA,Causas,frp_anual_queimadas,0.2571428571428572
+Agropecuária,BA,Causas,rebanho,0.43458646616541347
+Agropecuária,BA,Causas,venda_comb,0.0706766917293233
+Agropecuária,GO,Causas,area_colhida,0.5864475830906469
+Agropecuária,GO,Causas,area_destinada_colheita,0.5821073724926328
+Agropecuária,GO,Causas,consumo_energia_industrial,0.49624060150375937
+Agropecuária,GO,Causas,desmat_area,0.33383458646616543
+Agropecuária,GO,Causas,frota,0.3928237502624784
+Agropecuária,GO,Causas,frp_anual_queimadas,0.08270676691729321
+Agropecuária,GO,Causas,rebanho,0.4867069018838193
+Agropecuária,GO,Causas,venda_comb,0.5368421052631579
+Agropecuária,MS,Causas,area_colhida,-0.27368421052631575
+Agropecuária,MS,Causas,area_destinada_colheita,-0.26165413533834586
+Agropecuária,MS,Causas,consumo_energia_industrial,-0.22556390977443608
+Agropecuária,MS,Causas,desmat_area,0.6992481203007518
+Agropecuária,MS,Causas,frota,-0.28872180451127816
+Agropecuária,MS,Causas,frp_anual_queimadas,0.30526315789473685
+Agropecuária,MS,Causas,rebanho,0.27669172932330827
+Agropecuária,MS,Causas,venda_comb,-0.16842105263157892
+Agropecuária,PI,Causas,area_colhida,0.5357862767376976
+Agropecuária,PI,Causas,area_destinada_colheita,0.5624189606276365
+Agropecuária,PI,Causas,consumo_energia_industrial,-0.07461684842306734
+Agropecuária,PI,Causas,desmat_area,0.9824493553583561
+Agropecuária,PI,Causas,frota,0.4915155352366289
+Agropecuária,PI,Causas,frp_anual_queimadas,0.27087080277760794
+Agropecuária,PI,Causas,rebanho,-0.4360902255639097
+Agropecuária,PI,Causas,venda_comb,0.4601503759398496
+Agropecuária,CE,Causas,area_colhida,-0.7428571428571428
+Agropecuária,CE,Causas,area_destinada_colheita,-0.7458646616541353
+Agropecuária,CE,Causas,consumo_energia_industrial,0.8669737145540279
+Agropecuária,CE,Causas,desmat_area,-0.13684210526315788
+Agropecuária,CE,Causas,frota,0.8769503466262606
+Agropecuária,CE,Causas,frp_anual_queimadas,-0.4917293233082706
+Agropecuária,CE,Causas,rebanho,0.3935229548706993
+Agropecuária,CE,Causas,venda_comb,0.882706766917293
+Agropecuária,RN,Causas,area_colhida,-0.728256110795291
+Agropecuária,RN,Causas,area_destinada_colheita,-0.5458646616541353
+Agropecuária,RN,Causas,consumo_energia_industrial,0.6828917088502939
+Agropecuária,RN,Causas,desmat_area,0.24409498104117863
+Agropecuária,RN,Causas,frota,0.7800434952580084
+Agropecuária,RN,Causas,frp_anual_queimadas,-0.6046286289044681
+Agropecuária,RN,Causas,rebanho,0.02129833007121032
+Agropecuária,RN,Causas,venda_comb,0.7338345864661654
+Agropecuária,PB,Causas,area_colhida,-0.5969924812030075
+Agropecuária,PB,Causas,area_destinada_colheita,-0.6796992481203006
+Agropecuária,PB,Causas,consumo_energia_industrial,0.6496240601503759
+Agropecuária,PB,Causas,desmat_area,0.5639097744360902
+Agropecuária,PB,Causas,frota,0.9428571428571428
+Agropecuária,PB,Causas,frp_anual_queimadas,-0.28721804511278193
+Agropecuária,PB,Causas,rebanho,0.6706766917293233
+Agropecuária,PB,Causas,venda_comb,0.7684210526315788
+Agropecuária,PE,Causas,area_colhida,-0.5218045112781955
+Agropecuária,PE,Causas,area_destinada_colheita,-0.7274616733400819
+Agropecuária,PE,Causas,consumo_energia_industrial,0.8766917293233082
+Agropecuária,PE,Causas,desmat_area,0.19944475254689298
+Agropecuária,PE,Causas,frota,0.911101857488565
+Agropecuária,PE,Causas,frp_anual_queimadas,-0.5997958809696535
+Agropecuária,PE,Causas,rebanho,0.1565963490208703
+Agropecuária,PE,Causas,venda_comb,0.874631293441219
+Agropecuária,AL,Causas,area_colhida,-0.6150375939849623
+Agropecuária,AL,Causas,area_destinada_colheita,-0.5969924812030075
+Agropecuária,AL,Causas,consumo_energia_industrial,-0.16691729323308271
+Agropecuária,AL,Causas,desmat_area,0.13684210526315788
+Agropecuária,AL,Causas,frota,0.8417186787142233
+Agropecuária,AL,Causas,frp_anual_queimadas,-0.2066146531518763
+Agropecuária,AL,Causas,rebanho,0.8953482798248455
+Agropecuária,AL,Causas,venda_comb,0.8330827067669173
+Agropecuária,SE,Causas,area_colhida,-0.23675298293623048
+Agropecuária,SE,Causas,area_destinada_colheita,-0.31699622072751604
+Agropecuária,SE,Causas,consumo_energia_industrial,0.23941578226183208
+Agropecuária,SE,Causas,desmat_area,-0.0973545253562519
+Agropecuária,SE,Causas,frota,0.721529717295159
+Agropecuária,SE,Causas,frp_anual_queimadas,-0.45807514731064786
+Agropecuária,SE,Causas,rebanho,0.7005012116846473
+Agropecuária,SE,Causas,venda_comb,0.7338345864661654
+Energia/industrial,SP,Causas,area_colhida,0.17558803406020393
+Energia/industrial,SP,Causas,area_destinada_colheita,0.18216956625554676
+Energia/industrial,SP,Causas,consumo_energia_industrial,0.7068318055487034
+Energia/industrial,SP,Causas,desmat_area,-0.06643235388088597
+Energia/industrial,SP,Causas,frota,0.1445332513677719
+Energia/industrial,SP,Causas,frp_anual_queimadas,-0.09624060150375939
+Energia/industrial,SP,Causas,rebanho,-0.4917293233082706
+Energia/industrial,SP,Causas,venda_comb,0.43458646616541347
+Energia/industrial,RJ,Causas,area_colhida,-0.437593984962406
+Energia/industrial,RJ,Causas,area_destinada_colheita,-0.43909774436090226
+Energia/industrial,RJ,Causas,consumo_energia_industrial,-0.14586466165413534
+Energia/industrial,RJ,Causas,desmat_area,0.14285714285714285
+Energia/industrial,RJ,Causas,frota,0.47067669172932325
+Energia/industrial,RJ,Causas,frp_anual_queimadas,-0.08421052631578946
+Energia/industrial,RJ,Causas,rebanho,0.45112781954887216
+Energia/industrial,RJ,Causas,venda_comb,0.849624060150376
+Energia/industrial,MG,Causas,area_colhida,-0.20752439320111055
+Energia/industrial,MG,Causas,area_destinada_colheita,-0.19229429642041662
+Energia/industrial,MG,Causas,consumo_energia_industrial,0.14191699018518839
+Energia/industrial,MG,Causas,desmat_area,0.7011081669655604
+Energia/industrial,MG,Causas,frota,-0.3955976820204111
+Energia/industrial,MG,Causas,frp_anual_queimadas,0.2265243330499461
+Energia/industrial,MG,Causas,rebanho,0.5108189206912341
+Energia/industrial,MG,Causas,venda_comb,-0.12030075187969923
+Energia/industrial,ES,Causas,area_colhida,-0.6195488721804511
+Energia/industrial,ES,Causas,area_destinada_colheita,-0.6120300751879698
+Energia/industrial,ES,Causas,consumo_energia_industrial,0.26616541353383455
+Energia/industrial,ES,Causas,desmat_area,0.5413533834586466
+Energia/industrial,ES,Causas,frota,0.5894736842105263
+Energia/industrial,ES,Causas,frp_anual_queimadas,0.13533834586466165
+Energia/industrial,ES,Causas,rebanho,0.4466165413533834
+Energia/industrial,ES,Causas,venda_comb,0.7744360902255639
+Energia/industrial,PR,Causas,area_colhida,0.7977779196117689
+Energia/industrial,PR,Causas,area_destinada_colheita,0.8005116513130313
+Energia/industrial,PR,Causas,consumo_energia_industrial,0.776636459471573
+Energia/industrial,PR,Causas,desmat_area,0.0462980179290637
+Energia/industrial,PR,Causas,frota,0.7807911770986581
+Energia/industrial,PR,Causas,frp_anual_queimadas,-0.4745444752160975
+Energia/industrial,PR,Causas,rebanho,-0.595898651412698
+Energia/industrial,PR,Causas,venda_comb,0.7383458646616541
+Energia/industrial,SC,Causas,area_colhida,-0.6380061839742776
+Energia/industrial,SC,Causas,area_destinada_colheita,-0.6454747060970158
+Energia/industrial,SC,Causas,consumo_energia_industrial,0.7593140500870885
+Energia/industrial,SC,Causas,desmat_area,-0.365631946935324
+Energia/industrial,SC,Causas,frota,0.7467998625246569
+Energia/industrial,SC,Causas,frp_anual_queimadas,-0.3488721804511278
+Energia/industrial,SC,Causas,rebanho,0.732330827067669
+Energia/industrial,SC,Causas,venda_comb,0.7857629106374814
+Energia/industrial,RS,Causas,area_colhida,-0.06692503676808842
+Energia/industrial,RS,Causas,area_destinada_colheita,-0.03308270676691729
+Energia/industrial,RS,Causas,consumo_energia_industrial,0.48751822184125065
+Energia/industrial,RS,Causas,desmat_area,0.6894359672401655
+Energia/industrial,RS,Causas,frota,0.016603151377256514
+Energia/industrial,RS,Causas,frp_anual_queimadas,-0.18104540431472083
+Energia/industrial,RS,Causas,rebanho,0.31127819548872177
+Energia/industrial,RS,Causas,venda_comb,0.0706766917293233
+Energia/industrial,DF,Causas,area_colhida,0.593984962406015
+Energia/industrial,DF,Causas,area_destinada_colheita,0.5954887218045113
+Energia/industrial,DF,Causas,consumo_energia_industrial,0.780296738521171
+Energia/industrial,DF,Causas,desmat_area,-0.16470123423794145
+Energia/industrial,DF,Causas,frota,0.6836511672895617
+Energia/industrial,DF,Causas,frp_anual_queimadas,0.04360902255639097
+Energia/industrial,DF,Causas,rebanho,-0.17260380189682112
+Energia/industrial,DF,Causas,venda_comb,0.9571636271254743
+Mudanca de Uso da Terra,AC,Consequências,chuva_media,0.5735294117647058
+Mudanca de Uso da Terra,AC,Consequências,temp_media,0.21176470588235297
+Mudanca de Uso da Terra,AM,Consequências,chuva_media,-0.4947368421052631
+Mudanca de Uso da Terra,AM,Consequências,temp_media,0.34586466165413526
+Mudanca de Uso da Terra,AP,Consequências,chuva_media,-0.10588235294117648
+Mudanca de Uso da Terra,AP,Consequências,temp_media,0.1323529411764706
+Mudanca de Uso da Terra,MA,Consequências,chuva_media,-0.26315789473684204
+Mudanca de Uso da Terra,MA,Consequências,temp_media,0.20455999318068566
+Mudanca de Uso da Terra,MT,Consequências,chuva_media,-0.33383458646616543
+Mudanca de Uso da Terra,MT,Consequências,temp_media,0.10977443609022557
+Mudanca de Uso da Terra,PA,Consequências,chuva_media,0.4054866738523463
+Mudanca de Uso da Terra,PA,Consequências,temp_media,-0.18346403214279366
+Mudanca de Uso da Terra,RO,Consequências,chuva_media,-0.46323529411764713
+Mudanca de Uso da Terra,RO,Consequências,temp_media,0.1936274509803922
+Mudanca de Uso da Terra,RR,Consequências,chuva_media,-0.12379464081335644
+Mudanca de Uso da Terra,RR,Consequências,temp_media,0.33873438097446507
+Mudanca de Uso da Terra,TO,Consequências,chuva_media,-0.29774436090225564
+Mudanca de Uso da Terra,TO,Consequências,temp_media,0.09022556390977443
+Agropecuária,BA,Consequências,chuva_media,0.10676691729323308
+Agropecuária,BA,Consequências,temp_media,0.013533834586466165
+Agropecuária,GO,Consequências,chuva_media,-0.04060150375939849
+Agropecuária,GO,Consequências,temp_media,0.19629930937110246
+Agropecuária,MS,Consequências,chuva_media,-0.312781954887218
+Agropecuária,MS,Consequências,temp_media,0.3037593984962406
+Agropecuária,PI,Consequências,chuva_media,-0.18769165039405727
+Agropecuária,PI,Consequências,temp_media,-0.053450206613021974
+Agropecuária,CE,Consequências,chuva_media,-0.07218045112781954
+Agropecuária,CE,Consequências,temp_media,0.3668260952673929
+Agropecuária,RN,Consequências,chuva_media,-0.4857142857142857
+Agropecuária,RN,Consequências,temp_media,0.7263157894736841
+Agropecuária,PB,Consequências,chuva_media,-0.06616541353383458
+Agropecuária,PB,Consequências,temp_media,0.8721804511278194
+Agropecuária,PE,Consequências,chuva_media,-0.6547983799737119
+Agropecuária,PE,Consequências,temp_media,-0.07744878864382605
+Agropecuária,AL,Consequências,chuva_media,-0.3293233082706767
+Agropecuária,AL,Consequências,temp_media,0.14442379876407288
+Agropecuária,SE,Consequências,chuva_media,-0.14845068868377945
+Agropecuária,SE,Consequências,temp_media,-0.5028173075208155
+Energia/industrial,SP,Consequências,chuva_media,0.34888550128316
+Energia/industrial,SP,Consequências,temp_media,-0.246271502100738
+Energia/industrial,RJ,Consequências,chuva_media,0.015037593984962403
+Energia/industrial,RJ,Consequências,temp_media,-0.41353383458646614
+Energia/industrial,MG,Consequências,chuva_media,-0.16160083833923147
+Energia/industrial,MG,Consequências,temp_media,-0.3038166715300472
+Energia/industrial,ES,Consequências,chuva_media,-0.2053663570691434
+Energia/industrial,ES,Consequências,temp_media,-0.1991744066047472
+Energia/industrial,PR,Consequências,chuva_media,0.25789473684210523
+Energia/industrial,PR,Consequências,temp_media,0.45789473684210524
+Energia/industrial,SC,Consequências,chuva_media,0.13264859564295836
+Energia/industrial,SC,Consequências,temp_media,-0.12932330827067667
+Energia/industrial,RS,Consequências,chuva_media,-0.04557801897883752
+Energia/industrial,RS,Consequências,temp_media,-0.19627082732773105
+Energia/industrial,DF,Consequências,chuva_media,-0.2611488955027963
+Energia/industrial,DF,Consequências,temp_media,0.4769381008125792

@@ -1,271 +1,271 @@
 Estado,Variavel,Metodo,Defasagem_CO2,n,Coeficiente,p_valor,Significativo_5pct,Direcao,Forca,Conclusao,Ano_inicial_min,Ano_inicial_max
-AC,area_colhida,Spearman,0,21,-0.5402597402597402,0.01146091866432833,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-AC,area_destinada_colheita,Spearman,0,21,-0.49350649350649345,0.02299628542974775,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
+AC,area_colhida,Spearman,0,20,-0.5503759398496241,0.011919637001913333,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+AC,area_destinada_colheita,Spearman,0,20,-0.5082706766917292,0.022124780463792442,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
 AC,chuva_media,Spearman,0,16,0.5735294117647058,0.0201910380465231,Sim,Positiva,Moderada,Correlação monotônica significativa,2008,2023
 AC,consumo_energia_industrial,Spearman,0,20,0.15789473684210525,0.5061465835201626,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-AC,desmat_area,Spearman,0,21,0.9623376623376624,3.3446990261039698e-12,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-AC,frota,Spearman,0,21,0.29740259740259745,0.19043999754486568,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AC,internacoes,Spearman,0,21,-0.4909090909090909,0.023839688371383023,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-AC,rebanho,Spearman,0,21,0.32597402597402597,0.14928317187962065,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+AC,desmat_area,Spearman,0,20,0.9578947368421054,3.389666746806415e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+AC,frota,Spearman,0,20,0.42255639097744363,0.06344083999820867,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+AC,frp_anual_queimadas,Spearman,0,20,0.6962406015037594,0.00064992440549734,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+AC,rebanho,Spearman,0,20,0.45563909774436084,0.04349340980546598,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
 AC,temp_media,Spearman,0,16,0.21176470588235297,0.4310832472392213,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2008,2023
-AC,venda_comb,Spearman,0,21,0.14155844155844155,0.5404880300232261,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AL,area_colhida,Spearman,0,21,-0.5909090909090908,0.004791420615320218,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-AL,area_destinada_colheita,Spearman,0,21,-0.6090909090909091,0.0033822861384930295,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-AL,chuva_media,Spearman,0,21,-0.4168831168831169,0.06010068446787318,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
+AC,venda_comb,Spearman,0,20,0.17593984962406017,0.4580986587024854,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AL,area_colhida,Spearman,0,20,-0.6150375939849623,0.003900311298213233,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+AL,area_destinada_colheita,Spearman,0,20,-0.5969924812030075,0.005451989383349599,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+AL,chuva_media,Spearman,0,20,-0.3293233082706767,0.15623105162611658,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 AL,consumo_energia_industrial,Spearman,0,20,-0.16691729323308271,0.4818249184315467,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-AL,desmat_area,Spearman,0,21,0.023376623376623374,0.9198848317686953,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AL,frota,Spearman,0,21,0.8376623376623376,2.162054009534969e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-AL,internacoes,Spearman,0,21,0.24805194805194808,0.2782897943042767,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AL,rebanho,Spearman,0,21,0.8974025974025974,3.526135069655139e-08,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-AL,temp_media,Spearman,0,21,0.1961038961038961,0.39424166216971973,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AL,venda_comb,Spearman,0,21,0.851948051948052,9.557130744669017e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-AM,area_colhida,Spearman,0,21,-0.6779220779220779,0.0007325317500767633,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-AM,area_destinada_colheita,Spearman,0,21,-0.7246753246753247,0.00020267623916371942,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-AM,chuva_media,Spearman,0,21,-0.47402597402597396,0.02993936808467944,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
+AL,desmat_area,Spearman,0,20,0.13684210526315788,0.5650957921363964,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AL,frota,Spearman,0,20,0.8165413533834586,1.1247209263971724e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+AL,frp_anual_queimadas,Spearman,0,20,-0.4285714285714286,0.059379774686065624,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+AL,rebanho,Spearman,0,20,0.8857142857142858,2.07204739173452e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+AL,temp_media,Spearman,0,20,0.10827067669172932,0.6495672222012883,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AL,venda_comb,Spearman,0,20,0.8330827067669173,5.123854828137089e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+AM,area_colhida,Spearman,0,20,-0.7398496240601502,0.00019241032720557428,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+AM,area_destinada_colheita,Spearman,0,20,-0.7969924812030074,2.5917474294045434e-05,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+AM,chuva_media,Spearman,0,20,-0.4947368421052631,0.026578647405457147,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
 AM,consumo_energia_industrial,Spearman,0,20,0.14736842105263157,0.5352473458918692,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-AM,desmat_area,Spearman,0,21,0.9935064935064933,2.1102349405433035e-19,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-AM,frota,Spearman,0,21,0.6454545454545455,0.0015778975857754147,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-AM,internacoes,Spearman,0,21,-0.14415584415584418,0.5330058743165694,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AM,rebanho,Spearman,0,21,0.2571428571428571,0.2604731897004084,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AM,temp_media,Spearman,0,21,0.34025974025974026,0.13123757652772486,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AM,venda_comb,Spearman,0,21,-0.6233766233766234,0.0025346926925616103,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-AP,area_colhida,Spearman,0,21,0.2584415584415584,0.2579885873988545,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AP,area_destinada_colheita,Spearman,0,21,0.2675324675324675,0.24102003675627295,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+AM,desmat_area,Spearman,0,20,0.9924812030075187,7.097515845390696e-18,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+AM,frota,Spearman,0,20,0.7112781954887217,0.00043769852641295997,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+AM,frp_anual_queimadas,Spearman,0,20,0.8736842105263156,4.872962880719225e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+AM,rebanho,Spearman,0,20,0.29624060150375936,0.2047182974286216,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AM,temp_media,Spearman,0,20,0.34586466165413526,0.13525234313351656,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AM,venda_comb,Spearman,0,20,-0.6541353383458646,0.001755195412843212,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+AP,area_colhida,Spearman,0,20,0.18796992481203004,0.42742125802266395,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AP,area_destinada_colheita,Spearman,0,20,0.19849624060150375,0.40150360700389714,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 AP,chuva_media,Spearman,0,16,-0.10588235294117648,0.6963341050381158,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2008,2023
 AP,consumo_energia_industrial,Spearman,0,20,-0.15037593984962402,0.5268549482529813,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-AP,desmat_area,Spearman,0,21,0.7376623376623377,0.0001354741498121529,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-AP,frota,Spearman,0,21,0.2857142857142857,0.2092950927335546,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-AP,internacoes,Spearman,0,21,0.6012987012987013,0.003936569354114926,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-AP,rebanho,Spearman,0,21,0.17142857142857143,0.45747702762159437,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+AP,desmat_area,Spearman,0,20,0.7127819548872181,0.00042017538910877765,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+AP,frota,Spearman,0,20,0.22556390977443608,0.33897093917086674,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AP,frp_anual_queimadas,Spearman,0,20,0.42556390977443603,0.06138492007540429,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+AP,rebanho,Spearman,0,20,0.14887218045112782,0.5310434616086306,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 AP,temp_media,Spearman,0,16,0.1323529411764706,0.6251064291516133,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2008,2023
-AP,venda_comb,Spearman,0,21,0.4753246753246753,0.029430421226411388,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-BA,area_colhida,Spearman,0,21,0.023376623376623374,0.9198848317686953,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-BA,area_destinada_colheita,Spearman,0,21,-0.07012987012987014,0.7625997832797398,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-BA,chuva_media,Spearman,0,21,0.09090909090909091,0.6951310760397714,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+AP,venda_comb,Spearman,0,20,0.42105263157894735,0.06448807512897045,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+BA,area_colhida,Spearman,0,20,-0.045112781954887216,0.8502061902084873,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+BA,area_destinada_colheita,Spearman,0,20,-0.14285714285714285,0.5479501508336088,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+BA,chuva_media,Spearman,0,20,0.10676691729323308,0.6541415450094845,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 BA,consumo_energia_industrial,Spearman,0,20,0.3383458646616541,0.14452609966359922,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
-BA,desmat_area,Spearman,0,21,0.9649350649350649,1.71370773033691e-12,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-BA,frota,Spearman,0,21,0.2753246753246753,0.22706392689035135,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-BA,internacoes,Spearman,0,21,-0.015584415584415586,0.9465439560865643,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-BA,rebanho,Spearman,0,21,0.48181818181818176,0.02698722611165965,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-BA,temp_media,Spearman,0,21,0.045454545454545456,0.8448883449705005,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-BA,venda_comb,Spearman,0,21,0.16233766233766234,0.4820201872355597,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-CE,area_colhida,Spearman,0,21,-0.7636363636363636,5.624426843282805e-05,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-CE,area_destinada_colheita,Spearman,0,21,-0.7662337662337663,5.120304298510372e-05,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-CE,chuva_media,Spearman,0,21,-0.1948051948051948,0.3974429535072252,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+BA,desmat_area,Spearman,0,20,0.9714285714285714,1.0864095402975098e-12,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+BA,frota,Spearman,0,20,0.20150375939849624,0.39426050476127356,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+BA,frp_anual_queimadas,Spearman,0,20,0.2571428571428572,0.27375050350001545,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+BA,rebanho,Spearman,0,20,0.43458646616541347,0.055518791395969054,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+BA,temp_media,Spearman,0,20,0.013533834586466165,0.9548397533571387,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+BA,venda_comb,Spearman,0,20,0.0706766917293233,0.7671582206450904,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+CE,area_colhida,Spearman,0,20,-0.7428571428571428,0.00017540444660487075,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+CE,area_destinada_colheita,Spearman,0,20,-0.7458646616541353,0.00015970222414751246,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+CE,chuva_media,Spearman,0,20,-0.07218045112781954,0.7623392575365604,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 CE,consumo_energia_industrial,Spearman,0,20,0.8676691729323308,7.239120255573912e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
-CE,desmat_area,Spearman,0,21,-0.1909090909090909,0.4071327297448127,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-CE,frota,Spearman,0,21,0.857142857142857,6.953420523811729e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-CE,internacoes,Spearman,0,21,0.3311688311688311,0.14253086581850202,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-CE,rebanho,Spearman,0,21,0.4753246753246753,0.029430421226411388,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-CE,temp_media,Spearman,0,21,0.17922077922077922,0.4369652748985062,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-CE,venda_comb,Spearman,0,21,0.8987012987012987,3.14055105816141e-08,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-DF,area_colhida,Spearman,0,21,0.6493506493506493,0.0014457726307433869,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-DF,area_destinada_colheita,Spearman,0,21,0.6506493506493506,0.0014038628654171022,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-DF,chuva_media,Spearman,0,21,-0.125974025974026,0.5863643592427876,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+CE,desmat_area,Spearman,0,20,-0.13684210526315788,0.5650957921363964,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+CE,frota,Spearman,0,20,0.8345864661654135,4.750605779025455e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+CE,frp_anual_queimadas,Spearman,0,20,-0.4917293233082706,0.027658227513046155,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+CE,rebanho,Spearman,0,20,0.3924812030075188,0.08695594245899084,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+CE,temp_media,Spearman,0,20,0.3037593984962406,0.19291416827770458,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+CE,venda_comb,Spearman,0,20,0.882706766917293,2.58814738791862e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+DF,area_colhida,Spearman,0,20,0.593984962406015,0.005754247539586488,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+DF,area_destinada_colheita,Spearman,0,20,0.5954887218045113,0.005601441030074217,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+DF,chuva_media,Spearman,0,20,-0.3037593984962406,0.19291416827770458,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 DF,consumo_energia_industrial,Spearman,0,20,0.7894736842105263,3.490503836386607e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-DF,desmat_area,Spearman,0,21,-0.15064935064935067,0.5145138644694079,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-DF,frota,Spearman,0,21,0.6337662337662338,0.0020369727175807645,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-DF,internacoes,Spearman,0,21,0.4142857142857143,0.061879942683025185,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-DF,rebanho,Spearman,0,21,-0.33766233766233766,0.1343969724884117,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-DF,temp_media,Spearman,0,21,0.45584415584415583,0.03781998900387758,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-DF,venda_comb,Spearman,0,21,0.9467532467532468,8.442873280491462e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-ES,area_colhida,Spearman,0,21,-0.6636363636363637,0.0010381964669403767,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-ES,area_destinada_colheita,Spearman,0,21,-0.6571428571428571,0.0012093758514660198,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
+DF,desmat_area,Spearman,0,20,-0.021052631578947364,0.9297994024457079,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+DF,frota,Spearman,0,20,0.5759398496240601,0.007870940177445083,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+DF,frp_anual_queimadas,Spearman,0,20,0.04360902255639097,0.8551479470173744,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+DF,rebanho,Spearman,0,20,-0.23759398496240602,0.3131305637442673,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+DF,temp_media,Spearman,0,20,0.4541353383458646,0.04427910416289475,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+DF,venda_comb,Spearman,0,20,0.9383458646616539,9.762241109318062e-10,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+ES,area_colhida,Spearman,0,20,-0.6195488721804511,0.003575852944413449,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+ES,area_destinada_colheita,Spearman,0,20,-0.6120300751879698,0.004129875210325546,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
 ES,chuva_media,Spearman,0,18,-0.2053663570691434,0.41363537140209433,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2006,2023
 ES,consumo_energia_industrial,Spearman,0,20,0.26616541353383455,0.2566708454025406,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
-ES,desmat_area,Spearman,0,21,0.5103896103896104,0.018076642193560668,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-ES,frota,Spearman,0,21,0.6376623376623376,0.0018728838968196711,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-ES,internacoes,Spearman,0,21,0.6077922077922078,0.0034698523902231258,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-ES,rebanho,Spearman,0,21,0.503896103896104,0.0198573765141571,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
+ES,desmat_area,Spearman,0,20,0.5413533834586466,0.013697495397047697,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+ES,frota,Spearman,0,20,0.5894736842105263,0.006233369103076914,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+ES,frp_anual_queimadas,Spearman,0,20,0.13533834586466165,0.5694186911507698,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+ES,rebanho,Spearman,0,20,0.4466165413533834,0.04837283310926692,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
 ES,temp_media,Spearman,0,18,-0.1991744066047472,0.42815803191920493,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2006,2023
-ES,venda_comb,Spearman,0,21,0.7987012987012986,1.4189641838423763e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-GO,area_colhida,Spearman,0,21,0.425974025974026,0.05417854233992368,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-GO,area_destinada_colheita,Spearman,0,21,0.4090909090909091,0.06555816920931516,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-GO,chuva_media,Spearman,0,21,-0.08181818181818182,0.7244098408074375,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+ES,venda_comb,Spearman,0,20,0.7744360902255639,6.119579516446203e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+GO,area_colhida,Spearman,0,20,0.6451127819548872,0.0021306929704406814,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+GO,area_destinada_colheita,Spearman,0,20,0.625563909774436,0.0031783546111788592,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+GO,chuva_media,Spearman,0,20,-0.04060150375939849,0.8650468790077723,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 GO,consumo_energia_industrial,Spearman,0,20,0.49624060150375937,0.026051464707248905,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
-GO,desmat_area,Spearman,0,21,0.42337662337662335,0.05582289840720048,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-GO,frota,Spearman,0,21,0.29740259740259745,0.19043999754486568,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-GO,internacoes,Spearman,0,21,-0.49350649350649345,0.02299628542974775,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-GO,rebanho,Spearman,0,21,0.287012987012987,0.20714101817766592,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-GO,temp_media,Spearman,0,21,0.12727272727272726,0.5824788611326692,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-GO,venda_comb,Spearman,0,21,0.32857142857142857,0.14587956444987268,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MA,area_colhida,Spearman,0,21,-0.17272727272727273,0.45402436101288696,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MA,area_destinada_colheita,Spearman,0,21,-0.16103896103896104,0.4855791442852288,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MA,chuva_media,Spearman,0,21,-0.13246753246753248,0.567048530648251,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+GO,desmat_area,Spearman,0,20,0.33383458646616543,0.15029922707342813,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+GO,frota,Spearman,0,20,0.5007518796992482,0.024519268409476453,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+GO,frp_anual_queimadas,Spearman,0,20,0.08270676691729321,0.7288508763559794,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+GO,rebanho,Spearman,0,20,0.48872180451127817,0.028772030054996112,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+GO,temp_media,Spearman,0,20,0.3037593984962406,0.19291416827770458,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+GO,venda_comb,Spearman,0,20,0.5368421052631579,0.014663294425522912,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+MA,area_colhida,Spearman,0,20,-0.07218045112781954,0.7623392575365604,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MA,area_destinada_colheita,Spearman,0,20,-0.05864661654135337,0.8059928433862232,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MA,chuva_media,Spearman,0,20,-0.26315789473684204,0.26228712287542844,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 MA,consumo_energia_industrial,Spearman,0,20,0.16691729323308271,0.4818249184315467,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-MA,desmat_area,Spearman,0,21,0.8896103896103895,6.85016604424206e-08,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-MA,frota,Spearman,0,21,-0.16103896103896104,0.4855791442852288,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MA,internacoes,Spearman,0,21,-0.448051948051948,0.04165618995678565,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-MA,rebanho,Spearman,0,21,-0.17012987012987013,0.46094318375206567,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MA,temp_media,Spearman,0,21,0.05844155844155843,0.8013282220179796,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MA,venda_comb,Spearman,0,21,-0.16883116883116883,0.46442277316539365,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MG,area_colhida,Spearman,0,21,-0.2909090909090909,0.2007676414411941,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MG,area_destinada_colheita,Spearman,0,21,-0.2922077922077922,0.19867271696574043,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MG,chuva_media,Spearman,0,21,-0.22207792207792207,0.3332805195945379,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+MA,desmat_area,Spearman,0,20,0.8842105263157894,2.3175269783488735e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+MA,frota,Spearman,0,20,-0.05864661654135337,0.8059928433862232,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MA,frp_anual_queimadas,Spearman,0,20,0.21804511278195485,0.35573636611773685,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MA,rebanho,Spearman,0,20,-0.06917293233082707,0.7719854265259409,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MA,temp_media,Spearman,0,20,0.12932330827067667,0.5868527244899819,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MA,venda_comb,Spearman,0,20,-0.06766917293233082,0.7768207117441497,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MG,area_colhida,Spearman,0,20,-0.3037593984962406,0.19291416827770458,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MG,area_destinada_colheita,Spearman,0,20,-0.30526315789473685,0.19060938739632302,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MG,chuva_media,Spearman,0,20,-0.21954887218045113,0.3523456773115151,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 MG,consumo_energia_industrial,Spearman,0,20,0.08120300751879699,0.733607630478017,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-MG,desmat_area,Spearman,0,21,0.7,0.0004112938713638757,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-MG,frota,Spearman,0,21,-0.4246753246753247,0.054996018009894246,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-MG,internacoes,Spearman,0,21,-0.02727272727272727,0.9065844922540648,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MG,rebanho,Spearman,0,21,0.40129870129870127,0.07138262110690317,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-MG,temp_media,Spearman,0,21,-0.3064935064935065,0.17659418586665693,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MG,venda_comb,Spearman,0,21,-0.12077922077922078,0.6020154473326507,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MS,area_colhida,Spearman,0,21,-0.37272727272727274,0.09610224578434738,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MS,area_destinada_colheita,Spearman,0,21,-0.36233766233766235,0.10649069901450199,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MS,chuva_media,Spearman,0,21,-0.3649350649350649,0.10382027127753134,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+MG,desmat_area,Spearman,0,20,0.7413533834586465,0.0001837390400004595,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+MG,frota,Spearman,0,20,-0.4496240601503759,0.046701909388062866,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+MG,frp_anual_queimadas,Spearman,0,20,0.3984962406015037,0.08180541617403751,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MG,rebanho,Spearman,0,20,0.45563909774436084,0.04349340980546598,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+MG,temp_media,Spearman,0,20,-0.33533834586466166,0.1483572986184929,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MG,venda_comb,Spearman,0,20,-0.12030075187969923,0.6134176645307824,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,area_colhida,Spearman,0,20,-0.27368421052631575,0.24296636906130648,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,area_destinada_colheita,Spearman,0,20,-0.26165413533834586,0.26512410951035276,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,chuva_media,Spearman,0,20,-0.312781954887218,0.17936353052759132,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 MS,consumo_energia_industrial,Spearman,0,20,-0.22556390977443608,0.33897093917086674,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
-MS,desmat_area,Spearman,0,21,0.7402597402597402,0.0001246428308208667,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-MS,frota,Spearman,0,21,-0.38571428571428573,0.08418819066159453,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MS,internacoes,Spearman,0,21,-0.5792207792207792,0.005931730203525632,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-MS,rebanho,Spearman,0,21,0.37532467532467534,0.09362577329735101,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MS,temp_media,Spearman,0,21,0.22337662337662337,0.330387908876124,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MS,venda_comb,Spearman,0,21,-0.26493506493506497,0.24579261871540747,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MT,area_colhida,Spearman,0,21,-0.1935064935064935,0.40065858838070295,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MT,area_destinada_colheita,Spearman,0,21,-0.1935064935064935,0.40065858838070295,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MT,chuva_media,Spearman,0,21,-0.26883116883116887,0.23865637920307153,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+MS,desmat_area,Spearman,0,20,0.6992481203007518,0.0006016416290038309,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+MS,frota,Spearman,0,20,-0.28872180451127816,0.2169926666873039,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,frp_anual_queimadas,Spearman,0,20,0.30526315789473685,0.19060938739632302,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,rebanho,Spearman,0,20,0.27669172932330827,0.2376188406109919,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,temp_media,Spearman,0,20,0.3037593984962406,0.19291416827770458,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MS,venda_comb,Spearman,0,20,-0.16842105263157892,0.4778286757964304,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MT,area_colhida,Spearman,0,20,-0.06616541353383458,0.781663912108574,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MT,area_destinada_colheita,Spearman,0,20,-0.06616541353383458,0.781663912108574,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MT,chuva_media,Spearman,0,20,-0.33383458646616543,0.15029922707342813,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 MT,consumo_energia_industrial,Spearman,0,20,-0.10375939849624059,0.6633257542362446,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-MT,desmat_area,Spearman,0,21,0.9792207792207792,1.2567854031499688e-14,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-MT,frota,Spearman,0,21,-0.24935064935064938,0.27569907970760515,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MT,internacoes,Spearman,0,21,-0.6246753246753247,0.002467394475033327,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-MT,rebanho,Spearman,0,21,-0.2636363636363636,0.24820156437430954,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MT,temp_media,Spearman,0,21,0.032467532467532464,0.8888886581323973,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-MT,venda_comb,Spearman,0,21,-0.1987012987012987,0.3878822634645567,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PA,area_colhida,Spearman,0,21,0.3818181818181818,0.08764053578453823,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PA,area_destinada_colheita,Spearman,0,21,0.3818181818181818,0.08764053578453823,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PA,chuva_media,Spearman,0,21,0.26493506493506497,0.24579261871540747,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+MT,desmat_area,Spearman,0,20,0.9759398496240601,2.351920209922708e-13,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+MT,frota,Spearman,0,20,-0.13082706766917293,0.5824730901969897,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MT,frp_anual_queimadas,Spearman,0,20,0.437593984962406,0.05366144000429179,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+MT,rebanho,Spearman,0,20,-0.14736842105263157,0.5352473458918692,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MT,temp_media,Spearman,0,20,0.10977443609022557,0.6450049409876997,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+MT,venda_comb,Spearman,0,20,-0.09172932330827067,0.7005157258604466,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PA,area_colhida,Spearman,0,20,0.4481203007518797,0.0475317357506642,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PA,area_destinada_colheita,Spearman,0,20,0.4481203007518797,0.0475317357506642,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PA,chuva_media,Spearman,0,20,0.14887218045112782,0.5310434616086306,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 PA,consumo_energia_industrial,Spearman,0,20,-0.3082706766917293,0.18605556077810145,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
-PA,desmat_area,Spearman,0,21,0.9584415584415583,8.392363834833032e-12,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-PA,frota,Spearman,0,21,-0.24285714285714283,0.28880425437585355,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PA,internacoes,Spearman,0,21,-0.8142857142857143,7.044009255480785e-06,Sim,Negativa,Muito forte,Correlação monotônica significativa,2003,2023
-PA,rebanho,Spearman,0,21,-0.14935064935064934,0.5181875885017935,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PA,temp_media,Spearman,0,21,-0.14805194805194805,0.5218737233561959,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PA,venda_comb,Spearman,0,21,-0.3168831168831169,0.161633166892741,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PB,area_colhida,Spearman,0,21,-0.6324675324675325,0.002094285916756489,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-PB,area_destinada_colheita,Spearman,0,21,-0.7038961038961039,0.00036952182272340854,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
+PA,desmat_area,Spearman,0,20,0.9518796992481202,1.102807897899161e-10,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+PA,frota,Spearman,0,20,-0.12481203007518797,0.6000744184144978,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PA,frp_anual_queimadas,Spearman,0,20,0.4781954887218045,0.03295038321495765,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PA,rebanho,Spearman,0,20,-0.021052631578947364,0.9297994024457079,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PA,temp_media,Spearman,0,20,-0.03157894736842105,0.8948543863933639,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PA,venda_comb,Spearman,0,20,-0.21052631578947367,0.3729699095048001,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PB,area_colhida,Spearman,0,20,-0.5969924812030075,0.005451989383349599,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+PB,area_destinada_colheita,Spearman,0,20,-0.6796992481203006,0.0009782817239871891,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
 PB,chuva_media,Spearman,0,20,-0.06616541353383458,0.781663912108574,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 PB,consumo_energia_industrial,Spearman,0,20,0.6496240601503759,0.0019353332844401446,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-PB,desmat_area,Spearman,0,21,0.4974025974025974,0.021775935134623416,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PB,frota,Spearman,0,21,0.9506493506493506,4.1652156700862666e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-PB,internacoes,Spearman,0,21,0.2038961038961039,0.37533722290245836,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PB,rebanho,Spearman,0,21,0.7155844155844155,0.00026525306265137597,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
+PB,desmat_area,Spearman,0,20,0.5639097744360902,0.00960697153757662,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PB,frota,Spearman,0,20,0.9428571428571428,5.009327938313909e-10,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+PB,frp_anual_queimadas,Spearman,0,20,-0.28721804511278193,0.2195043134627025,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PB,rebanho,Spearman,0,20,0.6706766917293233,0.0012099715195241648,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
 PB,temp_media,Spearman,0,20,0.8721804511278194,5.389740442330202e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
-PB,venda_comb,Spearman,0,21,0.8,1.3416326957422072e-05,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-PE,area_colhida,Spearman,0,21,-0.5337662337662338,0.012697637214593742,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-PE,area_destinada_colheita,Spearman,0,21,-0.6025974025974027,0.00383926774177884,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-PE,chuva_media,Spearman,0,21,-0.43506493506493504,0.04871398224636616,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
+PB,venda_comb,Spearman,0,20,0.7684210526315788,7.571881175260252e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+PE,area_colhida,Spearman,0,20,-0.5218045112781955,0.018284943482097568,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+PE,area_destinada_colheita,Spearman,0,20,-0.5909774436090225,0.006070153699275822,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+PE,chuva_media,Spearman,0,20,-0.6616541353383457,0.0014862222546038802,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
 PE,consumo_energia_industrial,Spearman,0,20,0.8766917293233082,3.9679240752959395e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
-PE,desmat_area,Spearman,0,21,0.04025974025974026,0.8624424916554133,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PE,frota,Spearman,0,21,0.9025974025974025,2.197749206954007e-08,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-PE,internacoes,Spearman,0,21,0.4896103896103896,0.024270522021007424,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PE,rebanho,Spearman,0,21,0.3246753246753247,0.15100567594389833,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PE,temp_media,Spearman,0,21,-0.14675324675324675,0.5255721976110102,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PE,venda_comb,Spearman,0,21,0.8090909090909091,8.95835754740236e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-PI,area_colhida,Spearman,0,21,0.5233766233766234,0.01490000636370951,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PI,area_destinada_colheita,Spearman,0,21,0.5441558441558442,0.01076722731945727,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PI,chuva_media,Spearman,0,21,-0.3532467532467533,0.11623101293161814,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+PE,desmat_area,Spearman,0,20,0.11278195488721804,0.6359170579042353,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PE,frota,Spearman,0,20,0.8872180451127819,1.8496782864288356e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+PE,frp_anual_queimadas,Spearman,0,20,-0.4872180451127819,0.02934199190370818,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+PE,rebanho,Spearman,0,20,0.21804511278195485,0.35573636611773685,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PE,temp_media,Spearman,0,20,-0.012030075187969924,0.9598534442846784,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PE,venda_comb,Spearman,0,20,0.7789473684210525,5.194277584211623e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+PI,area_colhida,Spearman,0,20,0.4586466165413533,0.04195431160933543,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PI,area_destinada_colheita,Spearman,0,20,0.4827067669172932,0.03110521686954333,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PI,chuva_media,Spearman,0,20,-0.26165413533834586,0.26512410951035276,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 PI,consumo_energia_industrial,Spearman,0,20,-0.193984962406015,0.4125038246613566,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-PI,desmat_area,Spearman,0,21,0.974025974025974,1.0259942221352342e-13,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-PI,frota,Spearman,0,21,0.5324675324675324,0.012957519789950382,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PI,internacoes,Spearman,0,21,0.032467532467532464,0.8888886581323973,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PI,rebanho,Spearman,0,21,-0.4714285714285714,0.030978075295294817,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-PI,temp_media,Spearman,0,21,0.1012987012987013,0.6621759840226068,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PI,venda_comb,Spearman,0,21,0.525974025974026,0.014322464412872613,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PR,area_colhida,Spearman,0,21,0.6402597402597403,0.001769793050350855,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-PR,area_destinada_colheita,Spearman,0,21,0.625974025974026,0.0024016012615434247,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-PR,chuva_media,Spearman,0,20,0.08120300751879699,0.733607630478017,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+PI,desmat_area,Spearman,0,20,0.9729323308270676,6.714944202233502e-13,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+PI,frota,Spearman,0,20,0.4676691729323308,0.037588510204148835,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PI,frp_anual_queimadas,Spearman,0,20,0.3984962406015037,0.08180541617403751,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PI,rebanho,Spearman,0,20,-0.4360902255639097,0.05458409967322206,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+PI,temp_media,Spearman,0,20,0.022556390977443608,0.9247982163788796,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PI,venda_comb,Spearman,0,20,0.4601503759398496,0.041200717801954445,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+PR,area_colhida,Spearman,0,20,0.7954887218045112,2.7534156851806365e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+PR,area_destinada_colheita,Spearman,0,20,0.7789473684210525,5.194277584211623e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+PR,chuva_media,Spearman,0,19,0.25789473684210523,0.28643023354996244,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2005,2023
 PR,consumo_energia_industrial,Spearman,0,20,0.7218045112781954,0.0003270659389347301,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-PR,desmat_area,Spearman,0,21,0.17922077922077922,0.4369652748985062,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PR,frota,Spearman,0,21,0.5064935064935064,0.019128951134752437,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-PR,internacoes,Spearman,0,21,-0.05064935064935065,0.8274046658865746,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PR,rebanho,Spearman,0,21,-0.5181818181818182,0.016111558031212534,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-PR,temp_media,Spearman,0,20,0.2857142857142857,0.22203494893940115,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-PR,venda_comb,Spearman,0,21,0.5246753246753247,0.014608927612336519,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-RJ,area_colhida,Spearman,0,21,-0.509090909090909,0.01842211138738375,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-RJ,area_destinada_colheita,Spearman,0,21,-0.5103896103896104,0.018076642193560668,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-RJ,chuva_media,Spearman,0,21,0.12207792207792208,0.5980864852006569,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+PR,desmat_area,Spearman,0,20,0.05413533834586466,0.8206745196973447,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+PR,frota,Spearman,0,20,0.7172932330827068,0.00037114093366673155,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+PR,frp_anual_queimadas,Spearman,0,20,-0.4240601503759398,0.06240648623134539,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+PR,rebanho,Spearman,0,20,-0.7097744360902255,0.0004558392343877837,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+PR,temp_media,Spearman,0,19,0.45789473684210524,0.048674125792005335,Sim,Positiva,Moderada,Correlação monotônica significativa,2005,2023
+PR,venda_comb,Spearman,0,20,0.7383458646616541,0.0002014294307883675,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RJ,area_colhida,Spearman,0,20,-0.437593984962406,0.05366144000429179,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+RJ,area_destinada_colheita,Spearman,0,20,-0.43909774436090226,0.05275071743383972,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+RJ,chuva_media,Spearman,0,20,0.015037593984962403,0.9498276950483329,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 RJ,consumo_energia_industrial,Spearman,0,20,-0.14586466165413534,0.5394664944297437,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-RJ,desmat_area,Spearman,0,21,0.02857142857142857,0.9021562162960429,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RJ,frota,Spearman,0,21,0.5428571428571428,0.010994545574058883,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-RJ,internacoes,Spearman,0,21,0.41818181818181815,0.059225789351652174,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-RJ,rebanho,Spearman,0,21,0.525974025974026,0.014322464412872613,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-RJ,temp_media,Spearman,0,21,-0.49350649350649345,0.02299628542974775,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-RJ,venda_comb,Spearman,0,21,0.8675324675324675,3.5406211386267126e-07,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-RN,area_colhida,Spearman,0,21,-0.6792207792207793,0.0007090174365901505,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-RN,area_destinada_colheita,Spearman,0,21,-0.6025974025974027,0.00383926774177884,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-RN,chuva_media,Spearman,0,21,-0.3675324675324675,0.1011990270876957,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+RJ,desmat_area,Spearman,0,20,0.14285714285714285,0.5479501508336088,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RJ,frota,Spearman,0,20,0.47067669172932325,0.036214551666000905,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+RJ,frp_anual_queimadas,Spearman,0,20,-0.08421052631578946,0.7241036435108112,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RJ,rebanho,Spearman,0,20,0.45112781954887216,0.04588325880000643,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+RJ,temp_media,Spearman,0,20,-0.41353383458646614,0.06992073829262116,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+RJ,venda_comb,Spearman,0,20,0.849624060150376,2.134870346341263e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+RN,area_colhida,Spearman,0,20,-0.6345864661654135,0.002651407534655651,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+RN,area_destinada_colheita,Spearman,0,20,-0.5458646616541353,0.012783628876204716,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+RN,chuva_media,Spearman,0,20,-0.4857142857142857,0.029920782525592465,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
 RN,consumo_energia_industrial,Spearman,0,20,0.7308270676691728,0.0002521513415096557,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-RN,desmat_area,Spearman,0,21,0.24025974025974026,0.29415239923972397,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RN,frota,Spearman,0,21,0.7506493506493507,8.84386872841125e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-RN,internacoes,Spearman,0,21,0.36363636363636365,0.10514930870551215,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RN,rebanho,Spearman,0,21,0.11038961038961038,0.6338228017857539,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RN,temp_media,Spearman,0,21,0.748051948051948,9.650639036965712e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-RN,venda_comb,Spearman,0,21,0.7701298701298702,4.4376470220679326e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-RO,area_colhida,Spearman,0,21,-0.12467532467532469,0.590260853646067,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RO,area_destinada_colheita,Spearman,0,21,-0.12857142857142856,0.5786044448638965,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+RN,desmat_area,Spearman,0,20,0.26165413533834586,0.26512410951035276,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RN,frota,Spearman,0,20,0.7112781954887217,0.00043769852641295997,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RN,frp_anual_queimadas,Spearman,0,20,-0.6105263157894737,0.0042487826519470445,Sim,Negativa,Forte,Correlação monotônica significativa,2004,2023
+RN,rebanho,Spearman,0,20,0.02706766917293233,0.9098116651774512,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RN,temp_media,Spearman,0,20,0.7263157894736841,0.00028753287121455824,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RN,venda_comb,Spearman,0,20,0.7338345864661654,0.0002306890933683326,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RO,area_colhida,Spearman,0,20,0.013533834586466165,0.9548397533571387,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RO,area_destinada_colheita,Spearman,0,20,0.009022556390977442,0.9698849998123449,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 RO,chuva_media,Spearman,0,17,-0.46323529411764713,0.061113371302034855,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2007,2023
 RO,consumo_energia_industrial,Spearman,0,20,-0.3924812030075188,0.08695594245899084,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
-RO,desmat_area,Spearman,0,21,0.9753246753246754,6.334484986822827e-14,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-RO,frota,Spearman,0,21,-0.12987012987012986,0.5747411951907224,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RO,internacoes,Spearman,0,21,-0.7103896103896103,0.0003079593734962154,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-RO,rebanho,Spearman,0,21,-0.08831168831168833,0.7034559950013928,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+RO,desmat_area,Spearman,0,20,0.9714285714285714,1.0864095402975098e-12,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+RO,frota,Spearman,0,20,0.007518796992481202,0.97490250199334,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RO,frp_anual_queimadas,Spearman,0,20,0.7218045112781954,0.0003270659389347301,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RO,rebanho,Spearman,0,20,0.05563909774436089,0.8157739948259725,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 RO,temp_media,Spearman,0,17,0.1936274509803922,0.4564969285487544,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2007,2023
-RO,venda_comb,Spearman,0,21,-0.24155844155844156,0.291470754429199,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RR,area_colhida,Spearman,0,21,0.7922077922077921,1.8668396670120597e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-RR,area_destinada_colheita,Spearman,0,21,0.764935064935065,5.3672360673180114e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
+RO,venda_comb,Spearman,0,20,-0.12180451127819547,0.608956622164901,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RR,area_colhida,Spearman,0,20,0.8210526315789473,9.148582181124782e-06,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+RR,area_destinada_colheita,Spearman,0,20,0.7909774436090224,3.291872728004308e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
 RR,chuva_media,Spearman,0,14,-0.1076923076923077,0.7140308087262492,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2010,2023
 RR,consumo_energia_industrial,Spearman,0,20,0.6406015037593984,0.0023422708584825785,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-RR,desmat_area,Spearman,0,21,0.9480519480519479,6.711681626030516e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa,2003,2023
-RR,frota,Spearman,0,21,0.5597402597402598,0.008325815617061407,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-RR,internacoes,Spearman,0,21,0.32607991326802355,0.14914334026138762,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RR,rebanho,Spearman,0,21,0.5688311688311689,0.007125381298647018,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
+RR,desmat_area,Spearman,0,20,0.9548872180451128,6.23787604797925e-11,Sim,Positiva,Muito forte,Correlação monotônica significativa,2004,2023
+RR,frota,Spearman,0,20,0.6330827067669172,0.00273378687905134,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RR,frp_anual_queimadas,Spearman,0,20,0.28721804511278193,0.2195043134627025,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RR,rebanho,Spearman,0,20,0.6421052631578947,0.0022698795673186793,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
 RR,temp_media,Spearman,0,14,0.5340659340659341,0.04915991637198507,Sim,Positiva,Moderada,Correlação monotônica significativa,2010,2023
-RR,venda_comb,Spearman,0,21,0.5701298701298702,0.006966166514889711,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-RS,area_colhida,Spearman,0,21,-0.031168831168831172,0.893308173976082,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RS,area_destinada_colheita,Spearman,0,21,-0.12857142857142856,0.5786044448638965,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RS,chuva_media,Spearman,0,21,-0.02857142857142857,0.9021562162960429,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+RR,venda_comb,Spearman,0,20,0.6390977443609022,0.0024165793968331305,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RS,area_colhida,Spearman,0,20,0.025563909774436087,0.9148041683144317,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RS,area_destinada_colheita,Spearman,0,20,-0.03308270676691729,0.8898759648856192,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RS,chuva_media,Spearman,0,20,0.007518796992481202,0.97490250199334,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 RS,consumo_energia_industrial,Spearman,0,20,0.5699248120300752,0.008703721225416197,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
-RS,desmat_area,Spearman,0,21,0.7207792207792209,0.00022773372444622524,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-RS,frota,Spearman,0,21,-0.17142857142857143,0.45747702762159437,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RS,internacoes,Spearman,0,21,0.1987012987012987,0.3878822634645567,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RS,rebanho,Spearman,0,21,0.3675324675324675,0.1011990270876957,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RS,temp_media,Spearman,0,21,-0.13636363636363635,0.5555953559520419,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-RS,venda_comb,Spearman,0,21,-0.005194805194805195,0.9821704184352004,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SC,area_colhida,Spearman,0,21,-0.6207792207792208,0.0026739127590746713,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-SC,area_destinada_colheita,Spearman,0,21,-0.6272727272727273,0.002337286312784887,Sim,Negativa,Forte,Correlação monotônica significativa,2003,2023
-SC,chuva_media,Spearman,0,21,0.1987012987012987,0.3878822634645567,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+RS,desmat_area,Spearman,0,20,0.6842105263157895,0.0008772646601370124,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+RS,frota,Spearman,0,20,-0.08270676691729321,0.7288508763559794,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RS,frp_anual_queimadas,Spearman,0,20,-0.2706766917293233,0.2483905691366973,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RS,rebanho,Spearman,0,20,0.31127819548872177,0.18157577037037334,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RS,temp_media,Spearman,0,20,-0.13533834586466165,0.5694186911507698,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+RS,venda_comb,Spearman,0,20,0.0706766917293233,0.7671582206450904,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SC,area_colhida,Spearman,0,20,-0.5969924812030075,0.005451989383349599,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+SC,area_destinada_colheita,Spearman,0,20,-0.5984962406015037,0.005305836200418915,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+SC,chuva_media,Spearman,0,20,0.1518796992481203,0.5226819111403138,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 SC,consumo_energia_industrial,Spearman,0,20,0.7699248120300751,7.183540419814863e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-SC,desmat_area,Spearman,0,21,-0.4285714285714285,0.05257154042070506,Não,Negativa,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-SC,frota,Spearman,0,21,0.7376623376623377,0.0001354741498121529,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SC,internacoes,Spearman,0,21,0.2675324675324675,0.24102003675627295,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SC,rebanho,Spearman,0,21,0.735064935064935,0.000147107674920188,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SC,temp_media,Spearman,0,21,-0.16753246753246753,0.4679157387083451,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SC,venda_comb,Spearman,0,21,0.7727272727272727,4.0277358787013074e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SE,area_colhida,Spearman,0,21,-0.17662337662337665,0.4437478469481735,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SE,area_destinada_colheita,Spearman,0,21,-0.07402597402597402,0.7498058787122429,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SE,chuva_media,Spearman,0,21,-0.03896103896103896,0.8668411213715634,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
+SC,desmat_area,Spearman,0,20,-0.3954887218045112,0.08435163245001213,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SC,frota,Spearman,0,20,0.7353383458646616,0.00022055698212103086,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+SC,frp_anual_queimadas,Spearman,0,20,-0.3488721804511278,0.13166317155695242,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SC,rebanho,Spearman,0,20,0.732330827067669,0.00024121635708852925,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+SC,temp_media,Spearman,0,20,-0.12932330827067667,0.5868527244899819,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SC,venda_comb,Spearman,0,20,0.77593984962406,5.79652934065361e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+SE,area_colhida,Spearman,0,20,-0.26766917293233083,0.2538915426582106,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SE,area_destinada_colheita,Spearman,0,20,-0.12180451127819547,0.608956622164901,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SE,chuva_media,Spearman,0,20,0.11278195488721804,0.6359170579042353,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 SE,consumo_energia_industrial,Spearman,0,20,0.41503759398496237,0.06880769728594092,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
-SE,desmat_area,Spearman,0,21,-0.18441558441558442,0.42356621430502056,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SE,frota,Spearman,0,21,0.6298701298701298,0.0022129859036497516,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SE,internacoes,Spearman,0,21,0.4207792207792207,0.05750513790191279,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
-SE,rebanho,Spearman,0,21,0.7883116883116883,2.1908919304486008e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SE,temp_media,Spearman,0,21,-0.2896103896103896,0.2028773165232885,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SE,venda_comb,Spearman,0,21,0.7701298701298702,4.4376470220679326e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SP,area_colhida,Spearman,0,21,0.24025974025974026,0.29415239923972397,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SP,area_destinada_colheita,Spearman,0,21,0.24025974025974026,0.29415239923972397,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SP,chuva_media,Spearman,0,21,0.36233766233766235,0.10649069901450199,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
+SE,desmat_area,Spearman,0,20,-0.10375939849624059,0.6633257542362446,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SE,frota,Spearman,0,20,0.5714285714285714,0.008489085694766705,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+SE,frp_anual_queimadas,Spearman,0,20,-0.2827067669172932,0.2271532851047362,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SE,rebanho,Spearman,0,20,0.7548872180451127,0.00011960282700609442,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+SE,temp_media,Spearman,0,20,-0.18496240601503755,0.43498614362285254,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SE,venda_comb,Spearman,0,20,0.7338345864661654,0.0002306890933683326,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+SP,area_colhida,Spearman,0,20,0.16541353383458643,0.4858377042773382,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SP,area_destinada_colheita,Spearman,0,20,0.16541353383458643,0.4858377042773382,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SP,chuva_media,Spearman,0,20,0.3293233082706767,0.15623105162611658,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 SP,consumo_energia_industrial,Spearman,0,20,0.6842105263157895,0.0008772646601370124,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-SP,desmat_area,Spearman,0,21,-0.24415584415584415,0.286152904374841,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SP,frota,Spearman,0,21,0.24675324675324672,0.2808956712631186,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SP,internacoes,Spearman,0,21,0.6194805194805195,0.002745889753237558,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-SP,rebanho,Spearman,0,21,-0.5246753246753247,0.014608927612336519,Sim,Negativa,Moderada,Correlação monotônica significativa,2003,2023
-SP,temp_media,Spearman,0,21,-0.14155844155844155,0.5404880300232261,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-SP,venda_comb,Spearman,0,21,0.48441558441558447,0.026056161788623734,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-TO,area_colhida,Spearman,0,21,0.4766233766233766,0.02892832768335774,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
-TO,area_destinada_colheita,Spearman,0,21,0.4688311688311688,0.032044958116342656,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
+SP,desmat_area,Spearman,0,20,-0.16842105263157892,0.4778286757964304,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SP,frota,Spearman,0,20,0.17142857142857143,0.46988617281087525,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SP,frp_anual_queimadas,Spearman,0,20,-0.09624060150375939,0.6864870716570238,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SP,rebanho,Spearman,0,20,-0.4917293233082706,0.027658227513046155,Sim,Negativa,Moderada,Correlação monotônica significativa,2004,2023
+SP,temp_media,Spearman,0,20,-0.23759398496240602,0.3131305637442673,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+SP,venda_comb,Spearman,0,20,0.43458646616541347,0.055518791395969054,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+TO,area_colhida,Spearman,0,20,0.5203007518796992,0.01868322114312066,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
+TO,area_destinada_colheita,Spearman,0,20,0.5112781954887218,0.021220644133224786,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
 TO,chuva_media,Spearman,0,20,-0.29774436090225564,0.2023199860189742,Não,Negativa,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 TO,consumo_energia_industrial,Spearman,0,20,0.4842105263157894,0.03050849355066659,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
-TO,desmat_area,Spearman,0,21,0.7870129870129869,2.309278639660772e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2003,2023
-TO,frota,Spearman,0,21,0.3896103896103896,0.08083791705627742,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2003,2023
-TO,internacoes,Spearman,0,21,-0.08311688311688312,0.7202033241160488,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2003,2023
-TO,rebanho,Spearman,0,21,0.5532467532467533,0.009281014982756769,Sim,Positiva,Moderada,Correlação monotônica significativa,2003,2023
+TO,desmat_area,Spearman,0,20,0.793984962406015,2.9237338796840142e-05,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
+TO,frota,Spearman,0,20,0.4270676691729323,0.06037604759529396,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
+TO,frp_anual_queimadas,Spearman,0,20,-0.09924812030075188,0.6771888443218217,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
+TO,rebanho,Spearman,0,20,0.5669172932330826,0.009146270047598541,Sim,Positiva,Moderada,Correlação monotônica significativa,2004,2023
 TO,temp_media,Spearman,0,20,0.09022556390977443,0.705213030860713,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
-TO,venda_comb,Spearman,0,21,0.4,0.07239002577225485,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2003,2023
+TO,venda_comb,Spearman,0,20,0.43909774436090226,0.05275071743383972,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
