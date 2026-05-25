@@ -2,6 +2,8 @@ import os
 import pandas as pd
 import unicodedata
 
+from config import CONFIG
+
 MAPA_ESTADOS = {
     "Acre": "AC", "Alagoas": "AL", "Amapá": "AP", "Amazonas": "AM",
     "Bahia": "BA", "Ceará": "CE", "Distrito Federal": "DF", "Espírito Santo": "ES",
@@ -24,9 +26,9 @@ MAPA_REGIOES = {
 ORDEM_REGIOES = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]
 ORDEM_ESTADOS = list(MAPA_REGIOES.keys())
 
-# Periodo unico usado por todos os pipelines de tratamento.
-ANO_INICIAL = 2004
-ANO_FINAL = 2023
+# Período único usado por todos os pipelines de tratamento.
+ANO_INICIAL = CONFIG.ANO_INICIAL
+ANO_FINAL = CONFIG.ANO_FINAL
 
 
 def normalizar_texto(txt: str) -> str:
@@ -53,14 +55,16 @@ def normalizar_estado(nome_estado: str) -> str | None:
 
 
 def salvar_tratado(df, nome):
-    os.makedirs("bases/tratadas", exist_ok=True)
-    caminho = f"bases/tratadas/{nome}-tratada.csv"
+    os.makedirs(CONFIG.PASTA_TRATADAS, exist_ok=True)
+    caminho = CONFIG.caminho_base_tratada(nome)
     df.to_csv(caminho, index=False)
     print(f"✅ Base '{nome}' tratada salva em {caminho}")
     return df
 
 
-def preparar_pasta_graficos(caminho="graficos"):
+def preparar_pasta_graficos(caminho=None):
+    if caminho is None:
+        caminho = CONFIG.PASTA_GRAFICOS
     os.makedirs(caminho, exist_ok=True)
 
 

@@ -83,7 +83,7 @@ IGNORAR_COLUNAS = ["IDHM", "internacoes"]
 # ---------------------------------------------------------------------------
 
 BLOCOS_ESTADOS = {
-    "Amazônia Legal": [
+    "Mudanca de Uso da Terra": [
         "AC", "AM", "AP", "MA", "MT", "PA", "RO", "RR", "TO",
     ],
     "Agropecuária": [
@@ -109,7 +109,7 @@ ORDEM_ESTADOS_POR_BLOCO = [
 ]
 
 SLUG_BLOCO = {
-    "Amazônia Legal": "amazonia_legal",
+    "Mudanca de Uso da Terra": "mudanca_uso_da_terra",
     "Agropecuária": "agropecuaria",
     "Energia/industrial": "energia_industrial",
 }
