@@ -34,7 +34,7 @@ AP,area_destinada_colheita,Spearman,0,20,0.19849624060150375,0.40150360700389714
 AP,chuva_media,Spearman,0,16,-0.10588235294117648,0.6963341050381158,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2008,2023
 AP,consumo_energia_industrial,Spearman,0,20,-0.15037593984962402,0.5268549482529813,Não,Negativa,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 AP,desmat_area,Spearman,0,20,0.7127819548872181,0.00042017538910877765,Sim,Positiva,Forte,Correlação monotônica significativa,2004,2023
-AP,frota,Spearman,0,20,0.22556390977443608,0.33897093917086674,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
+AP,frota,Spearman,0,20,0.23157894736842105,0.32589862703879297,Não,Positiva,Fraca,Sem evidência de correlação monotônica significativa,2004,2023
 AP,frp_anual_queimadas,Spearman,0,20,0.42556390977443603,0.06138492007540429,Não,Positiva,Moderada,Sem evidência de correlação monotônica significativa,2004,2023
 AP,rebanho,Spearman,0,20,0.14887218045112782,0.5310434616086306,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2004,2023
 AP,temp_media,Spearman,0,16,0.1323529411764706,0.6251064291516133,Não,Positiva,Muito fraca,Sem evidência de correlação monotônica significativa,2008,2023

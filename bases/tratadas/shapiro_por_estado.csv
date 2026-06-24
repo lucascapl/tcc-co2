@@ -5,18 +5,18 @@ AC,chuva_media,16,0.9164088512093854,0.1476418631255607,Sim,Não rejeita normali
 AC,co2,20,0.7808079304775649,0.00045320479743731705,Não,Rejeita normalidade
 AC,consumo_energia_industrial,20,0.9621439870546863,0.5875157790068137,Sim,Não rejeita normalidade
 AC,desmat_area,20,0.781725317704973,0.00046711352426663126,Não,Rejeita normalidade
-AC,frota,20,0.9448224642514258,0.29523772170222445,Sim,Não rejeita normalidade
+AC,frota,20,0.9425867349758748,0.26822345417555415,Sim,Não rejeita normalidade
 AC,frp_anual_queimadas,20,0.8087079036077314,0.0011684702025653467,Não,Rejeita normalidade
 AC,rebanho,20,0.8657494549915487,0.009901015487705585,Não,Rejeita normalidade
-AC,temp_media,16,0.9395454783001079,0.34348364356525674,Sim,Não rejeita normalidade
+AC,temp_media,16,0.9395454783001083,0.3434836435652606,Sim,Não rejeita normalidade
 AC,venda_comb,20,0.8589990345955117,0.007571357835301295,Não,Rejeita normalidade
 AL,area_colhida,20,0.903221804545048,0.04741124135446523,Não,Rejeita normalidade
 AL,area_destinada_colheita,20,0.8962295249014072,0.03506434713724921,Não,Rejeita normalidade
-AL,chuva_media,20,0.8844150515755218,0.021260762752150466,Não,Rejeita normalidade
+AL,chuva_media,20,0.8844150515755222,0.021260762752150827,Não,Rejeita normalidade
 AL,co2,20,0.9318550222636119,0.167636974087303,Sim,Não rejeita normalidade
 AL,consumo_energia_industrial,20,0.8208511934564158,0.0017983882895392493,Não,Rejeita normalidade
 AL,desmat_area,20,0.8452162087797851,0.004436589712760823,Não,Rejeita normalidade
-AL,frota,20,0.9471979857914111,0.3265500737444075,Sim,Não rejeita normalidade
+AL,frota,20,0.9429885732576139,0.2729085625163791,Sim,Não rejeita normalidade
 AL,frp_anual_queimadas,20,0.9285125608770085,0.14456143844132469,Sim,Não rejeita normalidade
 AL,rebanho,20,0.9199557644982155,0.0988911204321177,Sim,Não rejeita normalidade
 AL,temp_media,20,0.9741226599301738,0.8383829817126812,Sim,Não rejeita normalidade
@@ -27,7 +27,7 @@ AM,chuva_media,20,0.9426061359992808,0.26844796975570806,Sim,Não rejeita normal
 AM,co2,20,0.8039609958609255,0.0009904132007865244,Não,Rejeita normalidade
 AM,consumo_energia_industrial,20,0.9819025536936229,0.9562289381528676,Sim,Não rejeita normalidade
 AM,desmat_area,20,0.8284879534541402,0.0023734666336853263,Não,Rejeita normalidade
-AM,frota,20,0.9573630499748159,0.49260949039027224,Sim,Não rejeita normalidade
+AM,frota,20,0.9540906082817141,0.43346607261618475,Sim,Não rejeita normalidade
 AM,frp_anual_queimadas,20,0.9468604141792328,0.3219320663768609,Sim,Não rejeita normalidade
 AM,rebanho,20,0.6920101404487393,3.120318960257983e-05,Não,Rejeita normalidade
 AM,temp_media,20,0.8391611247551152,0.0035274898361492527,Não,Rejeita normalidade
@@ -38,18 +38,18 @@ AP,chuva_media,16,0.9525900214779048,0.5317992662694342,Sim,Não rejeita normali
 AP,co2,20,0.6808758848644704,2.29979987972261e-05,Não,Rejeita normalidade
 AP,consumo_energia_industrial,20,0.7967946542293356,0.0007742186685904298,Não,Rejeita normalidade
 AP,desmat_area,20,0.6934133410382208,3.244019547035492e-05,Não,Rejeita normalidade
-AP,frota,20,0.9501973165030725,0.3700947557427191,Sim,Não rejeita normalidade
+AP,frota,20,0.9454906462124683,0.3037681935944345,Sim,Não rejeita normalidade
 AP,frp_anual_queimadas,20,0.9616104861217085,0.576503181857527,Sim,Não rejeita normalidade
 AP,rebanho,20,0.9125742914208131,0.071369431306616,Sim,Não rejeita normalidade
 AP,temp_media,16,0.9321453662394222,0.26358390985323876,Sim,Não rejeita normalidade
 AP,venda_comb,20,0.7873084498278443,0.0005621886786680382,Não,Rejeita normalidade
 BA,area_colhida,20,0.9358600745439599,0.20004062421319724,Sim,Não rejeita normalidade
 BA,area_destinada_colheita,20,0.9116203002489202,0.06843615400475819,Sim,Não rejeita normalidade
-BA,chuva_media,20,0.9659211287393185,0.6674906814715966,Sim,Não rejeita normalidade
+BA,chuva_media,20,0.9659211287393185,0.6674906814715964,Sim,Não rejeita normalidade
 BA,co2,20,0.889766275056415,0.02662750320221261,Não,Rejeita normalidade
 BA,consumo_energia_industrial,20,0.925472845240026,0.1263181357992751,Sim,Não rejeita normalidade
 BA,desmat_area,20,0.9231922208091606,0.11415643203943532,Sim,Não rejeita normalidade
-BA,frota,20,0.9415926725939399,0.2569458741286508,Sim,Não rejeita normalidade
+BA,frota,20,0.9378461794057487,0.21825957604699053,Sim,Não rejeita normalidade
 BA,frp_anual_queimadas,20,0.8954087662165261,0.033853208635673725,Não,Rejeita normalidade
 BA,rebanho,20,0.8486826218728484,0.00506652847793707,Não,Rejeita normalidade
 BA,temp_media,20,0.9468582898468467,0.3219031839746091,Sim,Não rejeita normalidade
@@ -60,7 +60,7 @@ CE,chuva_media,20,0.85569187874093,0.006649302116221837,Não,Rejeita normalidade
 CE,co2,20,0.9480928244251812,0.3390661771541167,Sim,Não rejeita normalidade
 CE,consumo_energia_industrial,20,0.9371730116886374,0.21191491748170022,Sim,Não rejeita normalidade
 CE,desmat_area,20,0.8930436844405225,0.030601920148958205,Não,Rejeita normalidade
-CE,frota,20,0.9288654162561601,0.14684166499771711,Sim,Não rejeita normalidade
+CE,frota,20,0.9230682103563892,0.11352988697415783,Sim,Não rejeita normalidade
 CE,frp_anual_queimadas,20,0.8662752690537765,0.010111915718729799,Não,Rejeita normalidade
 CE,rebanho,20,0.9763983120777222,0.8796709522809509,Sim,Não rejeita normalidade
 CE,temp_media,20,0.9467093363524908,0.3198835704713808,Sim,Não rejeita normalidade
@@ -71,7 +71,7 @@ DF,chuva_media,20,0.9566654885079359,0.4795706327147553,Sim,Não rejeita normali
 DF,co2,20,0.9364150869528569,0.20498076533617854,Sim,Não rejeita normalidade
 DF,consumo_energia_industrial,20,0.9705252910316022,0.7659301380822795,Sim,Não rejeita normalidade
 DF,desmat_area,20,0.9462247652744723,0.31338896903189717,Sim,Não rejeita normalidade
-DF,frota,20,0.9457746143013148,0.307458609587678,Sim,Não rejeita normalidade
+DF,frota,20,0.9375996981267006,0.2159159094010435,Sim,Não rejeita normalidade
 DF,frp_anual_queimadas,20,0.8988905876913186,0.03931221081670863,Não,Rejeita normalidade
 DF,rebanho,20,0.9250851884722172,0.12416294736475636,Sim,Não rejeita normalidade
 DF,temp_media,20,0.9367017369941251,0.20757754059126698,Sim,Não rejeita normalidade
@@ -82,7 +82,7 @@ ES,chuva_media,18,0.9469594311135772,0.3793307959914339,Sim,Não rejeita normali
 ES,co2,20,0.8766545395630491,0.015411819357914186,Não,Rejeita normalidade
 ES,consumo_energia_industrial,20,0.9462477730217976,0.31369473236632583,Sim,Não rejeita normalidade
 ES,desmat_area,20,0.9856504384535216,0.9852286231222005,Sim,Não rejeita normalidade
-ES,frota,20,0.9535045894275791,0.4234329810191261,Sim,Não rejeita normalidade
+ES,frota,20,0.9508739968794552,0.38055176586333495,Sim,Não rejeita normalidade
 ES,frp_anual_queimadas,20,0.8195928221171283,0.0017188302308247462,Não,Rejeita normalidade
 ES,rebanho,20,0.9476708316089993,0.3331138868493142,Sim,Não rejeita normalidade
 ES,temp_media,18,0.9377874642493836,0.26549557993675144,Sim,Não rejeita normalidade
@@ -93,18 +93,18 @@ GO,chuva_media,20,0.9043143828443931,0.04971652546842442,Não,Rejeita normalidad
 GO,co2,20,0.9636521657080678,0.6190904042671079,Sim,Não rejeita normalidade
 GO,consumo_energia_industrial,20,0.8601372248082289,0.007919301289239762,Não,Rejeita normalidade
 GO,desmat_area,20,0.789569547633786,0.0006063822203814875,Não,Rejeita normalidade
-GO,frota,20,0.9442669979289009,0.2883082312497086,Sim,Não rejeita normalidade
+GO,frota,20,0.9395352293666172,0.23497526783623474,Sim,Não rejeita normalidade
 GO,frp_anual_queimadas,20,0.8900815789621739,0.02698516673433096,Não,Rejeita normalidade
 GO,rebanho,20,0.9275745135198055,0.1386685989795,Sim,Não rejeita normalidade
 GO,temp_media,20,0.9734320597391988,0.8250427337270916,Sim,Não rejeita normalidade
 GO,venda_comb,20,0.8958051940588299,0.03443263329879501,Não,Rejeita normalidade
 MA,area_colhida,20,0.9584023100478098,0.5124470122074053,Sim,Não rejeita normalidade
 MA,area_destinada_colheita,20,0.9603802200314475,0.5514730999312134,Sim,Não rejeita normalidade
-MA,chuva_media,20,0.8811131701406342,0.018528124826271877,Não,Rejeita normalidade
+MA,chuva_media,20,0.8811131701406346,0.018528124826272196,Não,Rejeita normalidade
 MA,co2,20,0.9290821686496694,0.14825994511400054,Sim,Não rejeita normalidade
 MA,consumo_energia_industrial,20,0.8084768379338844,0.001159056542304396,Não,Rejeita normalidade
 MA,desmat_area,20,0.906347444755189,0.054321027723268765,Sim,Não rejeita normalidade
-MA,frota,20,0.9286671947994699,0.14555637511934383,Sim,Não rejeita normalidade
+MA,frota,20,0.9282290040790305,0.14275444154187672,Sim,Não rejeita normalidade
 MA,frp_anual_queimadas,20,0.909690057405393,0.06287463761367215,Sim,Não rejeita normalidade
 MA,rebanho,20,0.9403308366738015,0.24325654096345734,Sim,Não rejeita normalidade
 MA,temp_media,20,0.9608637079464228,0.5612458764713094,Sim,Não rejeita normalidade
@@ -115,7 +115,7 @@ MG,chuva_media,20,0.975062341169652,0.8559679310929658,Sim,Não rejeita normalid
 MG,co2,20,0.955920267528245,0.4658945679507055,Sim,Não rejeita normalidade
 MG,consumo_energia_industrial,20,0.9730172542172155,0.8168784288229929,Sim,Não rejeita normalidade
 MG,desmat_area,20,0.9640564768924593,0.6276499637951327,Sim,Não rejeita normalidade
-MG,frota,20,0.9526852853278608,0.409697990562292,Sim,Não rejeita normalidade
+MG,frota,20,0.9454433950208408,0.30315790496090056,Sim,Não rejeita normalidade
 MG,frp_anual_queimadas,20,0.9121979142736827,0.07019702900822444,Sim,Não rejeita normalidade
 MG,rebanho,20,0.9366845452271118,0.20742092146812774,Sim,Não rejeita normalidade
 MG,temp_media,20,0.9513503366447122,0.3880536753302162,Sim,Não rejeita normalidade
@@ -126,18 +126,18 @@ MS,chuva_media,20,0.9270588206772122,0.13553115291112383,Sim,Não rejeita normal
 MS,co2,20,0.7347645568302648,0.000106812692074015,Não,Rejeita normalidade
 MS,consumo_energia_industrial,20,0.9348586089648826,0.19141335633402978,Sim,Não rejeita normalidade
 MS,desmat_area,20,0.8693997789291386,0.01146731868824373,Não,Rejeita normalidade
-MS,frota,20,0.9459262797482918,0.3094456515161929,Sim,Não rejeita normalidade
+MS,frota,20,0.938909507979732,0.22864760895224479,Sim,Não rejeita normalidade
 MS,frp_anual_queimadas,20,0.8371457614225641,0.0032706794342801594,Não,Rejeita normalidade
 MS,rebanho,20,0.9393267598257432,0.2328491581115218,Sim,Não rejeita normalidade
 MS,temp_media,20,0.9648629389808443,0.6448183856897092,Sim,Não rejeita normalidade
 MS,venda_comb,20,0.9521704289956775,0.4012421359577091,Sim,Não rejeita normalidade
 MT,area_colhida,20,0.9228696833760188,0.11253405160374896,Sim,Não rejeita normalidade
 MT,area_destinada_colheita,20,0.9229164384183878,0.11276778643302732,Sim,Não rejeita normalidade
-MT,chuva_media,20,0.9676563481318633,0.7048202799394401,Sim,Não rejeita normalidade
+MT,chuva_media,20,0.9676563481318636,0.7048202799394478,Sim,Não rejeita normalidade
 MT,co2,20,0.6815813523732124,2.3442808787093593e-05,Não,Rejeita normalidade
 MT,consumo_energia_industrial,20,0.9194639777063575,0.09675937192702008,Sim,Não rejeita normalidade
 MT,desmat_area,20,0.6921250114751216,3.130254400989948e-05,Não,Rejeita normalidade
-MT,frota,20,0.9549718928625804,0.4488790691571559,Sim,Não rejeita normalidade
+MT,frota,20,0.9492653886951882,0.356076725977548,Sim,Não rejeita normalidade
 MT,frp_anual_queimadas,20,0.7858377218939852,0.0005352940649467807,Não,Rejeita normalidade
 MT,rebanho,20,0.9421170042640407,0.26283935041002604,Sim,Não rejeita normalidade
 MT,temp_media,20,0.9076382523014829,0.05747184555318109,Sim,Não rejeita normalidade
@@ -148,7 +148,7 @@ PA,chuva_media,20,0.9252469590771537,0.12505780963245622,Sim,Não rejeita normal
 PA,co2,20,0.9288922158854342,0.1470162950376679,Sim,Não rejeita normalidade
 PA,consumo_energia_industrial,20,0.9800329875661359,0.9345267447310126,Sim,Não rejeita normalidade
 PA,desmat_area,20,0.9346582579646144,0.18973080882806126,Sim,Não rejeita normalidade
-PA,frota,20,0.9400429681289644,0.24022939362267293,Sim,Não rejeita normalidade
+PA,frota,20,0.9385041026994169,0.22463343527595908,Sim,Não rejeita normalidade
 PA,frp_anual_queimadas,20,0.8685270366637289,0.011070378971936953,Não,Rejeita normalidade
 PA,rebanho,20,0.9487128681012169,0.3479745499866185,Sim,Não rejeita normalidade
 PA,temp_media,20,0.9159165216932006,0.08270386290318806,Sim,Não rejeita normalidade
@@ -159,18 +159,18 @@ PB,chuva_media,20,0.9810676238999355,0.9471268239241475,Sim,Não rejeita normali
 PB,co2,20,0.8859871975102829,0.022708069886830565,Não,Rejeita normalidade
 PB,consumo_energia_industrial,20,0.8571773864579568,0.007047801119456591,Não,Rejeita normalidade
 PB,desmat_area,20,0.928448910966977,0.14415386255414137,Sim,Não rejeita normalidade
-PB,frota,20,0.9397893010404461,0.23759091579979869,Sim,Não rejeita normalidade
+PB,frota,20,0.9363510393680722,0.20440479756348567,Sim,Não rejeita normalidade
 PB,frp_anual_queimadas,20,0.9507008612977208,0.377853887755192,Sim,Não rejeita normalidade
 PB,rebanho,20,0.9653108720651994,0.6543992924953186,Sim,Não rejeita normalidade
 PB,temp_media,20,0.7451317544039628,0.00014617819327186038,Não,Rejeita normalidade
 PB,venda_comb,20,0.9305454151108942,0.15819394866529735,Sim,Não rejeita normalidade
 PE,area_colhida,20,0.8634362424145877,0.009027033627027541,Não,Rejeita normalidade
 PE,area_destinada_colheita,20,0.9149601118689483,0.07928377658395495,Sim,Não rejeita normalidade
-PE,chuva_media,20,0.9053878059024131,0.05209488912328057,Sim,Não rejeita normalidade
+PE,chuva_media,20,0.9053878059024135,0.05209488912328146,Sim,Não rejeita normalidade
 PE,co2,20,0.9431310350713494,0.27458723328790935,Sim,Não rejeita normalidade
 PE,consumo_energia_industrial,20,0.8718155846013392,0.012646644659915923,Não,Rejeita normalidade
 PE,desmat_area,20,0.9396812771527459,0.23647552340002626,Sim,Não rejeita normalidade
-PE,frota,20,0.9308899249751472,0.1606263398738415,Sim,Não rejeita normalidade
+PE,frota,20,0.9248608119158117,0.12293236307980315,Sim,Não rejeita normalidade
 PE,frp_anual_queimadas,20,0.9220862095980373,0.10868915170190646,Sim,Não rejeita normalidade
 PE,rebanho,20,0.9162892444473548,0.08407721006141278,Sim,Não rejeita normalidade
 PE,temp_media,20,0.9385105806344691,0.2246970542371835,Sim,Não rejeita normalidade
@@ -181,7 +181,7 @@ PI,chuva_media,20,0.9411416577308269,0.2519735376585629,Sim,Não rejeita normali
 PI,co2,20,0.9264247848340691,0.131770289665757,Sim,Não rejeita normalidade
 PI,consumo_energia_industrial,20,0.9676768915136749,0.7052620545558248,Sim,Não rejeita normalidade
 PI,desmat_area,20,0.9156046715399011,0.0815724298558552,Sim,Não rejeita normalidade
-PI,frota,20,0.9256728577004585,0.1274446895901905,Sim,Não rejeita normalidade
+PI,frota,20,0.923012626931651,0.113250183422131,Sim,Não rejeita normalidade
 PI,frp_anual_queimadas,20,0.9196087087794204,0.09738185292863495,Sim,Não rejeita normalidade
 PI,rebanho,20,0.8961796111600229,0.03498941434002308,Não,Rejeita normalidade
 PI,temp_media,20,0.9568213730284589,0.4824647343547338,Sim,Não rejeita normalidade
@@ -192,21 +192,21 @@ PR,chuva_media,19,0.8840530873680483,0.025275487697673252,Não,Rejeita normalida
 PR,co2,20,0.9540790930849103,0.4332672545485697,Sim,Não rejeita normalidade
 PR,consumo_energia_industrial,20,0.9594569203671823,0.5330574216172614,Sim,Não rejeita normalidade
 PR,desmat_area,20,0.9702436196207624,0.7600120718944843,Sim,Não rejeita normalidade
-PR,frota,20,0.9503124805617416,0.37185786432624035,Sim,Não rejeita normalidade
+PR,frota,20,0.9419687806966524,0.2611609300701241,Sim,Não rejeita normalidade
 PR,frp_anual_queimadas,20,0.9566048293179263,0.47844754832107167,Sim,Não rejeita normalidade
 PR,rebanho,20,0.9095834142119291,0.06258130056747084,Sim,Não rejeita normalidade
 PR,temp_media,19,0.6625791859824465,2.0576428075959003e-05,Não,Rejeita normalidade
 PR,venda_comb,20,0.8749427536930842,0.01436694000839896,Não,Rejeita normalidade
 RJ,area_colhida,20,0.8773143180101495,0.015835715023604945,Não,Rejeita normalidade
 RJ,area_destinada_colheita,20,0.8763488826657062,0.015219516716734362,Não,Rejeita normalidade
-RJ,chuva_media,20,0.9090932755414924,0.06125115646810774,Sim,Não rejeita normalidade
+RJ,chuva_media,20,0.9090932755414924,0.061251156468107616,Sim,Não rejeita normalidade
 RJ,co2,20,0.8760412911609213,0.01502855291815436,Não,Rejeita normalidade
 RJ,consumo_energia_industrial,20,0.9243669007727305,0.12026637984444183,Sim,Não rejeita normalidade
 RJ,desmat_area,20,0.9475902143869421,0.331986911731773,Sim,Não rejeita normalidade
-RJ,frota,20,0.938397179564678,0.22358579870830808,Sim,Não rejeita normalidade
+RJ,frota,20,0.9270827218636107,0.13567499528236454,Sim,Não rejeita normalidade
 RJ,frp_anual_queimadas,20,0.923255053828903,0.1144752129913662,Sim,Não rejeita normalidade
 RJ,rebanho,20,0.9083824937477516,0.05937387604114027,Sim,Não rejeita normalidade
-RJ,temp_media,20,0.9589748714819142,0.5235786024937468,Sim,Não rejeita normalidade
+RJ,temp_media,20,0.9589748714819138,0.5235786024937403,Sim,Não rejeita normalidade
 RJ,venda_comb,20,0.9386426539719209,0.2259978237010717,Sim,Não rejeita normalidade
 RN,area_colhida,20,0.9224954703161025,0.11068079701026895,Sim,Não rejeita normalidade
 RN,area_destinada_colheita,20,0.8458252514584175,0.004540938909664372,Não,Rejeita normalidade
@@ -214,10 +214,10 @@ RN,chuva_media,20,0.8817318508019314,0.019010476923289735,Não,Rejeita normalida
 RN,co2,20,0.9346612114789798,0.18975550880459785,Sim,Não rejeita normalidade
 RN,consumo_energia_industrial,20,0.9054494534683779,0.052235013867611875,Sim,Não rejeita normalidade
 RN,desmat_area,20,0.9413858119280838,0.2546542110543698,Sim,Não rejeita normalidade
-RN,frota,20,0.9429195869561245,0.2720990112471237,Sim,Não rejeita normalidade
+RN,frota,20,0.9386348073441926,0.22592034644411896,Sim,Não rejeita normalidade
 RN,frp_anual_queimadas,20,0.909569835313662,0.06254405137459157,Sim,Não rejeita normalidade
 RN,rebanho,20,0.9631007018144768,0.6074758183324471,Sim,Não rejeita normalidade
-RN,temp_media,20,0.9017143290433657,0.04441145436905475,Não,Rejeita normalidade
+RN,temp_media,20,0.901714329043365,0.04441145436905331,Não,Rejeita normalidade
 RN,venda_comb,20,0.8787416914079376,0.01679545347964751,Não,Rejeita normalidade
 RO,area_colhida,20,0.7585477393719444,0.0002215373604399586,Não,Rejeita normalidade
 RO,area_destinada_colheita,20,0.7921755512902149,0.0006619521553477741,Não,Rejeita normalidade
@@ -225,7 +225,7 @@ RO,chuva_media,17,0.9327469331397233,0.2418552785593998,Sim,Não rejeita normali
 RO,co2,20,0.9005010476427964,0.04214083188589732,Não,Rejeita normalidade
 RO,consumo_energia_industrial,20,0.9379748740803677,0.21949279013018552,Sim,Não rejeita normalidade
 RO,desmat_area,20,0.9060900944888546,0.05371452972464613,Sim,Não rejeita normalidade
-RO,frota,20,0.93960987949661,0.23574098974864982,Sim,Não rejeita normalidade
+RO,frota,20,0.9356996042342559,0.19863360791302204,Sim,Não rejeita normalidade
 RO,frp_anual_queimadas,20,0.733787069578473,0.0001037331333433782,Não,Rejeita normalidade
 RO,rebanho,20,0.895820244862577,0.03445483508431574,Não,Rejeita normalidade
 RO,temp_media,17,0.968569587781577,0.7929134245133177,Sim,Não rejeita normalidade
@@ -236,7 +236,7 @@ RR,chuva_media,14,0.9367255827100641,0.37797885317012336,Sim,Não rejeita normal
 RR,co2,20,0.9429247001025165,0.27215893925017204,Sim,Não rejeita normalidade
 RR,consumo_energia_industrial,20,0.9555969002223107,0.4600433804906963,Sim,Não rejeita normalidade
 RR,desmat_area,20,0.9569378058249187,0.48463382681624545,Sim,Não rejeita normalidade
-RR,frota,20,0.9492416635200032,0.35572563319498274,Sim,Não rejeita normalidade
+RR,frota,20,0.9465158844591197,0.3172769434949101,Sim,Não rejeita normalidade
 RR,frp_anual_queimadas,20,0.8989461477370908,0.03940642331155256,Não,Rejeita normalidade
 RR,rebanho,20,0.9260288899326315,0.12947488742413238,Sim,Não rejeita normalidade
 RR,temp_media,14,0.9715886842018281,0.8971622362040095,Sim,Não rejeita normalidade
@@ -247,18 +247,18 @@ RS,chuva_media,20,0.9442611037292876,0.2882354823904885,Sim,Não rejeita normali
 RS,co2,20,0.9729470980270184,0.8154871200683524,Sim,Não rejeita normalidade
 RS,consumo_energia_industrial,20,0.9154400806431718,0.08098166439078805,Sim,Não rejeita normalidade
 RS,desmat_area,20,0.9559851829282461,0.46707529031131484,Sim,Não rejeita normalidade
-RS,frota,20,0.9449389997310894,0.29671010393492286,Sim,Não rejeita normalidade
+RS,frota,20,0.9324573116025698,0.17216255977732758,Sim,Não rejeita normalidade
 RS,frp_anual_queimadas,20,0.9498894249149811,0.3654144024122122,Sim,Não rejeita normalidade
 RS,rebanho,20,0.8573502797055936,0.007095801348312415,Não,Rejeita normalidade
-RS,temp_media,20,0.9073763950148592,0.0568177066890323,Sim,Não rejeita normalidade
+RS,temp_media,20,0.9073763950148597,0.05681770668903331,Sim,Não rejeita normalidade
 RS,venda_comb,20,0.8685968465411016,0.011101588305087146,Não,Rejeita normalidade
 SC,area_colhida,20,0.9344557736090995,0.18804480957456887,Sim,Não rejeita normalidade
 SC,area_destinada_colheita,20,0.9302798192503983,0.15634343109653692,Sim,Não rejeita normalidade
-SC,chuva_media,20,0.9655081442822693,0.6586269709131832,Sim,Não rejeita normalidade
+SC,chuva_media,20,0.9655081442822696,0.6586269709131908,Sim,Não rejeita normalidade
 SC,co2,20,0.9572081262787265,0.4896941354639773,Sim,Não rejeita normalidade
 SC,consumo_energia_industrial,20,0.9607652441875136,0.559248704376742,Sim,Não rejeita normalidade
 SC,desmat_area,20,0.9532122285050156,0.41849257012614033,Sim,Não rejeita normalidade
-SC,frota,20,0.9586640933117223,0.5175191236331451,Sim,Não rejeita normalidade
+SC,frota,20,0.9510530573412346,0.3833581441788039,Sim,Não rejeita normalidade
 SC,frp_anual_queimadas,20,0.7793945269459815,0.00043263248672965714,Não,Rejeita normalidade
 SC,rebanho,20,0.8753787623935304,0.014625774618677444,Não,Rejeita normalidade
 SC,temp_media,20,0.8723520933841191,0.012925562475951597,Não,Rejeita normalidade
@@ -269,7 +269,7 @@ SE,chuva_media,20,0.9662130348931656,0.6737642923358341,Sim,Não rejeita normali
 SE,co2,20,0.943094917680058,0.27416077166641567,Sim,Não rejeita normalidade
 SE,consumo_energia_industrial,20,0.9558925235017884,0.4653905631585649,Sim,Não rejeita normalidade
 SE,desmat_area,20,0.9611928338273926,0.5679465944793465,Sim,Não rejeita normalidade
-SE,frota,20,0.9403554914212602,0.24351744005258585,Sim,Não rejeita normalidade
+SE,frota,20,0.9361921821832077,0.20298287464279957,Sim,Não rejeita normalidade
 SE,frp_anual_queimadas,20,0.9187340690191859,0.09368106980516056,Sim,Não rejeita normalidade
 SE,rebanho,20,0.976799772402415,0.8864607303989045,Sim,Não rejeita normalidade
 SE,temp_media,20,0.9131355336504785,0.0731551694352335,Sim,Não rejeita normalidade
@@ -280,7 +280,7 @@ SP,chuva_media,20,0.9103837767067806,0.06481774850599561,Sim,Não rejeita normal
 SP,co2,20,0.9132285800772736,0.0734556250201451,Sim,Não rejeita normalidade
 SP,consumo_energia_industrial,20,0.9366858628571455,0.20743292126371893,Sim,Não rejeita normalidade
 SP,desmat_area,20,0.9425897493451664,0.2682583263568019,Sim,Não rejeita normalidade
-SP,frota,20,0.9487083033144893,0.34790825662190694,Sim,Não rejeita normalidade
+SP,frota,20,0.9405701839816116,0.24580030776978778,Sim,Não rejeita normalidade
 SP,frp_anual_queimadas,20,0.7690779283491403,0.00030951628116564315,Não,Rejeita normalidade
 SP,rebanho,20,0.7777692219314007,0.0004101989015949443,Não,Rejeita normalidade
 SP,temp_media,20,0.9482346438251789,0.3410866443380641,Sim,Não rejeita normalidade
@@ -291,7 +291,7 @@ TO,chuva_media,20,0.8909028493587011,0.027940644057279564,Não,Rejeita normalida
 TO,co2,20,0.8573767717664407,0.007103186909183062,Não,Rejeita normalidade
 TO,consumo_energia_industrial,20,0.9422272599829772,0.26409420833930064,Sim,Não rejeita normalidade
 TO,desmat_area,20,0.8532746155860969,0.006051111487230782,Não,Rejeita normalidade
-TO,frota,20,0.955974261896839,0.466876509328127,Sim,Não rejeita normalidade
+TO,frota,20,0.9541374074914589,0.434274780736175,Sim,Não rejeita normalidade
 TO,frp_anual_queimadas,20,0.8944019068180602,0.032426958239952106,Não,Rejeita normalidade
 TO,rebanho,20,0.8120592435004081,0.0013145548044280525,Não,Rejeita normalidade
 TO,temp_media,20,0.9361450107757456,0.20256246519397736,Sim,Não rejeita normalidade

@@ -31,6 +31,7 @@ def processar_frota(agrupar_por_regiao: bool = False):
     df = pd.read_csv("bases/frota-veiculos-2003-2023-denatran.csv", sep=";")
 
     # Garantir tipos corretos
+    df["mes"] = pd.to_numeric(df["mes"], errors="coerce")
     df["ano"] = pd.to_numeric(df["ano"], errors="coerce").astype(int)
     df["quantidade"] = pd.to_numeric(df["quantidade"], errors="coerce").fillna(0)
 
@@ -41,8 +42,16 @@ def processar_frota(agrupar_por_regiao: bool = False):
     df["tipo_norm"] = df["tipo_veiculo"].apply(_normalizar_tipo_veiculo)
     df = df[df["tipo_norm"].isin(TIPOS_MOTORIZADOS_EMITENTES)]
 
-    # Agregar: Frota total por estado e ano
-    df_agg = df.groupby(["sigla_uf", "ano"], as_index=False)["quantidade"].sum()
+    # A base é mensal e cada mês traz linhas por tipo de veículo.
+    # Primeiro somamos os tipos motorizados dentro de cada mês e, só depois,
+    # usamos o último mês disponível no ano (normalmente dezembro) como
+    # retrato do estoque anual.
+    df = df.groupby(["sigla_uf", "ano", "mes"], as_index=False)["quantidade"].sum()
+    df = df.dropna(subset=["mes"]).copy()
+    df["mes"] = df["mes"].astype(int)
+    df = df.sort_values(["sigla_uf", "ano", "mes"])
+    df_agg = df.groupby(["sigla_uf", "ano"], as_index=False).tail(1)
+    df_agg = df_agg[["sigla_uf", "ano", "quantidade"]]
 
     # Renomear colunas para padrão
     df_agg = df_agg.rename(columns={
