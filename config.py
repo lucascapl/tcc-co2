@@ -35,6 +35,7 @@ class Config:
     GERAR_VISUALIZACOES: bool = True
     GERAR_HEATMAPS: bool = True
     GERAR_HEATMAPS_POR_BLOCO: bool = True
+    GERAR_CLUSTERIZACAO: bool = True
     IGNORAR_COLUNAS: tuple[str, ...] = ("IDHM", "internacoes")
 
     @property

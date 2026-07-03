@@ -33,6 +33,7 @@ from utils import base_grupo_ano
 from pearson import correlacao_pearson_por_grupo
 from spearman import correlacao_spearman_por_grupo
 from heatmap_correlacao_estado import salvar_correlacao_e_heatmaps_estado
+from clusterizacao_estado import executar_clusterizacao_estado
 
 
 # ---------------------------------------------------------------------------
@@ -55,6 +56,7 @@ IGNORAR_COLUNAS = list(CONFIG.IGNORAR_COLUNAS)
 GERAR_VISUALIZACOES = CONFIG.GERAR_VISUALIZACOES
 GERAR_HEATMAPS = CONFIG.GERAR_HEATMAPS
 GERAR_HEATMAPS_POR_BLOCO = CONFIG.GERAR_HEATMAPS_POR_BLOCO
+GERAR_CLUSTERIZACAO = CONFIG.GERAR_CLUSTERIZACAO
 
 
 # ---------------------------------------------------------------------------
@@ -260,6 +262,25 @@ def gerar_heatmaps(df_principal: pd.DataFrame) -> pd.DataFrame | None:
     )
 
 
+def gerar_clusterizacao(df_principal: pd.DataFrame) -> dict[str, pd.DataFrame] | None:
+    """
+    Gera a clusterização estadual como parte da análise principal.
+
+    Assim como os heatmaps por perfis, esta etapa é específica para Estado/Ano.
+    """
+    if not GERAR_CLUSTERIZACAO:
+        return None
+
+    if COLUNA_GRUPO != "Estado" or AGREGAR_PARA_REGIAO:
+        print("[clusterizacao] Etapa ignorada: a clusterização atual está definida para análise Estado/Ano.")
+        return None
+
+    return executar_clusterizacao_estado(
+        caminho_df=CAMINHO_DF,
+        n_clusters=3,
+    )
+
+
 def main() -> dict[str, pd.DataFrame]:
     print("=== Análise do dataframe principal ===")
     print(f"Arquivo analisado: {CAMINHO_DF}")
@@ -271,6 +292,13 @@ def main() -> dict[str, pd.DataFrame]:
 
     resultados = rodar_testes_estatisticos(df_principal)
     gerar_heatmaps(df_principal)
+    resultados_clusterizacao = gerar_clusterizacao(df_principal)
+    if resultados_clusterizacao is not None:
+        resultados.update({
+            f"clusterizacao_{nome}": valor
+            for nome, valor in resultados_clusterizacao.items()
+            if isinstance(valor, pd.DataFrame)
+        })
     gerar_visualizacoes_exploratorias(df_principal)
 
     print("=== Análise concluída ===")

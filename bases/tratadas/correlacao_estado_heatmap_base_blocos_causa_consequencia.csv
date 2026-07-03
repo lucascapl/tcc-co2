@@ -224,21 +224,21 @@ Desmatamento/uso da terra,AP,Consequências,temp_media,0.1323529411764706
 Desmatamento/uso da terra,BA,Consequências,chuva_media,0.10676691729323308
 Desmatamento/uso da terra,BA,Consequências,temp_media,0.013533834586466165
 Desmatamento/uso da terra,MA,Consequências,chuva_media,-0.26315789473684204
-Desmatamento/uso da terra,MA,Consequências,temp_media,0.20455999318068566
-Desmatamento/uso da terra,MG,Consequências,chuva_media,-0.1616008383392315
+Desmatamento/uso da terra,MA,Consequências,temp_media,0.20455999318068407
+Desmatamento/uso da terra,MG,Consequências,chuva_media,-0.16160083833923145
 Desmatamento/uso da terra,MG,Consequências,temp_media,-0.3038166715300472
 Desmatamento/uso da terra,MS,Consequências,chuva_media,-0.312781954887218
 Desmatamento/uso da terra,MS,Consequências,temp_media,0.3037593984962406
 Desmatamento/uso da terra,MT,Consequências,chuva_media,-0.33383458646616543
 Desmatamento/uso da terra,MT,Consequências,temp_media,0.10977443609022557
-Desmatamento/uso da terra,PA,Consequências,chuva_media,0.4054866738523463
+Desmatamento/uso da terra,PA,Consequências,chuva_media,0.4054866738523464
 Desmatamento/uso da terra,PA,Consequências,temp_media,-0.18346403214279366
 Desmatamento/uso da terra,PI,Consequências,chuva_media,-0.18769165039405727
 Desmatamento/uso da terra,PI,Consequências,temp_media,-0.053450206613021974
 Desmatamento/uso da terra,RO,Consequências,chuva_media,-0.46323529411764713
 Desmatamento/uso da terra,RO,Consequências,temp_media,0.1936274509803922
-Desmatamento/uso da terra,RS,Consequências,chuva_media,-0.04557801897883745
-Desmatamento/uso da terra,RS,Consequências,temp_media,-0.19627082732773127
+Desmatamento/uso da terra,RS,Consequências,chuva_media,-0.04557801897883752
+Desmatamento/uso da terra,RS,Consequências,temp_media,-0.19627082732773105
 Energia/agroindustria,DF,Consequências,chuva_media,-0.2611488955027963
 Energia/agroindustria,DF,Consequências,temp_media,0.4769381008125792
 Energia/agroindustria,GO,Consequências,chuva_media,-0.04060150375939849
@@ -246,7 +246,7 @@ Energia/agroindustria,GO,Consequências,temp_media,0.19629930937110246
 Energia/agroindustria,PR,Consequências,chuva_media,0.25789473684210523
 Energia/agroindustria,PR,Consequências,temp_media,0.45789473684210524
 Energia/agroindustria,RR,Consequências,chuva_media,-0.12379464081335644
-Energia/agroindustria,RR,Consequências,temp_media,0.33873438097446507
+Energia/agroindustria,RR,Consequências,temp_media,0.3387343809744649
 Energia/agroindustria,SP,Consequências,chuva_media,0.34888550128316
 Energia/agroindustria,SP,Consequências,temp_media,-0.246271502100738
 Energia/agroindustria,TO,Consequências,chuva_media,-0.29774436090225564
@@ -259,7 +259,7 @@ Transporte/combustiveis,ES,Consequências,chuva_media,-0.2053663570691434
 Transporte/combustiveis,ES,Consequências,temp_media,-0.1991744066047472
 Transporte/combustiveis,PB,Consequências,chuva_media,-0.06616541353383458
 Transporte/combustiveis,PB,Consequências,temp_media,0.8721804511278194
-Transporte/combustiveis,PE,Consequências,chuva_media,-0.6547983799737119
+Transporte/combustiveis,PE,Consequências,chuva_media,-0.6547983799737118
 Transporte/combustiveis,PE,Consequências,temp_media,-0.07744878864382605
 Transporte/combustiveis,RJ,Consequências,chuva_media,0.015037593984962403
 Transporte/combustiveis,RJ,Consequências,temp_media,-0.41353383458646614
@@ -268,4 +268,4 @@ Transporte/combustiveis,RN,Consequências,temp_media,0.7263157894736841
 Transporte/combustiveis,SC,Consequências,chuva_media,0.13264859564295836
 Transporte/combustiveis,SC,Consequências,temp_media,-0.12932330827067667
 Transporte/combustiveis,SE,Consequências,chuva_media,-0.14845068868377945
-Transporte/combustiveis,SE,Consequências,temp_media,-0.5028173075208155
+Transporte/combustiveis,SE,Consequências,temp_media,-0.5028173075208159
