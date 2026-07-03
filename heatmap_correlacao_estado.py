@@ -83,14 +83,14 @@ IGNORAR_COLUNAS = ["IDHM", "internacoes"]
 # ---------------------------------------------------------------------------
 
 BLOCOS_ESTADOS = {
-    "Mudanca de Uso da Terra": [
-        "AC", "AM", "AP", "MA", "MT", "PA", "RO", "RR", "TO",
+    "Desmatamento/uso da terra": [
+        "AC", "AM", "AP", "BA", "MA", "MG", "MS", "MT", "PA", "PI", "RO", "RS",
     ],
-    "Agropecuária": [
-        "BA", "GO", "MS", "PI", "CE", "RN", "PB", "PE", "AL", "SE",
+    "Energia/agroindustria": [
+        "DF", "GO", "PR", "RR", "SP", "TO",
     ],
-    "Energia/industrial": [
-        "SP", "RJ", "MG", "ES", "PR", "SC", "RS", "DF",
+    "Transporte/combustiveis": [
+        "AL", "CE", "ES", "PB", "PE", "RJ", "RN", "SC", "SE",
     ],
 }
 
@@ -109,9 +109,9 @@ ORDEM_ESTADOS_POR_BLOCO = [
 ]
 
 SLUG_BLOCO = {
-    "Mudanca de Uso da Terra": "mudanca_uso_da_terra",
-    "Agropecuária": "agropecuaria",
-    "Energia/industrial": "energia_industrial",
+    "Desmatamento/uso da terra": "desmatamento_uso_da_terra",
+    "Energia/agroindustria": "energia_agroindustria",
+    "Transporte/combustiveis": "transporte_combustiveis",
 }
 
 # ---------------------------------------------------------------------------

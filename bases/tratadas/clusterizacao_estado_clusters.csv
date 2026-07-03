@@ -1,0 +1,28 @@
+Estado,Cluster,Ordem_dendrograma,Perfil_artigo
+AL,1,8,Transporte/combustiveis
+CE,1,3,Transporte/combustiveis
+ES,1,5,Transporte/combustiveis
+PB,1,6,Transporte/combustiveis
+PE,1,1,Transporte/combustiveis
+RJ,1,9,Transporte/combustiveis
+RN,1,2,Transporte/combustiveis
+SC,1,4,Transporte/combustiveis
+SE,1,7,Transporte/combustiveis
+DF,2,14,Energia/agroindustria
+GO,2,11,Energia/agroindustria
+PR,2,15,Energia/agroindustria
+RR,2,10,Energia/agroindustria
+SP,2,13,Energia/agroindustria
+TO,2,12,Energia/agroindustria
+AC,3,16,Desmatamento/uso da terra
+AM,3,17,Desmatamento/uso da terra
+AP,3,23,Desmatamento/uso da terra
+BA,3,21,Desmatamento/uso da terra
+MA,3,22,Desmatamento/uso da terra
+MG,3,18,Desmatamento/uso da terra
+MS,3,19,Desmatamento/uso da terra
+MT,3,26,Desmatamento/uso da terra
+PA,3,25,Desmatamento/uso da terra
+PI,3,24,Desmatamento/uso da terra
+RO,3,27,Desmatamento/uso da terra
+RS,3,20,Desmatamento/uso da terra
