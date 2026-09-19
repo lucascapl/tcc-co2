@@ -66,7 +66,12 @@ Para reproduzir o tratamento no repositório do projeto, consulte [README.md](RE
 
 ## Citation
 
-Use a referência bibliográfica gerada pelo Zenodo após o depósito. DOI: A CONFIRMAR, pois ainda não foi criado.
+Para citar este conjunto de dados, utilize a referência bibliográfica disponibilizada pelo Zenodo após a publicação.
+
+**DOI:** https://doi.org/10.5281/zenodo.22841658
+
+**Versão:** 1.0.0
+
 
 ## License and attribution
 
