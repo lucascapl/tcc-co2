@@ -1,0 +1,22 @@
+Base,Ano inicial,Ano final,Fonte,Unidade,Link,Possivel Causa ?,Facilidades,Dificuldades
+Desmatamento,1987,2024,MapBiomas(SEEG),hectares,https://brasil.mapbiomas.org/estatisticas/,Sim,Agregação direta,N/A
+Co2 bruto,1990,2023,SEEG,Mt CO2e -> 1 = 1000Kg,https://plataforma.seeg.eco.br/?yearRange%5B0%5D=1990&yearRange%5B1%5D=2023&emissionType%5B0%5D=1&gas=8&groupBy=Sector&rankBy=State&filtersTab=highlights&statisticsTab=historical,/,Poucos tratamentos; já próxima do formato Estado–Ano,N/A
+frota veiculos,2003,2023,denatran/min. Infraestrutura,unidade,https://basedosdados.org/dataset/61d592ca-5aec-4f66-b8eb-f7b894a29b66?table=3f0d609e-c85d-4daf-845f-08dd502665b2,Sim,Agregação direta,N/A
+rebanho,1974,2023,ibge,unidade,https://www.ibge.gov.br/estatisticas/economicas/agricultura-e-pecuaria/9107-producao-da-pecuaria-municipal.html?=&t=series-historicas,Sim,Download simplificado,Estrutura com anos e animais em múltiplos níveis; precisei reconstruir a tabela antes da análise
+venda combustiveis,1990,2025,gov/min. transporte,m³,https://dados.gov.br/dados/conjuntos-dados/vendas-de-derivados-de-petroleo-e-biocombustiveis,Sim,Agregação direta,N/A
+precipitacao,2000,2025,inmet,mm,https://portal.inmet.gov.br/dadoshistoricos,Nao,N/A,"Excesso de arquivos, colunas inconsistentes, diversas agregações pois um unico estado possui mais de uma estação; leitura em partes"
+temperatura,2000,2025,inmet,ºC,,,,
+area plantada ou destinada a colheita,1988,2024,ibge,hectares,https://sidra.ibge.gov.br/Tabela/5457,Sim,Agregação semi-direta,Conversão para Estado–Ano
+area colhida,1974,2024,ibge,hectares,,,,
+consumo energia eletrica industrial,2004,2025,EPE,MWh,https://www.epe.gov.br/pt/publicacoes-dados-abertos/publicacoes/consumo-de-energia-eletrica,Sim,Agregação direta,Ajuste na granularidade de tempo (base mensal)
+Queimadas,2003,2023,Terra Brasilis / INPE,FRP,https://terrabrasilis.dpi.inpe.br/queimadas/bdqueimadas/#exportar-dados,Sim,N/A,Processo de download com muitas etapas para cada ano. Muitos arquivos; leitura em partes;
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Morbidade hospitalar (respiratoria),2008,2025,datasus,unidade,https://datasus.saude.gov.br/acesso-a-informacao/morbidade-hospitalar-do-sus-sih-sus/,N/A,N/A,"Filtros limitados, download separado por ano, dados faltantes"
+problemas respiratorios fiocruz,N/A,N/A,fiocruz / infogripe,N/A,http://info.gripe.fiocruz.br/,N/A,N/A,Site indisponivel
+Secas ambientais,2014,N/A,Agência Nacional de Águas e Saneamento Básico (ANA),N/A,https://monitordesecas.ana.gov.br/dados-tabulares?tipo=8&area=5,N/A,N/A,Dados começam a partir de 2014 somente no nordeste a partir de 2020 em outras regiões
+IDH,N/A,N/A,UNDP,N/A,https://www.undp.org/pt/brazil/desenvolvimento-humano/painel-idhm,N/A,N/A,Dados intervalados (CENSO) e excesso de dados faltantes
+Rendimento medio mensal,N/A,N/A,IBGE,N/A,https://www.ibge.gov.br/estatisticas/sociais/rendimento-despesa-e-consumo/9127-pesquisa-nacional-por-amostra-de-domicilios.html?=&t=series-historicas,N/A,N/A,Dados somente até 2015
