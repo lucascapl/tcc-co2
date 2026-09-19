@@ -47,8 +47,7 @@ No arquivo final observado, `temp_media` e `chuva_media` têm 203 valores ausent
 - `dataframe-principal-estado-tratada.csv`: painel integrado descrito neste documento.
 - `DATA_DICTIONARY.csv`: dicionário das 13 colunas do painel.
 - `SOURCES.md`: proveniência, transformações e informações de fontes.
-- `LICENSE_DATASET_TEMPLATE.md`: modelo para registrar posteriormente a licença do dataset integrado.
-- `CITATION.cff`: metadados de citação, com campos ainda pendentes de confirmação.
+- `LICENSE_DATASET.md`: licença do dataset integrado.
 - `bases/tratadas/`: bases intermediárias e resultados derivados do projeto, quando incluídos no depósito.
 - `bases/`: arquivos brutos utilizados pelo processamento, quando sua redistribuição for permitida pelas condições das fontes originais.
 
@@ -67,11 +66,11 @@ Para reproduzir o tratamento no repositório do projeto, consulte [README.md](RE
 
 ## Citation
 
-Use o arquivo `CITATION.cff` e a referência gerada pelo Zenodo após o depósito. DOI: A CONFIRMAR, pois ainda não foi criado.
+Use a referência bibliográfica gerada pelo Zenodo após o depósito. DOI: A CONFIRMAR, pois ainda não foi criado.
 
 ## License and attribution
 
-A licença do dataset integrado ainda não foi escolhida. Consulte [LICENSE_DATASET_TEMPLATE.md](LICENSE_DATASET_TEMPLATE.md). A licença ou os termos de reutilização do dataset integrado não substituem as condições aplicáveis às fontes originais; as atribuições correspondentes devem ser mantidas.
+O dataset integrado está licenciado sob Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). Consulte [LICENSE_DATASET.md](LICENSE_DATASET.md). A licença ou os termos de reutilização do dataset integrado não substituem as condições aplicáveis às fontes originais; as atribuições correspondentes devem ser mantidas.
 
 ## Provenance
 
